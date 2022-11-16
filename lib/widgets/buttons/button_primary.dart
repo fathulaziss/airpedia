@@ -48,12 +48,12 @@ class ButtonPrimary extends StatelessWidget {
     return Center(
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 120),
-        width: isLoading ? height ?? 42.w : width ?? Get.width,
-        height: height ?? 42.w,
+        width: isLoading ? height ?? 45.w : width ?? Get.width,
+        height: height ?? 45.w,
         decoration: isOutline
             ? BoxDecoration(
                 borderRadius: BorderRadius.circular(
-                  isLoading ? 24.w : radius ?? Insets.xl,
+                  isLoading ? 24.w : radius ?? Insets.lg,
                 ),
                 color: enabled
                     ? color ?? AppColor.primaryColor
@@ -62,7 +62,7 @@ class ButtonPrimary extends StatelessWidget {
               )
             : BoxDecoration(
                 borderRadius: BorderRadius.circular(
-                  isLoading ? 24.w : radius ?? Insets.xl,
+                  isLoading ? 24.w : radius ?? Insets.lg,
                 ),
                 color: enabled
                     ? color ?? AppColor.primaryColor

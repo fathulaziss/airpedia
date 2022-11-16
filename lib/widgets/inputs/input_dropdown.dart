@@ -12,7 +12,7 @@ class InputDropdown extends StatelessWidget {
     required this.items,
     required this.selectedItem,
     this.onChanged,
-    this.titleColor = AppColor.primaryColor,
+    this.titleColor = Colors.black,
     this.borderColor,
     this.outlinedBorderColor,
     this.textAlign,
@@ -62,8 +62,8 @@ class InputDropdown extends StatelessWidget {
                     textAlign: textAlign ?? TextAlign.left,
                     style: TextStyles.text.copyWith(
                       color: selectedItem.isNotEmpty
-                          ? AppColor.primaryColor
-                          : AppColor.primaryColor.withOpacity(.6),
+                          ? Colors.black
+                          : const Color(0xFFC1BABA),
                     ),
                   ),
                 ),

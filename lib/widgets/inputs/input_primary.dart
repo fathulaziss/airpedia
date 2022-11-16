@@ -220,11 +220,7 @@ class _InputPrimaryState extends State<InputPrimary> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        if (widget.label != null)
-          Text(
-            widget.label!,
-            style: TextStyles.desc.copyWith(color: AppColor.primaryColor),
-          ),
+        if (widget.label != null) Text(widget.label!, style: TextStyles.text),
         Container(
           margin: widget.margin ??
               EdgeInsets.symmetric(

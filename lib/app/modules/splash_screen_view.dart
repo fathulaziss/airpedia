@@ -1,8 +1,10 @@
 import 'package:airpedia/app/controllers/utility_controller.dart';
 import 'package:airpedia/services/app_cycle_service.dart';
 import 'package:airpedia/styles/colors.dart';
+import 'package:airpedia/styles/styles.dart';
 import 'package:airpedia/utils/app_asset.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class SplashScreenView extends StatefulWidget {
@@ -15,6 +17,7 @@ class SplashScreenView extends StatefulWidget {
 class _SplashScreenViewState extends State<SplashScreenView> {
   final cUtility = Get.find<UtilityController>();
   double width = Get.width * 0.1;
+  double fontSize = 20.w;
 
   @override
   void initState() {
@@ -29,6 +32,7 @@ class _SplashScreenViewState extends State<SplashScreenView> {
     if (mounted) {
       setState(() {
         width = Get.width * 0.45;
+        fontSize = 24.w;
       });
     }
   }
@@ -43,11 +47,25 @@ class _SplashScreenViewState extends State<SplashScreenView> {
     return Scaffold(
       backgroundColor: AppColor.primaryColor,
       body: Center(
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 1000),
-          width: width,
-          height: width,
-          child: Image.asset(AppAsset.logo('logo_app.png')),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            AnimatedContainer(
+              duration: const Duration(milliseconds: 1000),
+              width: width,
+              height: width,
+              child: Image.asset(AppAsset.logo('logo_app.png')),
+            ),
+            verticalSpace(Insets.sm),
+            Text(
+              'AIRPEDIA',
+              style: TextStyles.title.copyWith(
+                color: Colors.white,
+                letterSpacing: 6,
+                fontSize: fontSize,
+              ),
+            )
+          ],
         ),
       ),
     );
