@@ -224,7 +224,7 @@ class _InputPrimaryState extends State<InputPrimary> {
         Container(
           margin: widget.margin ??
               EdgeInsets.symmetric(
-                vertical: widget.inputStyle == InputStyle.line ? 0 : Insets.xs,
+                vertical: widget.inputStyle == InputStyle.line ? 0 : Insets.sm,
               ),
           width: Get.width,
           decoration: _decor(),

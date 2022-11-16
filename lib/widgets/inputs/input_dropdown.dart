@@ -35,7 +35,7 @@ class InputDropdown extends StatelessWidget {
       children: [
         if (title.isNotEmpty)
           Padding(
-            padding: EdgeInsets.symmetric(vertical: Insets.xs),
+            padding: EdgeInsets.only(bottom: Insets.sm),
             child: Text(
               title,
               style: TextStyles.text.copyWith(color: titleColor),
@@ -77,7 +77,7 @@ class InputDropdown extends StatelessWidget {
             onChanged: onChanged,
           ),
         ),
-        verticalSpace(Insets.xs),
+        verticalSpace(Insets.sm),
       ],
     );
   }

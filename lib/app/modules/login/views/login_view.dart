@@ -1,16 +1,12 @@
-import 'package:airpedia/app/models/app_language_model.dart';
 import 'package:airpedia/app/modules/login/controllers/login_controller.dart';
 import 'package:airpedia/app/routes/app_pages.dart';
+import 'package:airpedia/styles/colors.dart';
 import 'package:airpedia/styles/styles.dart';
 import 'package:airpedia/widgets/buttons/button_primary.dart';
-import 'package:airpedia/widgets/inputs/input_date.dart';
-import 'package:airpedia/widgets/inputs/input_dropdown.dart';
+import 'package:airpedia/widgets/buttons/button_text_rich.dart';
+import 'package:airpedia/widgets/cards/card_app.dart';
 import 'package:airpedia/widgets/inputs/input_email.dart';
-import 'package:airpedia/widgets/inputs/input_number.dart';
 import 'package:airpedia/widgets/inputs/input_password.dart';
-import 'package:airpedia/widgets/inputs/input_phone.dart';
-import 'package:airpedia/widgets/inputs/input_primary.dart';
-import 'package:airpedia/widgets/others/input_dropdwon_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -21,100 +17,54 @@ class LoginView extends GetView<LoginController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 24.w),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                InputPrimary(
-                  label: 'Input Primary',
-                  onChanged: (value) {},
-                ),
-                InputEmail(
-                  label: 'Input Email',
-                  value: (value) {},
-                ),
-                InputPassword(
-                  label: 'Input Password',
-                  value: (value) {},
-                ),
-                InputNumber(
-                  label: 'Input Number',
-                  value: (value) {},
-                ),
-                InputPhone(
-                  label: 'Input Phone',
-                  controller: controller.cPhoneNumber,
-                  value: (value) {},
-                ),
-                Obx(
-                  () => InputDropdown(
-                    title: 'Input Dropdown',
-                    hintText: 'Choose Item',
-                    items: [
-                      ...controller.listDropdownExample.map((item) {
-                        return DropdownMenuItem<String>(
-                          value: item,
-                          child: InputDropdownItem(value: item),
-                        );
-                      })
-                    ],
-                    selectedItem: controller.selectedDropdown.value,
-                    onChanged: (value) {
-                      if (value != null) {
-                        final data = value as String;
-                        controller.setSelectedDropdown(data);
-                      }
-                    },
-                  ),
-                ),
-                InputDate(
-                  label: 'Input Date',
-                  controller: controller.cDate,
-                  value: (value) {},
-                ),
-                verticalSpace(Insets.lg),
-                ButtonPrimary(
-                  label: 'login'.tr,
-                  onTap: () => Get.toNamed(Routes.HOME),
-                )
-              ],
+      backgroundColor: AppColor.backgroundColor,
+      resizeToAvoidBottomInset: false,
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 24.w),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Sign In and\nLet's start the journey",
+              style: TextStyles.title,
             ),
-          ),
-          Positioned(
-            top: 40.w,
-            right: 30.w,
-            child: SizedBox(
-              width: 72.w,
-              height: 50.w,
-              child: Obx(
-                () => InputDropdown(
-                  hintText: '',
-                  borderColor: Colors.blueGrey[100],
-                  outlinedBorderColor: Colors.transparent,
-                  textAlign: TextAlign.center,
-                  items: [
-                    ...controller.cUtility.appLanguageOptions.map((item) {
-                      return DropdownMenuItem<AppLanguageModel>(
-                        value: item,
-                        child: InputDropdownItem(value: item.language),
-                      );
-                    })
-                  ],
-                  selectedItem: controller.cUtility.appLanguage.value.language,
-                  onChanged: (value) {
-                    if (value != null) {
-                      final data = value as AppLanguageModel;
-                      controller.cUtility.changeLanguage(data);
-                    }
-                  },
-                ),
+            verticalSpace(30.w),
+            CardApp(
+              width: double.infinity,
+              radius: Insets.lg,
+              padding: EdgeInsets.all(Insets.lg),
+              isShowShadows: true,
+              shadows: Shadows.universal,
+              child: Column(
+                children: [
+                  InputEmail(
+                    label: 'Email Address',
+                    hint: 'Enter Email Address',
+                    value: (value) {},
+                  ),
+                  InputPassword(
+                    label: 'Password',
+                    value: (value) {},
+                  ),
+                ],
               ),
             ),
-          )
-        ],
+            verticalSpace(30.w),
+            ButtonPrimary(
+              label: 'login'.tr,
+              onTap: () => Get.toNamed(Routes.HOME),
+            ),
+            SizedBox(
+              width: double.infinity,
+              child: ButtonTextRich(
+                label1: "Don't have an account ? ",
+                label2: 'Sign Up',
+                onPressed: () {},
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
