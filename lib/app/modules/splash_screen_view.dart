@@ -17,7 +17,7 @@ class SplashScreenView extends StatefulWidget {
 class _SplashScreenViewState extends State<SplashScreenView> {
   final cUtility = Get.find<UtilityController>();
   double width = Get.width * 0.1;
-  double fontSize = 20.w;
+  double fontSize = 16.w;
 
   @override
   void initState() {
@@ -32,13 +32,13 @@ class _SplashScreenViewState extends State<SplashScreenView> {
     if (mounted) {
       setState(() {
         width = Get.width * 0.45;
-        fontSize = 24.w;
+        fontSize = 20.w;
       });
     }
   }
 
   Future<void> checkRoute() async {
-    await Future.delayed(const Duration(milliseconds: 1500));
+    await Future.delayed(const Duration(milliseconds: 2000));
     await AppCycleService().checkTokenAndRoute();
   }
 
@@ -56,12 +56,11 @@ class _SplashScreenViewState extends State<SplashScreenView> {
               height: width,
               child: Image.asset(AppAsset.logo('logo_app.png')),
             ),
-            verticalSpace(Insets.sm),
             Text(
               'AIRPEDIA',
               style: TextStyles.title.copyWith(
                 color: Colors.white,
-                letterSpacing: 6,
+                letterSpacing: 8.w,
                 fontSize: fontSize,
               ),
             )

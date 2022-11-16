@@ -12,15 +12,15 @@ class AppColor {
   static const backgroundColor = Color(0xFFFAFAFA);
 
   static const Map<int, Color> color = {
-    50: Color(0xffa596e3),
-    100: Color(0xff9d8ce0),
-    200: Color(0xff8d79db),
-    300: Color(0xff7d66d6),
-    400: Color(0xff6c53d1),
-    500: Color(0xff5c40cc),
-    600: Color(0xff533ab8),
-    700: Color(0xff4a33a3),
-    800: Color(0xff402d8f),
-    900: Color(0xff37267a),
+    50: Color(0xFFA596E3),
+    100: Color(0xFF9D8CE0),
+    200: Color(0xFF8D79DB),
+    300: Color(0xFF7D66D6),
+    400: Color(0xFF6C53D1),
+    500: Color(0xFF5C40CC),
+    600: Color(0xFF533AB8),
+    700: Color(0xFF4A33A3),
+    800: Color(0xFF402D8F),
+    900: Color(0xFF37267A),
   };
 }

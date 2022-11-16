@@ -1,10 +1,7 @@
-import 'package:airpedia/app/modules/onboarding/components/onboarding_slidetile.dart';
-import 'package:airpedia/app/modules/onboarding/components/onboarding_slidetile_indicator.dart';
 import 'package:airpedia/app/modules/onboarding/controllers/onboarding_controller.dart';
-import 'package:airpedia/app/routes/app_pages.dart';
-import 'package:airpedia/constants/constant.dart';
+import 'package:airpedia/styles/colors.dart';
 import 'package:airpedia/styles/styles.dart';
-import 'package:airpedia/utils/app_storage.dart';
+import 'package:airpedia/utils/app_asset.dart';
 import 'package:airpedia/widgets/buttons/button_primary.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,46 +13,36 @@ class OnboardingView extends GetView<OnboardingController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Obx(
-        () => Flex(
-          direction: Axis.vertical,
+      body: Container(
+        width: double.infinity,
+        margin: EdgeInsets.zero,
+        padding: EdgeInsets.fromLTRB(24.w, 0, 24.w, 80.w),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(AppAsset.image('img_background.png')),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            verticalSpace(Insets.xxl * 2),
-            Expanded(
-              child: PageView(
-                controller: controller.cSlideTile,
-                physics: const ClampingScrollPhysics(),
-                onPageChanged: (index) {
-                  controller.slideIndex(index);
-                },
-                children: [
-                  ...controller.listSlideTile.map((e) {
-                    return OnboardingSlidetile(data: e);
-                  }),
-                ],
-              ),
+            Text(
+              'Wellcome Traveler',
+              textAlign: TextAlign.center,
+              style: TextStyles.title.copyWith(color: Colors.white),
             ),
-            SizedBox(
-              width: double.infinity,
-              height: 144.w,
-              child: (controller.slideIndex.value == 2)
-                  ? Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 24.w),
-                      child: ButtonPrimary(
-                        onTap: () {
-                          AppStorage.write(
-                            key: APP_FIRST_TIME_OPEN,
-                            value: 'true',
-                          );
-                          Get.offNamed(Routes.LOGIN);
-                        },
-                        label: 'MULAI',
-                      ),
-                    )
-                  : OnboardingSlidetileIndicator(
-                      activeIndex: controller.slideIndex.value,
-                    ),
-            )
+            verticalSpace(10.w),
+            Text(
+              'Explore more countries and get an amazing experiences with us',
+              textAlign: TextAlign.center,
+              style: TextStyles.text.copyWith(color: AppColor.greyColor1),
+            ),
+            verticalSpace(50.w),
+            ButtonPrimary(
+              onTap: controller.getStarted,
+              label: 'Get Started',
+              width: 220.w,
+            ),
           ],
         ),
       ),

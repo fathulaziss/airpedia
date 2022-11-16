@@ -31,7 +31,7 @@ class InputDate extends StatefulWidget {
     this.firstDate,
     this.lastDate,
     this.inputStyle = InputStyle.box,
-    this.borderRadius = 8,
+    this.borderRadius = 16,
     this.contentPadding,
     this.dateFormat,
     this.outlineColor,

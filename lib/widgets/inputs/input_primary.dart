@@ -144,7 +144,7 @@ class _InputPrimaryState extends State<InputPrimary> {
   _box({required Color borderColor}) {
     return BoxDecoration(
       color: widget.color ?? Colors.white,
-      borderRadius: BorderRadius.circular(widget.borderRadius ?? Corners.sm),
+      borderRadius: BorderRadius.circular(widget.borderRadius ?? Corners.lg),
       border: Border.all(color: borderColor),
     );
   }
@@ -152,7 +152,7 @@ class _InputPrimaryState extends State<InputPrimary> {
   _outline({required Color borderColor}) {
     return BoxDecoration(
       color: widget.color ?? const Color(0xFFF6F8FB),
-      borderRadius: BorderRadius.circular(widget.borderRadius ?? Corners.sm),
+      borderRadius: BorderRadius.circular(widget.borderRadius ?? Corners.lg),
       border: Border.all(color: borderColor),
     );
   }

@@ -49,7 +49,7 @@ class _AppState extends State<App> {
       builder: (context, child) {
         return GetMaterialApp(
           title: 'Airpedia',
-          theme: AppStyle.appTheme(0xFF00B34D, Colors.white),
+          theme: AppStyle.appTheme(0xFF5C40CC, Colors.white),
           builder: (context, child) {
             return MediaQuery(
               data: MediaQuery.of(context)

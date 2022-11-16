@@ -46,7 +46,7 @@ class InputDropdown extends StatelessWidget {
           padding: EdgeInsets.all(10.w),
           decoration: BoxDecoration(
             color: borderColor ?? Colors.transparent,
-            borderRadius: BorderRadius.circular(Corners.sm),
+            borderRadius: BorderRadius.circular(Corners.lg),
             border:
                 Border.all(color: outlinedBorderColor ?? Colors.grey.shade300),
           ),
@@ -67,10 +67,7 @@ class InputDropdown extends StatelessWidget {
                     ),
                   ),
                 ),
-                Icon(
-                  Icons.arrow_drop_down,
-                  color: AppColor.primaryColor.withOpacity(.6),
-                )
+                const Icon(Icons.arrow_drop_down, color: AppColor.primaryColor)
               ],
             ),
             scrollbarAlwaysShow: false,

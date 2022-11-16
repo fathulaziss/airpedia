@@ -48,8 +48,8 @@ class ButtonPrimary extends StatelessWidget {
     return Center(
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 120),
-        width: isLoading ? height ?? 45.w : width ?? Get.width,
-        height: height ?? 45.w,
+        width: isLoading ? height ?? 42.w : width ?? Get.width,
+        height: height ?? 42.w,
         decoration: isOutline
             ? BoxDecoration(
                 borderRadius: BorderRadius.circular(
