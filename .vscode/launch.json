@@ -1,0 +1,82 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "PRODUCTION",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main_prod.dart",
+            "args":[		
+                "--flavor",
+                "prod",
+                "--debug",
+			]
+        },
+        {
+            "name": "DEVELOPMENT",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main_dev.dart",
+            "args":[
+                "--flavor",
+                "dev",
+                "--debug",
+                "--verbose",
+			]
+        },
+        {
+            "name": "STAGING",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main_stagging.dart",
+            "args":[
+                "--flavor",
+                "staging",
+                "--debug",
+			]
+        },
+        {
+            "name": "PRODUCTION IOS",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main_prod.dart",
+            "args":[
+                "--target",
+                "lib/main_prod.dart",
+			]
+        },
+        {
+            "name": "DEVELOPMENT IOS",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main_dev.dart",
+            "args":[
+                "--target",
+                "lib/main_dev.dart"
+			]
+        },
+        {
+            "name": "STAGING IOS",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main_staging.dart",
+            "args":[
+                "--target",
+                "lib/main_staging.dart"
+			]
+        }
+    ]
+    
+    // APK
+    // flutter build apk --split-per-abi --flavor dev -t lib/main_dev.dart --release
+    // flutter build apk --split-per-abi --flavor staging -t lib/main_staging.dart --release
+    // flutter build apk --split-per-abi --flavor prod -t lib/main_prod.dart --release
+
+    // AppBundle
+    // flutter build appbundle --flavor dev -t lib/main_dev.dart
+    // flutter build appbundle --flavor staging -t lib/main_staging.dart
+    // flutter build appbundle --flavor prod -t lib/main_prod.dart
+}
