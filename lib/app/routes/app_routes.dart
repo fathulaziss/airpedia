@@ -12,6 +12,7 @@ abstract class Routes {
   static const API_LOG = _Paths.API_LOG;
   static const LOGIN = _Paths.LOGIN;
   static const ONBOARDING = _Paths.ONBOARDING;
+  static const REGISTER = _Paths.REGISTER;
 }
 
 abstract class _Paths {
@@ -23,4 +24,5 @@ abstract class _Paths {
   static const API_LOG = '/api-log';
   static const LOGIN = '/login';
   static const ONBOARDING = '/onboarding';
+  static const REGISTER = '/register';
 }

@@ -23,6 +23,7 @@ class ButtonTextRich extends StatelessWidget {
         overlayColor:
             MaterialStateProperty.all(AppColor.greyColor1.withOpacity(0.1)),
         shadowColor: MaterialStateProperty.all(Colors.transparent),
+        padding: MaterialStateProperty.all(EdgeInsets.zero),
       ),
       child: RichText(
         text: TextSpan(

@@ -60,7 +60,7 @@ class LoginView extends GetView<LoginController> {
               child: ButtonTextRich(
                 label1: "Don't have an account ? ",
                 label2: 'Sign Up',
-                onPressed: () {},
+                onPressed: () => Get.toNamed(Routes.REGISTER),
               ),
             ),
           ],
