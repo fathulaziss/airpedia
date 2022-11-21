@@ -3,8 +3,13 @@ import 'package:airpedia/styles/styles.dart';
 import 'package:airpedia/widgets/buttons/button_primary.dart';
 import 'package:airpedia/widgets/buttons/button_text_rich.dart';
 import 'package:airpedia/widgets/cards/card_app.dart';
+import 'package:airpedia/widgets/inputs/input_email.dart';
+
+import 'package:airpedia/widgets/inputs/input_password.dart';
+import 'package:airpedia/widgets/inputs/input_primary.dart';
 import 'package:airpedia/widgets/pages/page_default.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
@@ -51,9 +56,44 @@ class RegisterView extends GetView<RegisterController> {
               child: CardApp(
                 width: double.infinity,
                 radius: Insets.lg,
-                padding: EdgeInsets.all(Insets.lg),
+                padding: EdgeInsets.all(Insets.xl),
                 isShowShadows: true,
                 shadows: Shadows.universal,
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      InputPrimary(
+                        label: 'Full Name',
+                        hint: 'Enter Full Name',
+                        onChanged: (value) {},
+                      ),
+                      InputEmail(
+                        label: 'Email Address',
+                        hint: 'Enter Email Address',
+                        value: (value) {},
+                      ),
+                      InputPassword(
+                        label: 'Password',
+                        hint: 'Enter Password',
+                        value: (value) {},
+                      ),
+                      InputPassword(
+                        label: 'PIN Transaction',
+                        hint: 'Enter PIN Transaction',
+                        keyboardType: TextInputType.number,
+                        inputFormatters: [
+                          FilteringTextInputFormatter.digitsOnly,
+                        ],
+                        value: (value) {},
+                      ),
+                      InputPrimary(
+                        label: 'Hobby',
+                        hint: 'Enter Hobby',
+                        onChanged: (value) {},
+                      ),
+                    ],
+                  ),
+                ),
               ),
             )
           ],
