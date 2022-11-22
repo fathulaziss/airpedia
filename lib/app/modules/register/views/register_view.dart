@@ -1,4 +1,5 @@
 import 'package:airpedia/app/modules/register/controllers/register_controller.dart';
+import 'package:airpedia/app/routes/app_pages.dart';
 import 'package:airpedia/styles/styles.dart';
 import 'package:airpedia/widgets/buttons/button_primary.dart';
 import 'package:airpedia/widgets/buttons/button_text_rich.dart';
@@ -27,7 +28,7 @@ class RegisterView extends GetView<RegisterController> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: Get.width / 10),
             child: ButtonPrimary(
-              onTap: () {},
+              onTap: () => Get.toNamed(Routes.REGISTER_SUCCESS),
               label: 'Register',
               margin: EdgeInsets.symmetric(horizontal: 24.w),
             ),
@@ -83,8 +84,17 @@ class RegisterView extends GetView<RegisterController> {
                         keyboardType: TextInputType.number,
                         inputFormatters: [
                           FilteringTextInputFormatter.digitsOnly,
+                          LengthLimitingTextInputFormatter(6),
                         ],
                         value: (value) {},
+                        validation: (value) {
+                          if (value.length != 6) {
+                            return false;
+                          } else {
+                            return true;
+                          }
+                        },
+                        validationText: "Pin transaction can't be empty",
                       ),
                       InputPrimary(
                         label: 'Hobby',

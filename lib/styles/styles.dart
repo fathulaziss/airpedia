@@ -91,7 +91,7 @@ class Shadows {
       ];
   static List<BoxShadow> get universal2 => [
         BoxShadow(
-          color: const Color(0xff333333).withOpacity(.05),
+          color: const Color(0xff333333).withOpacity(.5),
           blurRadius: 5,
           offset: const Offset(0, 5),
         ),

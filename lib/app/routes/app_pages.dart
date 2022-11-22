@@ -8,6 +8,7 @@ import 'package:airpedia/app/modules/login/views/login_view.dart';
 import 'package:airpedia/app/modules/onboarding/bindings/onboarding_binding.dart';
 import 'package:airpedia/app/modules/onboarding/views/onboarding_view.dart';
 import 'package:airpedia/app/modules/register/bindings/register_binding.dart';
+import 'package:airpedia/app/modules/register/views/register_success_view.dart';
 import 'package:airpedia/app/modules/register/views/register_view.dart';
 import 'package:airpedia/app/modules/splash_screen_view.dart';
 import 'package:airpedia/app/modules/under_development.dart';
@@ -56,6 +57,11 @@ class AppPages {
     GetPage(
       name: _Paths.REGISTER,
       page: () => const RegisterView(),
+      binding: RegisterBinding(),
+    ),
+    GetPage(
+      name: _Paths.REGISTER_SUCCESS,
+      page: () => const RegisterSuccessView(),
       binding: RegisterBinding(),
     ),
   ];
