@@ -6,11 +6,14 @@ environment:
   sdk: ">=2.17.6 <3.0.0"
 
 dependencies:
+  cloud_firestore: ^4.1.0
   colored_json: ^1.1.0
   cupertino_icons: ^1.0.2
   dio: ^4.0.6
   dropdown_button2: ^1.8.9
   easy_mask: ^2.0.1
+  firebase_auth: ^4.1.3
+  firebase_core: ^2.3.0
   flutter:
     sdk: flutter
   flutter_jailbreak_detection: ^1.8.0

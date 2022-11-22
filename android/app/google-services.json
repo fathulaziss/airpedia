@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "103733755346",
+    "project_id": "airpedia-b2fb4",
+    "storage_bucket": "airpedia-b2fb4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103733755346:android:e7804a0c9cd5669b8d9c0b",
+        "android_client_info": {
+          "package_name": "com.fathdotdev.airpedia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103733755346-toigbif9m5cc99htmcr0h82u6m0lsao2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAp-WZ0cqYSQ4I1kHPIeAuR8Wn69MM84fA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103733755346-toigbif9m5cc99htmcr0h82u6m0lsao2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
