@@ -101,7 +101,8 @@ class InputDateState extends State<InputDate> {
     if (datePicked != null) {
       setState(() {
         if (widget.dateFormat == null) {
-          _date = DateFormat('dd-MM-yyyy').format(datePicked);
+          // _date = DateFormat('dd-MM-yyyy').format(datePicked);
+          _date = DateFormat('dd/MM/yyyy').format(datePicked);
         } else {
           _date = DateFormat(widget.dateFormat).format(datePicked);
         }

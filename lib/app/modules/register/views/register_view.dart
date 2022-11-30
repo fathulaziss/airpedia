@@ -1,9 +1,11 @@
 import 'package:airpedia/app/modules/register/controllers/register_controller.dart';
 import 'package:airpedia/app/routes/app_pages.dart';
+import 'package:airpedia/styles/colors.dart';
 import 'package:airpedia/styles/styles.dart';
 import 'package:airpedia/widgets/buttons/button_primary.dart';
 import 'package:airpedia/widgets/buttons/button_text_rich.dart';
 import 'package:airpedia/widgets/cards/card_app.dart';
+import 'package:airpedia/widgets/inputs/input_date.dart';
 import 'package:airpedia/widgets/inputs/input_email.dart';
 
 import 'package:airpedia/widgets/inputs/input_password.dart';
@@ -73,6 +75,19 @@ class RegisterView extends GetView<RegisterController> {
                         hint: 'Enter Email Address',
                         value: (value) {},
                       ),
+                      InputDate(
+                        label: 'Date of Birth',
+                        hint: 'Choose Date of Birth',
+                        suffixIcon: Padding(
+                          padding: EdgeInsets.only(right: Insets.sm),
+                          child: const Icon(
+                            Icons.calendar_month,
+                            color: AppColor.primaryColor,
+                          ),
+                        ),
+                        controller: controller.cDateOfBirth,
+                        value: (value) {},
+                      ),
                       InputPassword(
                         label: 'Password',
                         hint: 'Enter Password',
@@ -95,11 +110,6 @@ class RegisterView extends GetView<RegisterController> {
                           }
                         },
                         validationText: "Pin transaction can't be empty",
-                      ),
-                      InputPrimary(
-                        label: 'Hobby',
-                        hint: 'Enter Hobby',
-                        onChanged: (value) {},
                       ),
                     ],
                   ),

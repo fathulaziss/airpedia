@@ -31,7 +31,7 @@ class RegisterSuccessView extends StatelessWidget {
             ),
             verticalSpace(Insets.xs),
             Text(
-              'We give you early credit so that you can buy a flight ticket',
+              'We give you early balance so that you can try our services',
               textAlign: TextAlign.center,
               style: TextStyles.text.copyWith(color: AppColor.greyColor1),
             ),
