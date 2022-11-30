@@ -131,11 +131,11 @@ class CardWallet extends StatelessWidget {
                                         color: Colors.white,
                                       ),
                                     ),
-                                    horizontalSpace(15.w),
+                                    horizontalSpace(Insets.lg),
                                     Container(
                                       width: 16.w,
                                       height: 16.w,
-                                      margin: EdgeInsets.only(right: 10.w),
+                                      margin: EdgeInsets.only(right: 16.w),
                                       decoration: const BoxDecoration(
                                         shape: BoxShape.circle,
                                         color: AppColor.greenColor,
@@ -164,7 +164,7 @@ class CardWallet extends StatelessWidget {
                                     Container(
                                       width: 16.w,
                                       height: 16.w,
-                                      margin: EdgeInsets.only(right: 10.w),
+                                      margin: EdgeInsets.only(right: 16.w),
                                       decoration: const BoxDecoration(
                                         shape: BoxShape.circle,
                                         color: AppColor.greenColor,
@@ -216,212 +216,5 @@ class CardWallet extends StatelessWidget {
         ],
       ),
     );
-    // return Container(
-    //   width: double.infinity,
-    //   margin: margin ?? EdgeInsets.symmetric(horizontal: 24.w, vertical: 20.h),
-    //   decoration: BoxDecoration(
-    //     borderRadius: Corners.xlBorder,
-    //     color: const Color(0xFF5445E5),
-    //     boxShadow: Shadows.universal,
-    //   ),
-    //   child: Stack(
-    //     children: [
-    //       Positioned(
-    //         right: 0,
-    //         left: 0,
-    //         top: 0,
-    //         bottom: 0,
-    //         child: Transform.rotate(
-    //           angle: 180 * math.pi / 360,
-    //           child: Image.asset(
-    //             AppIcons.icPlaneWhite,
-    //             color: AppColors.mainColor2.withOpacity(0.03),
-    //           ),
-    //         ),
-    //       ),
-    //       Positioned(
-    //         bottom: -30.h,
-    //         left: -20.w,
-    //         child: Container(
-    //           width: 100.w,
-    //           height: 100.w,
-    //           margin: EdgeInsets.only(right: 4.w),
-    //           decoration: BoxDecoration(
-    //             shape: BoxShape.circle,
-    //             color: AppColors.whiteColor.withOpacity(0.08),
-    //           ),
-    //         ),
-    //       ),
-    //       Positioned(
-    //         right: -20.w,
-    //         top: -30.h,
-    //         child: Container(
-    //           width: 100.w,
-    //           height: 100.w,
-    //           margin: EdgeInsets.only(right: 4.w),
-    //           decoration: BoxDecoration(
-    //             shape: BoxShape.circle,
-    //             color: AppColors.whiteColor.withOpacity(0.08),
-    //           ),
-    //         ),
-    //       ),
-    //       Padding(
-    //         padding: EdgeInsets.all(20.w),
-    //         child: Flex(
-    //           direction: Axis.vertical,
-    //           crossAxisAlignment: CrossAxisAlignment.start,
-    //           children: [
-    //             Row(
-    //               children: [
-    //                 Container(
-    //                   width: 18.w,
-    //                   height: 18.w,
-    //                   margin: EdgeInsets.only(right: 4.w),
-    //                   decoration: const BoxDecoration(
-    //                     shape: BoxShape.circle,
-    //                     color: Color(0xFFFFF2CB),
-    //                   ),
-    //                 ),
-    //                 Container(
-    //                   width: 30.w,
-    //                   height: 30.w,
-    //                   margin: EdgeInsets.only(right: 4.w),
-    //                   decoration: const BoxDecoration(
-    //                     shape: BoxShape.circle,
-    //                     color: Color(0xFFFBD460),
-    //                   ),
-    //                 )
-    //               ],
-    //             ),
-    //             verticalSpace(25.h),
-    //             Text(
-    //               'Balance',
-    //               style:
-    //                   TextStyles.whiteLight.copyWith(fontSize: FontSizes.s12),
-    //             ),
-    //             Text(
-    //               priceFormat(balance),
-    //               style: TextStyles.whiteBold.copyWith(fontSize: FontSizes.s20),
-    //             ),
-    //             verticalSpace(21.h),
-    //             Row(
-    //               children: [
-    //                 Expanded(
-    //                   flex: 6,
-    //                   child: Text(
-    //                     'Card Holder',
-    //                     style: TextStyles.whiteLight
-    //                         .copyWith(fontSize: FontSizes.s12),
-    //                   ),
-    //                 ),
-    //                 Expanded(
-    //                   flex: 2,
-    //                   child: Text(
-    //                     'Card ID',
-    //                     textAlign: TextAlign.left,
-    //                     style: TextStyles.whiteLight
-    //                         .copyWith(fontSize: FontSizes.s12),
-    //                   ),
-    //                 )
-    //               ],
-    //             ),
-    //             verticalSpace(4.h),
-    //             Row(
-    //               crossAxisAlignment: CrossAxisAlignment.start,
-    //               children: [
-    //                 Expanded(
-    //                   flex: 6,
-    //                   child: (name.isEmpty)
-    //                       ? const SizedBox()
-    //                       : (name.length <= 25)
-    //                           ? Row(
-    //                               children: [
-    //                                 Text(
-    //                                   name.toUpperCase(),
-    //                                   textAlign: TextAlign.left,
-    //                                   style: TextStyles.whiteSemiBold
-    //                                       .copyWith(fontSize: FontSizes.s12),
-    //                                 ),
-    //                                 horizontalSpace(15.w),
-    //                                 Container(
-    //                                   width: 16.w,
-    //                                   height: 16.w,
-    //                                   margin: EdgeInsets.only(right: 10.w),
-    //                                   decoration: BoxDecoration(
-    //                                     shape: BoxShape.circle,
-    //                                     color: AppColors.greenColor,
-    //                                   ),
-    //                                   child: Icon(
-    //                                     Icons.check,
-    //                                     color: AppColors.whiteColor,
-    //                                     size: 12.w,
-    //                                   ),
-    //                                 ),
-    //                               ],
-    //                             )
-    //                           : Row(
-    //                               children: [
-    //                                 Expanded(
-    //                                   child: Text(
-    //                                     name.toUpperCase(),
-    //                                     textAlign: TextAlign.left,
-    //                                     style: TextStyles.whiteSemiBold
-    //                                         .copyWith(fontSize: FontSizes.s12),
-    //                                   ),
-    //                                 ),
-    //                                 horizontalSpace(15.w),
-    //                                 Container(
-    //                                   width: 16.w,
-    //                                   height: 16.w,
-    //                                   margin: EdgeInsets.only(right: 10.w),
-    //                                   decoration: BoxDecoration(
-    //                                     shape: BoxShape.circle,
-    //                                     color: AppColors.greenColor,
-    //                                   ),
-    //                                   child: Icon(
-    //                                     Icons.check,
-    //                                     color: AppColors.whiteColor,
-    //                                     size: 12.w,
-    //                                   ),
-    //                                 ),
-    //                               ],
-    //                             ),
-    //                 ),
-    //                 Expanded(
-    //                   flex: 2,
-    //                   child: Row(
-    //                     children: [
-    //                       Expanded(
-    //                         child: Text(
-    //                           'AIRPAY',
-    //                           textAlign: TextAlign.left,
-    //                           style: TextStyles.whiteSemiBold
-    //                               .copyWith(fontSize: FontSizes.s12),
-    //                         ),
-    //                       ),
-    //                       Container(
-    //                         width: 16.w,
-    //                         height: 16.w,
-    //                         decoration: BoxDecoration(
-    //                           shape: BoxShape.circle,
-    //                           color: AppColors.greenColor,
-    //                         ),
-    //                         child: Icon(
-    //                           Icons.check,
-    //                           color: AppColors.whiteColor,
-    //                           size: 12.w,
-    //                         ),
-    //                       )
-    //                     ],
-    //                   ),
-    //                 )
-    //               ],
-    //             ),
-    //           ],
-    //         ),
-    //       ),
-    //     ],
-    //   ),
-    // );
   }
 }

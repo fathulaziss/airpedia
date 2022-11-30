@@ -22,7 +22,7 @@ class RegisterSuccessView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const CardWallet(),
+            const CardWallet(name: 'MUHAMAD FATHUL AZIS'),
             verticalSpace(Insets.lg),
             Text(
               'Big Bonus 🎉',
