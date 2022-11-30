@@ -8,7 +8,7 @@
 PRODUCT_NAME = airpedia
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.fathdotdev.airpedia.basecodeGetx
+PRODUCT_BUNDLE_IDENTIFIER = com.fathdotdev.airpedia
 
 // The copyright displayed in application information
 PRODUCT_COPYRIGHT = Copyright © 2022 com.fathdotdev.airpedia. All rights reserved.

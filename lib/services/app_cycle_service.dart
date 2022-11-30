@@ -5,6 +5,7 @@ import 'package:airpedia/constants/constant.dart';
 import 'package:airpedia/utils/app_storage.dart';
 import 'package:airpedia/utils/app_utils.dart';
 import 'package:airpedia/widgets/others/show_dialog.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
 
@@ -63,11 +64,11 @@ class AppCycleService {
       }
 
       //* CHECK TOKEN
-      final token = await AppStorage.read(key: CACHE_ACCESS_TOKEN);
-      if (token.isEmpty) {
-        await Get.offNamed(Routes.LOGIN);
-        return;
-      }
+      // final token = await AppStorage.read(key: CACHE_ACCESS_TOKEN);
+      // if (token.isEmpty) {
+      //   await Get.offNamed(Routes.LOGIN);
+      //   return;
+      // }
 
       // final isValid = await AppUtils.checkTokenValidity(token);
       // if (isValid) {
@@ -75,23 +76,33 @@ class AppCycleService {
       //   return;
       // }
 
-      //* DEFAULT ROUTES TO HOME
-      await Get.offNamed(Routes.HOME);
+      //* CHECK LOGGING USER
+      final user = FirebaseAuth.instance.currentUser;
+      if (user != null) {
+        await Get.offNamed(Routes.HOME);
+        return;
+      }
+
+      //* DEFAULT ROUTES TO LOGIN
+      await Get.offNamed(Routes.LOGIN);
     } on Exception {
       await Get.offNamed(Routes.LOGIN);
     }
   }
 
   Future<void> onUserLogout() async {
-    await AppStorage.delete(key: CACHE_ACCESS_TOKEN);
+    // await AppStorage.delete(key: CACHE_ACCESS_TOKEN);
 
-    try {
-      tokenExpiredTimer!.cancel();
-    } catch (e) {
-      logSys(e.toString());
-    } finally {
-      tokenExpiredTimer = null;
-    }
+    // try {
+    //   tokenExpiredTimer!.cancel();
+    // } catch (e) {
+    //   logSys(e.toString());
+    // } finally {
+    //   tokenExpiredTimer = null;
+    // }
+    final firebaseAuth = FirebaseAuth.instance;
+
+    await firebaseAuth.signOut();
 
     await Future.delayed(const Duration(milliseconds: 500));
 

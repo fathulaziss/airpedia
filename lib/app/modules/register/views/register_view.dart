@@ -1,5 +1,4 @@
 import 'package:airpedia/app/modules/register/controllers/register_controller.dart';
-import 'package:airpedia/app/routes/app_pages.dart';
 import 'package:airpedia/styles/colors.dart';
 import 'package:airpedia/styles/styles.dart';
 import 'package:airpedia/widgets/buttons/button_primary.dart';
@@ -30,7 +29,7 @@ class RegisterView extends GetView<RegisterController> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: Get.width / 10),
               child: ButtonPrimary(
-                onTap: () => Get.toNamed(Routes.REGISTER_SUCCESS),
+                onTap: controller.register,
                 label: 'Register',
                 margin: EdgeInsets.symmetric(horizontal: 24.w),
                 isLoading: controller.isLoading.value,
@@ -83,6 +82,8 @@ class RegisterView extends GetView<RegisterController> {
                         InputDate(
                           label: 'Date of Birth',
                           hint: 'Choose Date of Birth',
+                          initialDate: DateTime.now(),
+                          firstDate: DateTime(1945),
                           suffixIcon: Padding(
                             padding: EdgeInsets.only(right: Insets.sm),
                             child: const Icon(

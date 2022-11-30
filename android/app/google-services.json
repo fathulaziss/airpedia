@@ -29,6 +29,13 @@
             {
               "client_id": "103733755346-toigbif9m5cc99htmcr0h82u6m0lsao2.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "103733755346-8518sfg41dle1gjjb9eembbjn0vk7oup.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fathdotdev.airpedia"
+              }
             }
           ]
         }

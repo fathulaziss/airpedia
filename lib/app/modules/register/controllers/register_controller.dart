@@ -1,8 +1,16 @@
+import 'package:airpedia/app/controllers/user_info_controller.dart';
+import 'package:airpedia/app/models/user_model.dart';
+import 'package:airpedia/app/routes/app_pages.dart';
+import 'package:airpedia/utils/app_utils.dart';
 import 'package:airpedia/utils/regex.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class RegisterController extends GetxController {
+  final cUserInfo = Get.find<UserInfoController>();
+
   final cFullName = TextEditingController();
   RxString fullName = ''.obs;
   bool isValidFullName = false;
@@ -85,6 +93,42 @@ class RegisterController extends GetxController {
       isValidForm(true);
     } else {
       isValidForm(false);
+    }
+  }
+
+  Future<void> register() async {
+    try {
+      isLoading(true);
+
+      final firebaseAuth = FirebaseAuth.instance;
+      final collectionReference =
+          FirebaseFirestore.instance.collection('users');
+
+      final userCredential = await firebaseAuth.createUserWithEmailAndPassword(
+        email: email.value,
+        password: password.value,
+      );
+
+      final dataUser = UserModel(
+        userId: userCredential.user!.uid,
+        email: email.value,
+        fullName: fullName.value,
+        pinTransaction: pinTransaction.value,
+        dateOfBirth: dateOfBirth.value,
+        balance: 1000000,
+      );
+
+      await collectionReference.doc(dataUser.userId).set(dataUser.toJson());
+
+      cUserInfo.setDataUser(dataUser);
+
+      await Future.delayed(const Duration(seconds: 1));
+      await Get.offNamed(Routes.REGISTER_SUCCESS);
+
+      isLoading(false);
+    } catch (e) {
+      isLoading(false);
+      logSys(e.toString());
     }
   }
 }

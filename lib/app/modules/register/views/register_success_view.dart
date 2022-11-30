@@ -1,9 +1,11 @@
+import 'package:airpedia/app/routes/app_pages.dart';
 import 'package:airpedia/styles/colors.dart';
 import 'package:airpedia/styles/styles.dart';
 import 'package:airpedia/widgets/buttons/button_primary.dart';
 import 'package:airpedia/widgets/cards/card_wallet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class RegisterSuccessView extends StatelessWidget {
   const RegisterSuccessView({super.key});
@@ -22,7 +24,7 @@ class RegisterSuccessView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const CardWallet(name: 'MUHAMAD FATHUL AZIS'),
+            const CardWallet(),
             verticalSpace(Insets.lg),
             Text(
               'Big Bonus 🎉',
@@ -37,7 +39,7 @@ class RegisterSuccessView extends StatelessWidget {
             ),
             verticalSpace(Insets.lg),
             ButtonPrimary(
-              onTap: () {},
+              onTap: () => Get.offNamed(Routes.HOME),
               label: 'Start Now',
               width: 200.w,
             ),

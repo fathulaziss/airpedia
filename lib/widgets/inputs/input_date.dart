@@ -93,7 +93,7 @@ class InputDateState extends State<InputDate> {
   Future<void> _selectDate() async {
     final datePicked = await showDatePicker(
       context: context,
-      initialDate: widget.initialDate ?? widget.firstDate ?? DateTime.now(),
+      initialDate: widget.initialDate ?? DateTime.now(),
       firstDate: widget.firstDate ?? DateTime.now(),
       lastDate: DateTime(2100),
     );
