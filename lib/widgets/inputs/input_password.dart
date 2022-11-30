@@ -86,7 +86,7 @@ class _InputPasswordState extends State<InputPassword> {
 
     if (widget.validationText == null) {
       validateText =
-          '- Password minimum 8 characters\n- Password consists of uppercase, lowercase and number';
+          '- Password minimum 8 character\n- Password consists of uppercase, lowercase and number';
     } else {
       validateText = widget.validationText!;
     }
