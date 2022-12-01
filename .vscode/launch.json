@@ -13,6 +13,7 @@
                 "--flavor",
                 "prod",
                 "--debug",
+                "--warning-mode all"
 			]
         },
         {
@@ -25,6 +26,7 @@
                 "dev",
                 "--debug",
                 "--verbose",
+                "--warning-mode all"
 			]
         },
         {
@@ -36,6 +38,7 @@
                 "--flavor",
                 "staging",
                 "--debug",
+                "--warning-mode all"
 			]
         },
         {

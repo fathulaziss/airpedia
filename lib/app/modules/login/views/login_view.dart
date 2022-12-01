@@ -18,7 +18,6 @@ class LoginView extends GetView<LoginController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.backgroundColor,
-      resizeToAvoidBottomInset: false,
       body: Obx(
         () => Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.w),
@@ -58,7 +57,7 @@ class LoginView extends GetView<LoginController> {
               ),
               verticalSpace(30.w),
               ButtonPrimary(
-                label: 'login'.tr,
+                label: 'Sign In',
                 onTap: controller.login,
                 isLoading: controller.isLoading.value,
                 enabled: controller.isValidForm.value,

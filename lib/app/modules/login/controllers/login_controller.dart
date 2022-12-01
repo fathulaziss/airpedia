@@ -50,6 +50,7 @@ class LoginController extends GetxController {
 
   Future<void> login() async {
     try {
+      AppUtils.dismissKeyboard();
       isLoading(true);
 
       final firebaseAuth = FirebaseAuth.instance;

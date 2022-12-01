@@ -99,6 +99,7 @@ class RegisterController extends GetxController {
 
   Future<void> register() async {
     try {
+      AppUtils.dismissKeyboard();
       isLoading(true);
 
       final firebaseAuth = FirebaseAuth.instance;

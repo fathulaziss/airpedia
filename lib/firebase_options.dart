@@ -55,7 +55,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyAp-WZ0cqYSQ4I1kHPIeAuR8Wn69MM84fA',
-    appId: '1:103733755346:android:e7804a0c9cd5669b8d9c0b',
+    appId: '1:103733755346:android:6b9400acb3e7a97f8d9c0b',
     messagingSenderId: '103733755346',
     projectId: 'airpedia-b2fb4',
     storageBucket: 'airpedia-b2fb4.appspot.com',
@@ -63,7 +63,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyDktU2U0tSc5BU_tphEyeOG47XXXznj830',
-    appId: '1:103733755346:ios:323c3270ea00d4fb8d9c0b',
+    appId: '1:103733755346:ios:67dfd2b7afe47ce48d9c0b',
     messagingSenderId: '103733755346',
     projectId: 'airpedia-b2fb4',
     storageBucket: 'airpedia-b2fb4.appspot.com',
@@ -74,7 +74,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyDktU2U0tSc5BU_tphEyeOG47XXXznj830',
-    appId: '1:103733755346:ios:323c3270ea00d4fb8d9c0b',
+    appId: '1:103733755346:ios:67dfd2b7afe47ce48d9c0b',
     messagingSenderId: '103733755346',
     projectId: 'airpedia-b2fb4',
     storageBucket: 'airpedia-b2fb4.appspot.com',
