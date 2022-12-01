@@ -3,6 +3,7 @@ import 'package:airpedia/app/models/user_model.dart';
 import 'package:airpedia/app/routes/app_pages.dart';
 import 'package:airpedia/utils/app_utils.dart';
 import 'package:airpedia/utils/regex.dart';
+import 'package:airpedia/widgets/others/show_dialog.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -123,11 +124,13 @@ class RegisterController extends GetxController {
       cUserInfo.setDataUser(dataUser);
 
       await Future.delayed(const Duration(seconds: 1));
-      await Get.offNamed(Routes.REGISTER_SUCCESS);
 
       isLoading(false);
+
+      await Get.offNamed(Routes.REGISTER_SUCCESS);
     } catch (e) {
       isLoading(false);
+      showPopUpInfo(title: 'Error', description: e.toString());
       logSys(e.toString());
     }
   }

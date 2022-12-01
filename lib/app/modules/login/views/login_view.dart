@@ -19,51 +19,60 @@ class LoginView extends GetView<LoginController> {
     return Scaffold(
       backgroundColor: AppColor.backgroundColor,
       resizeToAvoidBottomInset: false,
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.w),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Sign In and\nLet's start the journey",
-              style: TextStyles.title,
-            ),
-            verticalSpace(30.w),
-            CardApp(
-              width: double.infinity,
-              radius: Insets.lg,
-              padding: EdgeInsets.all(Insets.lg),
-              isShowShadows: true,
-              shadows: Shadows.universal,
-              child: Column(
-                children: [
-                  InputEmail(
-                    label: 'Email Address',
-                    hint: 'Enter Email Address',
-                    value: (value) {},
-                  ),
-                  InputPassword(
-                    label: 'Password',
-                    value: (value) {},
-                  ),
-                ],
+      body: Obx(
+        () => Padding(
+          padding: EdgeInsets.symmetric(horizontal: 24.w),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Sign In and\nLet's start the journey",
+                style: TextStyles.title,
               ),
-            ),
-            verticalSpace(30.w),
-            ButtonPrimary(
-              label: 'login'.tr,
-              onTap: () => Get.toNamed(Routes.HOME),
-            ),
-            SizedBox(
-              width: double.infinity,
-              child: ButtonTextRich(
-                label1: "Don't have an account ? ",
-                label2: 'Sign Up',
-                onPressed: () => Get.toNamed(Routes.REGISTER),
+              verticalSpace(30.w),
+              CardApp(
+                width: double.infinity,
+                radius: Insets.lg,
+                padding: EdgeInsets.all(Insets.lg),
+                isShowShadows: true,
+                shadows: Shadows.universal,
+                child: Column(
+                  children: [
+                    InputEmail(
+                      label: 'Email Address',
+                      hint: 'Enter Email Address',
+                      controller: controller.cEmail,
+                      value: controller.setEmail,
+                      validation: (value) => value.isNotEmpty,
+                      validationText: "Email can't be empty",
+                    ),
+                    InputPassword(
+                      label: 'Password',
+                      value: controller.setPassword,
+                      validation: (value) => value.isNotEmpty,
+                      validationText: "Email can't be empty",
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+              verticalSpace(30.w),
+              ButtonPrimary(
+                label: 'login'.tr,
+                onTap: controller.login,
+                isLoading: controller.isLoading.value,
+                enabled: controller.isValidForm.value,
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: ButtonTextRich(
+                  label1: "Don't have an account ? ",
+                  label2: 'Sign Up',
+                  onPressed: () => Get.toNamed(Routes.REGISTER),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
