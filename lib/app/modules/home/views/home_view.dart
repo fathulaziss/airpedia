@@ -15,7 +15,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Obx(
       () => Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: const Color(0xFFFAFAFA),
         bottomNavigationBar: CustomBottomNavBar(
           selectedIndex: controller.selectedPage.value,
           onTap: (index) {
