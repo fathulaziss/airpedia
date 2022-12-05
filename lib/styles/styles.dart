@@ -7,6 +7,8 @@ enum TextFieldState { focus, error, disabled, none }
 
 enum InputStyle { box, line, outline }
 
+enum ShimmerStyle { rectangle, circle }
+
 Widget verticalSpace(double v) {
   return SizedBox(height: v);
 }

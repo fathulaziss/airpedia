@@ -6,8 +6,8 @@ import 'package:airpedia/widgets/cards/card_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class HomeRecommendedDestinationItem extends StatelessWidget {
-  const HomeRecommendedDestinationItem({
+class RecommendedDestinationItem extends StatelessWidget {
+  const RecommendedDestinationItem({
     required this.onTap,
     required this.data,
     this.margin,
@@ -37,7 +37,8 @@ class HomeRecommendedDestinationItem extends StatelessWidget {
                   borderRadius: BorderRadius.circular(18.w),
                   child: Image.asset(
                     AppAsset.image(data.image),
-                    height: 220.w,
+                    height: 200.w,
+                    width: 200.w,
                     fit: BoxFit.cover,
                   ),
                 ),

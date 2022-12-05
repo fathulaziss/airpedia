@@ -14,6 +14,8 @@ class HomeController extends GetxController {
   RxList<DestinationModel> listRecommendedDestination =
       <DestinationModel>[].obs;
 
+  RxBool isLoadingRecommendedDestination = false.obs;
+
   @override
   void onInit() {
     cUserInfo.getDataUser();
@@ -28,15 +30,21 @@ class HomeController extends GetxController {
 
   Future<void> getRecommendedDestination() async {
     try {
-      logSys('onloading');
+      isLoadingRecommendedDestination(true);
+
       await Future.delayed(const Duration(seconds: 2));
+
       listRecommendedDestination(
         RxList.from(
           recommendedDestination.map((e) => DestinationModel.fromJson(e)),
         ),
       );
-      logSys('offloading');
+
+      listRecommendedDestination.sort((a, b) => b.rating.compareTo(a.rating));
+
+      isLoadingRecommendedDestination(false);
     } catch (e) {
+      isLoadingRecommendedDestination(false);
       logSys(e.toString());
     }
   }
