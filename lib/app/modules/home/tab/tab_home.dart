@@ -1,4 +1,5 @@
 import 'package:airpedia/app/modules/home/components/home_header.dart';
+import 'package:airpedia/app/modules/home/components/new_destination.dart';
 import 'package:airpedia/app/modules/home/components/recommended_destination.dart';
 import 'package:airpedia/app/modules/home/controllers/home_controller.dart';
 import 'package:airpedia/services/app_cycle_service.dart';
@@ -15,26 +16,29 @@ class TabHome extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.fromLTRB(
-        24.w,
+        20.w,
         MediaQuery.of(context).viewPadding.top,
-        24.w,
+        20.w,
         0,
       ),
-      child: Column(
-        children: [
-          const HomeHeader(),
-          verticalSpace(Insets.lg),
-          const RecommendedDestination(),
-          Padding(
-            padding: EdgeInsets.all(24.w),
-            child: ButtonPrimary(
-              label: 'Logout',
-              onTap: () {
-                AppCycleService().onUserLogout();
-              },
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            const HomeHeader(),
+            verticalSpace(Insets.lg),
+            const RecommendedDestination(),
+            const NewDestination(),
+            Padding(
+              padding: EdgeInsets.all(24.w),
+              child: ButtonPrimary(
+                label: 'Logout',
+                onTap: () {
+                  AppCycleService().onUserLogout();
+                },
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
