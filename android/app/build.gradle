@@ -37,13 +37,14 @@ android {
     flavorDimensions "flavor-dimension"
 
     productFlavors {
-        prod {
+        production {
             dimension "flavor-dimension"
             applicationId "com.fathdotdev.airpedia"
             resValue "string", "app_name", "Airpedia"
             proguardFile 'proguard-rules.pro'
         }
-        dev {
+
+        development {
             dimension "flavor-dimension"
             applicationId "com.fathdotdev.airpedia"
             resValue "string", "app_name", "Airpedia"
