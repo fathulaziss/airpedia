@@ -1,6 +1,7 @@
 import 'package:airpedia/app/modules/home/components/recommended_destination_item.dart';
 import 'package:airpedia/app/modules/home/components/recommended_destination_shimmer_item.dart';
 import 'package:airpedia/app/modules/home/controllers/home_controller.dart';
+import 'package:airpedia/app/routes/app_pages.dart';
 import 'package:airpedia/styles/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -41,7 +42,13 @@ class RecommendedDestination extends GetView<HomeController> {
                         );
                       } else {
                         return RecommendedDestinationItem(
-                          onTap: () {},
+                          onTap: () => Get.toNamed(
+                            Routes.DESTINATION,
+                            arguments: {
+                              'data':
+                                  controller.listRecommendedDestination[index]
+                            },
+                          ),
                           data: controller.listRecommendedDestination[index],
                           margin: EdgeInsets.only(
                             left: (index == 0) ? 5.w : 24.w,
