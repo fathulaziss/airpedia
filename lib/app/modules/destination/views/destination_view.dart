@@ -1,4 +1,5 @@
-import 'package:airpedia/app/modules/destination/components/destination_desc.dart';
+import 'package:airpedia/app/modules/destination/components/destination_button.dart';
+import 'package:airpedia/app/modules/destination/components/destination_detail.dart';
 import 'package:airpedia/app/modules/destination/components/destination_header.dart';
 import 'package:airpedia/app/modules/destination/controllers/destination_controller.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +12,7 @@ class DestinationView extends GetView<DestinationController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: DestinationButton(onTap: () {}),
       body: CustomScrollView(
         shrinkWrap: true,
         slivers: [
@@ -23,9 +25,11 @@ class DestinationView extends GetView<DestinationController> {
             pinned: true,
             floating: true,
             automaticallyImplyLeading: false,
-            flexibleSpace: const DestinationHeader(),
+            flexibleSpace: DestinationHeader(data: controller.data.value),
           ),
-          const SliverToBoxAdapter(child: DestinationDesc())
+          SliverToBoxAdapter(
+            child: DestinationDetail(data: controller.data.value),
+          )
         ],
       ),
     );
