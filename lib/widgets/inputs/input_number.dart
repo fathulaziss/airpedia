@@ -1,4 +1,3 @@
-import 'package:airpedia/styles/colors.dart';
 import 'package:airpedia/styles/styles.dart';
 import 'package:airpedia/widgets/inputs/input_primary.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +11,7 @@ class InputNumber extends StatefulWidget {
     this.prefixIcon,
     this.suffixIcon,
     this.color,
-    this.textColor = AppColor.primaryColor,
+    this.textColor = Colors.black,
     this.margin,
     this.padding,
     this.enable = true,

@@ -35,6 +35,9 @@ class DestinationHeader extends StatelessWidget {
                   topRight: Corners.xxlRadius,
                 ),
                 color: Colors.white,
+                boxShadow: const [
+                  BoxShadow(color: Colors.white, offset: Offset(0, 1))
+                ],
               ),
               child: Stack(
                 alignment: Alignment.center,

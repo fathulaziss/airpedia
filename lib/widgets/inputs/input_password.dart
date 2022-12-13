@@ -13,7 +13,7 @@ class InputPassword extends StatefulWidget {
     this.prefixIcon,
     this.suffixIcon,
     this.color,
-    this.textColor = AppColor.primaryColor,
+    this.textColor = Colors.black,
     this.margin,
     this.padding,
     this.enable = true,

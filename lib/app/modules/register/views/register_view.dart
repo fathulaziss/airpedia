@@ -86,8 +86,9 @@ class RegisterView extends GetView<RegisterController> {
                           firstDate: DateTime(1945),
                           suffixIcon: Padding(
                             padding: EdgeInsets.only(right: Insets.sm),
-                            child: const Icon(
+                            child: Icon(
                               Icons.calendar_month,
+                              size: 24.w,
                               color: AppColor.primaryColor,
                             ),
                           ),
