@@ -162,19 +162,6 @@ class _InputSearchDropdownState extends State<InputSearchDropdown> {
                     vertical: Insets.med,
                   ),
                 ),
-                // decoration: inputDecoration(
-                //   padding: EdgeInsets.zero,
-                //   hintText: 'Cari Komunitas',
-                //   hintStyle: TextStyles.text.copyWith(color: hintColor),
-                //   prefixIcon: Padding(
-                //     padding: EdgeInsets.only(right: 5.w),
-                //     child: Icon(
-                //       Icons.search,
-                //       size: 24.w,
-                //       color: AppColor.primaryColor.withOpacity(.6),
-                //     ),
-                //   ),
-                // ),
               ),
               itemBuilder: widget.itemBuilder,
               noItemsFoundBuilder: (context) {

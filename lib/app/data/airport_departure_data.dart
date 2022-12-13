@@ -1,4 +1,4 @@
-const List airportDeparture = [
+const List airportDepartureData = [
   {
     'code': 'cgk',
     'name': 'Soekarno Hatta',

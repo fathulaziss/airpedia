@@ -28,7 +28,7 @@ class DestinationTicketForm extends GetView<DestinationController> {
             ),
           ),
           controller: controller.cDateDeparture,
-          value: controller.setDateOfBirth,
+          value: controller.setDateDeparture,
         ),
         InputSearchDropdown(
           label: 'Choose Airport Departure',

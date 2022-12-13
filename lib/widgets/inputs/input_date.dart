@@ -95,6 +95,7 @@ class InputDateState extends State<InputDate> {
       initialDate: widget.initialDate ?? DateTime.now(),
       firstDate: widget.firstDate ?? DateTime.now(),
       lastDate: DateTime(2100),
+      initialEntryMode: DatePickerEntryMode.calendarOnly,
     );
 
     if (datePicked != null) {

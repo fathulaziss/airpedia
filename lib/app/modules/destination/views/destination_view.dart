@@ -1,6 +1,7 @@
 import 'package:airpedia/app/modules/destination/components/destination_button.dart';
 import 'package:airpedia/app/modules/destination/components/destination_detail.dart';
 import 'package:airpedia/app/modules/destination/components/destination_header.dart';
+import 'package:airpedia/app/modules/destination/components/destination_ticket.dart';
 import 'package:airpedia/app/modules/destination/components/destination_ticket_form.dart';
 import 'package:airpedia/app/modules/destination/controllers/destination_controller.dart';
 import 'package:airpedia/widgets/buttons/button_primary.dart';
@@ -23,7 +24,18 @@ class DestinationView extends GetView<DestinationController> {
             child: const DestinationTicketForm(),
             buttonBottom: Obx(
               () => ButtonPrimary(
-                onTap: () {},
+                onTap: () {
+                  controller.getDestinationTicket();
+                  BottomSheetCustom(
+                    context: context,
+                    initialChildSize: 0.75,
+                    child: const DestinationTicket(),
+                    buttonBottom: ButtonPrimary(
+                      onTap: () {},
+                      label: 'Choose Ticket',
+                    ),
+                  ).showData();
+                },
                 label: 'Search Flight',
                 enabled: controller.isValidTicketForm.value,
               ),

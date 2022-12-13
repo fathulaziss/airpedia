@@ -1,23 +1,30 @@
 import 'package:airpedia/app/data/airport_departure_data.dart';
+import 'package:airpedia/app/data/destination_ticket_data.dart';
 import 'package:airpedia/app/models/airport_model.dart';
 import 'package:airpedia/app/models/destination_model.dart';
+import 'package:airpedia/app/models/destination_ticket_model.dart';
 import 'package:airpedia/utils/app_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 
 class DestinationController extends GetxController {
   Rx<DestinationModel> data = const DestinationModel().obs;
 
   final cDateDeparture = TextEditingController();
-  RxString dateDaparture = ''.obs;
+  DateTime dateDaparture = DateTime(2022);
   bool isValidDateDeparture = false;
 
   final cAirportDeparture = TextEditingController();
-  List<AirportModel> listAirportDeparture = <AirportModel>[];
+  RxList<AirportModel> listAirportDeparture = <AirportModel>[].obs;
   Rx<AirportModel> aiportDeparture = const AirportModel().obs;
   bool isValidAirportDeparture = false;
 
+  RxList<DestinationTicketModel> listDestinationTicket =
+      <DestinationTicketModel>[].obs;
+
   RxBool isValidTicketForm = false.obs;
+  RxBool isLoadingDestinationTicket = false.obs;
 
   @override
   void onInit() {
@@ -29,9 +36,9 @@ class DestinationController extends GetxController {
     super.onInit();
   }
 
-  void setDateOfBirth(DateTime value) {
-    dateDaparture(value.toString());
-    if (dateDaparture.value.isNotEmpty) {
+  void setDateDeparture(DateTime value) {
+    dateDaparture = value;
+    if (cDateDeparture.text.isNotEmpty) {
       isValidDateDeparture = true;
     } else {
       isValidDateDeparture = false;
@@ -42,7 +49,7 @@ class DestinationController extends GetxController {
   void setAirportDeparture(AirportModel value) {
     aiportDeparture(value);
     cAirportDeparture.text = value.name;
-    if (aiportDeparture.value.name.isNotEmpty) {
+    if (cAirportDeparture.text.isNotEmpty) {
       isValidAirportDeparture = true;
     } else {
       isValidAirportDeparture = false;
@@ -60,8 +67,9 @@ class DestinationController extends GetxController {
 
   Future<void> getAirportDeparture() async {
     try {
-      listAirportDeparture =
-          airportDeparture.map((e) => AirportModel.fromJson(e)).toList();
+      listAirportDeparture(
+        RxList.from(airportDepartureData.map((e) => AirportModel.fromJson(e))),
+      );
     } catch (e) {
       logSys(e.toString());
     }
@@ -81,6 +89,59 @@ class DestinationController extends GetxController {
           ..sort((a, b) => a.name.compareTo(b.name));
       }
     }
+
+    if (cAirportDeparture.text != aiportDeparture.value.name) {
+      isValidAirportDeparture = false;
+      aiportDeparture.value = const AirportModel();
+      validateTicketForm();
+    }
+
     return searchList;
+  }
+
+  Future<void> getDestinationTicket() async {
+    try {
+      isLoadingDestinationTicket(true);
+
+      // Get List Ticket
+      final List temp = destinationTicketData[data.value.airportDestinationCode]
+          [aiportDeparture.value.code];
+
+      // Parsing data List Ticket with Filter by Date Departure
+      listDestinationTicket(
+        RxList.from(
+          temp
+              .map((e) => DestinationTicketModel.fromJson(e))
+              .where(
+                (element) =>
+                    checkTicketSchedule(
+                      dateDaparture,
+                      element.departureSchedule,
+                    ) ==
+                    true,
+              )
+              .toList(),
+        ),
+      );
+
+      listDestinationTicket.sort((a, b) => b.price.compareTo(a.price));
+
+      Get.back();
+
+      await Future.delayed(const Duration(seconds: 2));
+
+      isLoadingDestinationTicket(false);
+    } catch (e) {
+      isLoadingDestinationTicket(false);
+      logSys(e.toString());
+    }
+  }
+
+  bool checkTicketSchedule(DateTime dateDeparture, String departureSchedule) {
+    final dateTimeNow = DateTime.now();
+    final dateSchedule = DateFormat('yyyy-MM-dd HH:mm').parse(
+      '${dateDeparture.year}-${dateDeparture.month}-${dateDeparture.day} $departureSchedule',
+    );
+    return dateTimeNow.isBefore(dateSchedule);
   }
 }
