@@ -11,7 +11,7 @@ class HomeHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 12.w),
+      padding: EdgeInsets.only(top: 12.w, bottom: 16.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

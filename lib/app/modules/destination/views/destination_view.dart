@@ -1,3 +1,4 @@
+import 'package:airpedia/app/models/destination_ticket_model.dart';
 import 'package:airpedia/app/modules/destination/components/destination_button.dart';
 import 'package:airpedia/app/modules/destination/components/destination_detail.dart';
 import 'package:airpedia/app/modules/destination/components/destination_header.dart';
@@ -29,10 +30,15 @@ class DestinationView extends GetView<DestinationController> {
                   BottomSheetCustom(
                     context: context,
                     initialChildSize: 0.75,
+                    contentPadding: EdgeInsets.zero,
                     child: const DestinationTicket(),
-                    buttonBottom: ButtonPrimary(
-                      onTap: () {},
-                      label: 'Choose Ticket',
+                    buttonBottom: Obx(
+                      () => ButtonPrimary(
+                        onTap: () {},
+                        label: 'Choose Ticket',
+                        enabled: controller.destinationTicket.value !=
+                            const DestinationTicketModel(),
+                      ),
                     ),
                   ).showData();
                 },

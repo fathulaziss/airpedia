@@ -22,6 +22,8 @@ class DestinationController extends GetxController {
 
   RxList<DestinationTicketModel> listDestinationTicket =
       <DestinationTicketModel>[].obs;
+  Rx<DestinationTicketModel> destinationTicket =
+      const DestinationTicketModel().obs;
 
   RxBool isValidTicketForm = false.obs;
   RxBool isLoadingDestinationTicket = false.obs;
@@ -65,6 +67,14 @@ class DestinationController extends GetxController {
     }
   }
 
+  void setDestinationTicket(DestinationTicketModel value) {
+    if (value != destinationTicket.value) {
+      destinationTicket(value);
+    } else {
+      destinationTicket(const DestinationTicketModel());
+    }
+  }
+
   Future<void> getAirportDeparture() async {
     try {
       listAirportDeparture(
@@ -105,7 +115,8 @@ class DestinationController extends GetxController {
 
       // Get List Ticket
       final List temp = destinationTicketData[data.value.airportDestinationCode]
-          [aiportDeparture.value.code];
+              [aiportDeparture.value.code] ??
+          [];
 
       // Parsing data List Ticket with Filter by Date Departure
       listDestinationTicket(
@@ -134,6 +145,7 @@ class DestinationController extends GetxController {
     } catch (e) {
       isLoadingDestinationTicket(false);
       logSys(e.toString());
+      rethrow;
     }
   }
 
