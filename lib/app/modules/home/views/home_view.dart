@@ -13,8 +13,8 @@ class HomeView extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(
-      () => Scaffold(
+    return Obx(() {
+      return Scaffold(
         backgroundColor: const Color(0xFFFAFAFA),
         bottomNavigationBar: CustomBottomNavBar(
           selectedIndex: controller.selectedPage.value,
@@ -33,7 +33,7 @@ class HomeView extends GetView<HomeController> {
             TabAccount(),
           ],
         ),
-      ),
-    );
+      );
+    });
   }
 }

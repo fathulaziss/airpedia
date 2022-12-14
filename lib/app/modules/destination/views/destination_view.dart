@@ -23,8 +23,10 @@ class DestinationView extends GetView<DestinationController> {
             context: context,
             initialChildSize: 0.75,
             child: const DestinationTicketForm(),
-            buttonBottom: Obx(
-              () => ButtonPrimary(
+            buttonBottom: Obx(() {
+              return ButtonPrimary(
+                label: 'Search Flight',
+                enabled: controller.isValidTicketForm.value,
                 onTap: () {
                   controller.getDestinationTicket();
                   BottomSheetCustom(
@@ -32,20 +34,20 @@ class DestinationView extends GetView<DestinationController> {
                     initialChildSize: 0.75,
                     contentPadding: EdgeInsets.zero,
                     child: const DestinationTicket(),
-                    buttonBottom: Obx(
-                      () => ButtonPrimary(
-                        onTap: () {},
+                    buttonBottom: Obx(() {
+                      return ButtonPrimary(
                         label: 'Choose Ticket',
                         enabled: controller.destinationTicket.value !=
                             const DestinationTicketModel(),
-                      ),
-                    ),
+                        onTap: () {
+                          Get.back();
+                        },
+                      );
+                    }),
                   ).showData();
                 },
-                label: 'Search Flight',
-                enabled: controller.isValidTicketForm.value,
-              ),
-            ),
+              );
+            }),
           ).showData();
         },
       ),

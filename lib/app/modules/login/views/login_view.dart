@@ -18,8 +18,8 @@ class LoginView extends GetView<LoginController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.backgroundColor,
-      body: Obx(
-        () => Padding(
+      body: Obx(() {
+        return Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.w),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -72,8 +72,8 @@ class LoginView extends GetView<LoginController> {
               ),
             ],
           ),
-        ),
-      ),
+        );
+      }),
     );
   }
 }

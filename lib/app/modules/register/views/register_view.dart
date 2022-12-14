@@ -19,8 +19,8 @@ class RegisterView extends GetView<RegisterController> {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(
-      () => PageDefault(
+    return Obx(() {
+      return PageDefault(
         title: 'Register',
         bottomBarHeight: 90.w,
         bottomBar: Column(
@@ -128,7 +128,7 @@ class RegisterView extends GetView<RegisterController> {
             ],
           ),
         ),
-      ),
-    );
+      );
+    });
   }
 }

@@ -12,22 +12,25 @@ class DestinationTicket extends GetView<DestinationController> {
   @override
   Widget build(BuildContext context) {
     return Obx(() {
-      return controller.isLoadingDestinationTicket.value
-          ? Center(child: LoadingIndicatorBounce(size: 25.w))
-          : controller.listDestinationTicket.isNotEmpty
-              ? ListView.builder(
-                  itemCount: controller.listDestinationTicket.length,
-                  itemBuilder: (context, index) {
-                    final data = controller.listDestinationTicket[index];
-                    return DestinationTicketItem(
-                      data: data,
-                      onTap: () {
-                        controller.setDestinationTicket(data);
-                      },
-                    );
-                  },
-                )
-              : const DestinationTicketEmpty();
+      if (controller.isLoadingDestinationTicket.value) {
+        return Center(child: LoadingIndicatorBounce(size: 25.w));
+      } else if (controller.listDestinationTicket.isNotEmpty) {
+        return ListView.builder(
+          itemCount: controller.listDestinationTicket.length,
+          itemBuilder: (context, index) {
+            final data = controller.listDestinationTicket[index];
+            return Obx(() {
+              return DestinationTicketItem(
+                data: data,
+                isSelect: data == controller.destinationTicket.value,
+                onTap: () => controller.setDestinationTicket(data),
+              );
+            });
+          },
+        );
+      } else {
+        return const DestinationTicketEmpty();
+      }
     });
   }
 }
