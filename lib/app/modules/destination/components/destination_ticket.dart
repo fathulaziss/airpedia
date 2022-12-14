@@ -1,3 +1,4 @@
+import 'package:airpedia/app/modules/destination/components/destination_ticket_empty.dart';
 import 'package:airpedia/app/modules/destination/components/destination_ticket_item.dart';
 import 'package:airpedia/app/modules/destination/controllers/destination_controller.dart';
 import 'package:airpedia/widgets/others/loading_indicator.dart';
@@ -13,18 +14,20 @@ class DestinationTicket extends GetView<DestinationController> {
     return Obx(() {
       return controller.isLoadingDestinationTicket.value
           ? Center(child: LoadingIndicatorBounce(size: 25.w))
-          : ListView.builder(
-              itemCount: controller.listDestinationTicket.length,
-              itemBuilder: (context, index) {
-                final data = controller.listDestinationTicket[index];
-                return DestinationTicketItem(
-                  data: data,
-                  onTap: () {
-                    controller.setDestinationTicket(data);
+          : controller.listDestinationTicket.isNotEmpty
+              ? ListView.builder(
+                  itemCount: controller.listDestinationTicket.length,
+                  itemBuilder: (context, index) {
+                    final data = controller.listDestinationTicket[index];
+                    return DestinationTicketItem(
+                      data: data,
+                      onTap: () {
+                        controller.setDestinationTicket(data);
+                      },
+                    );
                   },
-                );
-              },
-            );
+                )
+              : const DestinationTicketEmpty();
     });
   }
 }
