@@ -3,6 +3,7 @@ import 'package:airpedia/app/data/destination_ticket_data.dart';
 import 'package:airpedia/app/models/airport_model.dart';
 import 'package:airpedia/app/models/destination_model.dart';
 import 'package:airpedia/app/models/destination_ticket_model.dart';
+import 'package:airpedia/app/routes/app_pages.dart';
 import 'package:airpedia/utils/app_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -155,5 +156,11 @@ class DestinationController extends GetxController {
       '${dateDeparture.year}-${dateDeparture.month}-${dateDeparture.day} $departureSchedule',
     );
     return dateTimeNow.isBefore(dateSchedule);
+  }
+
+  void submit() {
+    Get
+      ..back()
+      ..toNamed(Routes.ORDER);
   }
 }

@@ -39,9 +39,7 @@ class DestinationView extends GetView<DestinationController> {
                         label: 'Choose Ticket',
                         enabled: controller.destinationTicket.value !=
                             const DestinationTicketModel(),
-                        onTap: () {
-                          Get.back();
-                        },
+                        onTap: controller.submit,
                       );
                     }),
                   ).showData();

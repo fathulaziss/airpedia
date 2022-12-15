@@ -140,14 +140,14 @@ class DestinationTicketItem extends StatelessWidget {
                           ),
                           horizontalSpace(Insets.xs),
                           Text(
-                            e,
+                            e == 'Baggage 20kg' ? '$e   ' : e,
                             style: TextStyles.desc.copyWith(fontSize: 10.w),
                           ),
                         ],
                       ),
                     ),
                   );
-                }),
+                })
               ],
             )
           ],
