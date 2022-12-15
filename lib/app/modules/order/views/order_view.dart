@@ -1,3 +1,4 @@
+import 'package:airpedia/app/modules/order/components/order_seat.dart';
 import 'package:airpedia/app/modules/order/components/order_seat_button.dart';
 import 'package:airpedia/app/modules/order/components/order_seat_status.dart';
 import 'package:airpedia/app/modules/order/controllers/order_controller.dart';
@@ -27,12 +28,7 @@ class OrderView extends GetView<OrderController> {
           children: [
             Text('Select Your\nFavorite Seat', style: TextStyles.title),
             const OrderSeatStatus(),
-            Expanded(
-              child: CardApp(
-                radius: 16.w,
-                isShowShadows: true,
-              ),
-            ),
+            const OrderSeat(),
             CardApp(
               radius: 16.w,
               isShowShadows: true,

@@ -23,7 +23,7 @@ class OrderSeatStatusItem extends StatelessWidget {
           padding: EdgeInsets.zero,
           width: 16.w,
           constraints: BoxConstraints(minHeight: 16.w),
-          radius: 6.w,
+          radius: 4.w,
           isOutlined: true,
           outlineColor: outlineColor,
           color: color,
