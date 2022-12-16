@@ -1,9 +1,12 @@
 import 'package:airpedia/app/data/seat_data.dart';
 import 'package:airpedia/app/models/seat_model.dart';
+import 'package:airpedia/app/modules/destination/controllers/destination_controller.dart';
 import 'package:airpedia/utils/app_utils.dart';
 import 'package:get/get.dart';
 
 class OrderController extends GetxController {
+  final cDestination = Get.find<DestinationController>();
+
   RxList<String> listSeatType = <String>[].obs;
   RxList<String> listSeatNumber = <String>[].obs;
   RxList<SeatModel> listSeatTypeA = <SeatModel>[].obs;
