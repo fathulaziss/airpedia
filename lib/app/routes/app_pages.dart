@@ -10,6 +10,7 @@ import 'package:airpedia/app/modules/login/views/login_view.dart';
 import 'package:airpedia/app/modules/onboarding/bindings/onboarding_binding.dart';
 import 'package:airpedia/app/modules/onboarding/views/onboarding_view.dart';
 import 'package:airpedia/app/modules/order/bindings/order_binding.dart';
+import 'package:airpedia/app/modules/order/views/order_detail_view.dart';
 import 'package:airpedia/app/modules/order/views/order_view.dart';
 import 'package:airpedia/app/modules/register/bindings/register_binding.dart';
 import 'package:airpedia/app/modules/register/views/register_success_view.dart';
@@ -76,6 +77,11 @@ class AppPages {
     GetPage(
       name: _Paths.ORDER,
       page: () => const OrderView(),
+      binding: OrderBinding(),
+    ),
+    GetPage(
+      name: _Paths.ORDER_DETAIL,
+      page: () => const OrderDetailView(),
       binding: OrderBinding(),
     ),
   ];

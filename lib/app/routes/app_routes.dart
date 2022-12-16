@@ -16,6 +16,7 @@ abstract class Routes {
   static const REGISTER_SUCCESS = _Paths.REGISTER_SUCCESS;
   static const DESTINATION = _Paths.DESTINATION;
   static const ORDER = _Paths.ORDER;
+  static const ORDER_DETAIL = _Paths.ORDER_DETAIL;
 }
 
 abstract class _Paths {
@@ -31,4 +32,5 @@ abstract class _Paths {
   static const REGISTER_SUCCESS = '/register-success';
   static const DESTINATION = '/destination';
   static const ORDER = '/order';
+  static const ORDER_DETAIL = '/order-detail';
 }

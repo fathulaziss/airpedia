@@ -114,6 +114,8 @@ class DestinationController extends GetxController {
     try {
       isLoadingDestinationTicket(true);
 
+      destinationTicket.value = const DestinationTicketModel();
+
       // Get List Ticket
       final List temp = destinationTicketData[data.value.airportDestinationCode]
               [aiportDeparture.value.code] ??

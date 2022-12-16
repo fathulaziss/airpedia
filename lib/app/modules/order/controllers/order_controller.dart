@@ -15,6 +15,10 @@ class OrderController extends GetxController {
   RxList<SeatModel> listSeatTypeD = <SeatModel>[].obs;
   RxList<SeatModel> selectedSeat = <SeatModel>[].obs;
 
+  RxInt totalSeatPrice = 0.obs;
+  RxDouble totalVatPrice = 0.0.obs;
+  RxDouble total = 0.0.obs;
+
   @override
   void onInit() {
     getSeat();
@@ -46,8 +50,20 @@ class OrderController extends GetxController {
   void chooseSeat(SeatModel value) {
     if (!selectedSeat.contains(value)) {
       selectedSeat.add(value);
+      totalSeatPrice.value =
+          cDestination.destinationTicket.value.price * selectedSeat.length;
+      totalVatPrice.value =
+          (cDestination.destinationTicket.value.price * selectedSeat.length) *
+              cDestination.destinationTicket.value.vat;
+      total.value = totalSeatPrice.value + totalVatPrice.value;
     } else {
       selectedSeat.remove(value);
+      totalSeatPrice.value =
+          cDestination.destinationTicket.value.price * selectedSeat.length;
+      totalVatPrice.value =
+          (cDestination.destinationTicket.value.price * selectedSeat.length) *
+              cDestination.destinationTicket.value.vat;
+      total.value = totalSeatPrice.value + totalVatPrice.value;
     }
   }
 }

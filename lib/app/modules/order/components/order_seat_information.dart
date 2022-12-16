@@ -48,10 +48,7 @@ class OrderSeatInformation extends GetView<OrderController> {
                 horizontalSpace(Insets.sm),
                 Expanded(
                   child: Text(
-                    priceFormat(
-                      controller.cDestination.destinationTicket.value.price *
-                          controller.selectedSeat.length,
-                    ),
+                    priceFormat(controller.totalSeatPrice.value),
                     style: TextStyles.title
                         .copyWith(fontSize: 14.w, color: AppColor.primaryColor),
                     textAlign: TextAlign.end,

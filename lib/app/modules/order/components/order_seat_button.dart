@@ -1,10 +1,11 @@
 import 'package:airpedia/app/modules/order/controllers/order_controller.dart';
+import 'package:airpedia/app/routes/app_pages.dart';
 import 'package:airpedia/styles/styles.dart';
 import 'package:airpedia/widgets/buttons/button_primary.dart';
 import 'package:airpedia/widgets/cards/card_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
+import 'package:get/get.dart';
 
 class OrderSeatButton extends GetView<OrderController> {
   const OrderSeatButton({super.key});
@@ -26,7 +27,7 @@ class OrderSeatButton extends GetView<OrderController> {
           )
         ],
         child: ButtonPrimary(
-          onTap: () {},
+          onTap: () => Get.toNamed(Routes.ORDER_DETAIL),
           label: 'Continue',
           enabled: controller.selectedSeat.isNotEmpty,
         ),
