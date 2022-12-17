@@ -32,7 +32,7 @@ class OrderSeatInformation extends GetView<OrderController> {
                         .map((item) => item.name)
                         .toList()
                         .join(', '),
-                    style: TextStyles.title.copyWith(fontSize: 14.w),
+                    style: TextStyles.title.copyWith(fontSize: 12.w),
                     textAlign: TextAlign.end,
                   ),
                 )
@@ -50,7 +50,7 @@ class OrderSeatInformation extends GetView<OrderController> {
                   child: Text(
                     priceFormat(controller.totalSeatPrice.value),
                     style: TextStyles.title
-                        .copyWith(fontSize: 14.w, color: AppColor.primaryColor),
+                        .copyWith(fontSize: 12.w, color: AppColor.primaryColor),
                     textAlign: TextAlign.end,
                   ),
                 )

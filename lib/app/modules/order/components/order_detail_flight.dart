@@ -14,135 +14,138 @@ class OrderDetailFlight extends GetView<OrderController> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text('Flight Detail', style: TextStyles.text),
-        verticalSpace(Insets.sm),
-        CardApp(
-          isShowShadows: true,
-          shadows: Shadows.shadowsUp,
-          radius: 16.w,
-          margin: EdgeInsets.only(bottom: 16.w),
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  CardApp(
-                    width: 40.w,
-                    constraints: BoxConstraints(minHeight: 40.w),
-                    margin: EdgeInsets.only(right: Insets.med),
-                    padding: EdgeInsets.all(Insets.xs),
-                    isShowShadows: true,
-                    shadows: Shadows.shadowsUp,
-                    radius: 10.w,
-                    child: Image.asset(
-                      AppAsset.logoAirline(
-                        controller
-                            .cDestination.destinationTicket.value.airlineCode,
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: Insets.xs),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text('Flight Detail', style: TextStyles.text),
+          verticalSpace(Insets.sm),
+          CardApp(
+            isShowShadows: true,
+            shadows: Shadows.shadowsUp,
+            radius: 16.w,
+            margin: EdgeInsets.only(bottom: 16.w),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    CardApp(
+                      width: 40.w,
+                      constraints: BoxConstraints(minHeight: 40.w),
+                      margin: EdgeInsets.only(right: Insets.med),
+                      padding: EdgeInsets.all(Insets.xs),
+                      isShowShadows: true,
+                      shadows: Shadows.shadowsUp,
+                      radius: 10.w,
+                      child: Image.asset(
+                        AppAsset.logoAirline(
+                          controller
+                              .cDestination.destinationTicket.value.airlineCode,
+                        ),
+                        fit: BoxFit.cover,
                       ),
-                      fit: BoxFit.cover,
                     ),
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        controller
-                            .cDestination.destinationTicket.value.airlineName,
-                        style: TextStyles.title.copyWith(fontSize: 12.w),
-                      ),
-                      Text(
-                        controller
-                            .cDestination.destinationTicket.value.airlineCode,
-                        style: TextStyles.desc,
-                      )
-                    ],
-                  )
-                ],
-              ),
-              verticalSpace(Insets.xs),
-              const Divider(color: AppColor.primaryColor2, thickness: 1),
-              Row(
-                children: [
-                  Expanded(
-                    child: Column(
+                    Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          controller.cDestination.destinationTicket.value
-                              .departureSchedule,
+                          controller
+                              .cDestination.destinationTicket.value.airlineName,
                           style: TextStyles.title.copyWith(fontSize: 12.w),
                         ),
-                        verticalSpace(4.h),
                         Text(
-                          FormatDateTime.format(
-                            value: controller.cDestination.dateDaparture,
-                            format: DateFormat('dd MMM yyyy'),
-                          ),
+                          controller
+                              .cDestination.destinationTicket.value.airlineCode,
                           style: TextStyles.desc,
-                        ),
+                        )
                       ],
                     ),
-                  ),
-                  Column(
-                    children: [
-                      Text('Duration', style: TextStyles.desc),
-                      Container(
-                        width: 70.w,
-                        height: 1.w,
-                        color: AppColor.greyColor1,
+                  ],
+                ),
+                verticalSpace(Insets.xs),
+                const Divider(color: AppColor.primaryColor2, thickness: 1),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            controller.cDestination.destinationTicket.value
+                                .departureSchedule,
+                            style: TextStyles.title.copyWith(fontSize: 12.w),
+                          ),
+                          verticalSpace(4.h),
+                          Text(
+                            FormatDateTime.format(
+                              value: controller.cDestination.dateDaparture,
+                              format: DateFormat('dd MMM yyyy'),
+                            ),
+                            style: TextStyles.desc,
+                          ),
+                        ],
                       ),
-                      Text(
-                        FormatDateTime.getDuration(
-                          FormatDateTime.getArrivalDate(
-                            departureDate:
-                                controller.cDestination.dateDaparture,
-                            arrivalSchedule: controller.cDestination
-                                .destinationTicket.value.arrivalSchedule,
-                          )
-                              .difference(
-                                controller.cDestination.dateDaparture,
-                              )
-                              .inMinutes,
-                        ),
-                        style: TextStyles.title.copyWith(fontSize: 12.w),
-                      ),
-                    ],
-                  ),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
+                    ),
+                    Column(
                       children: [
-                        Text(
-                          controller.cDestination.destinationTicket.value
-                              .arrivalSchedule,
-                          textAlign: TextAlign.end,
-                          style: TextStyles.title.copyWith(fontSize: 12.w),
+                        Text('Duration', style: TextStyles.desc),
+                        Container(
+                          width: 70.w,
+                          height: 1.w,
+                          color: AppColor.greyColor1,
                         ),
-                        verticalSpace(4.h),
                         Text(
-                          FormatDateTime.format(
-                            value: FormatDateTime.getArrivalDate(
+                          FormatDateTime.getDuration(
+                            FormatDateTime.getArrivalDate(
                               departureDate:
                                   controller.cDestination.dateDaparture,
                               arrivalSchedule: controller.cDestination
                                   .destinationTicket.value.arrivalSchedule,
-                            ),
-                            format: DateFormat('dd MMM yyyy'),
+                            )
+                                .difference(
+                                  controller.cDestination.dateDaparture,
+                                )
+                                .inMinutes,
                           ),
-                          textAlign: TextAlign.end,
-                          style: TextStyles.desc,
+                          style: TextStyles.title.copyWith(fontSize: 12.w),
                         ),
                       ],
                     ),
-                  )
-                ],
-              ),
-            ],
-          ),
-        )
-      ],
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            controller.cDestination.destinationTicket.value
+                                .arrivalSchedule,
+                            textAlign: TextAlign.end,
+                            style: TextStyles.title.copyWith(fontSize: 12.w),
+                          ),
+                          verticalSpace(4.h),
+                          Text(
+                            FormatDateTime.format(
+                              value: FormatDateTime.getArrivalDate(
+                                departureDate:
+                                    controller.cDestination.dateDaparture,
+                                arrivalSchedule: controller.cDestination
+                                    .destinationTicket.value.arrivalSchedule,
+                              ),
+                              format: DateFormat('dd MMM yyyy'),
+                            ),
+                            textAlign: TextAlign.end,
+                            style: TextStyles.desc,
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }

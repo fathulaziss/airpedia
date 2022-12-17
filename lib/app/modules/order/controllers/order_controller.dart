@@ -1,3 +1,4 @@
+import 'package:airpedia/app/controllers/user_info_controller.dart';
 import 'package:airpedia/app/data/seat_data.dart';
 import 'package:airpedia/app/models/seat_model.dart';
 import 'package:airpedia/app/modules/destination/controllers/destination_controller.dart';
@@ -6,6 +7,7 @@ import 'package:get/get.dart';
 
 class OrderController extends GetxController {
   final cDestination = Get.find<DestinationController>();
+  final cUserInfo = Get.find<UserInfoController>();
 
   RxList<String> listSeatType = <String>[].obs;
   RxList<String> listSeatNumber = <String>[].obs;
@@ -17,7 +19,7 @@ class OrderController extends GetxController {
 
   RxInt totalSeatPrice = 0.obs;
   RxDouble totalVatPrice = 0.0.obs;
-  RxDouble total = 0.0.obs;
+  RxInt total = 0.obs;
 
   @override
   void onInit() {
@@ -55,7 +57,7 @@ class OrderController extends GetxController {
       totalVatPrice.value =
           (cDestination.destinationTicket.value.price * selectedSeat.length) *
               cDestination.destinationTicket.value.vat;
-      total.value = totalSeatPrice.value + totalVatPrice.value;
+      total.value = (totalSeatPrice.value + totalVatPrice.value).truncate();
     } else {
       selectedSeat.remove(value);
       totalSeatPrice.value =
@@ -63,7 +65,7 @@ class OrderController extends GetxController {
       totalVatPrice.value =
           (cDestination.destinationTicket.value.price * selectedSeat.length) *
               cDestination.destinationTicket.value.vat;
-      total.value = totalSeatPrice.value + totalVatPrice.value;
+      total.value = (totalSeatPrice.value + totalVatPrice.value).truncate();
     }
   }
 }
