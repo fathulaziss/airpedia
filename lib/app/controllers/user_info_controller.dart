@@ -1,4 +1,6 @@
 import 'package:airpedia/app/models/user_model.dart';
+import 'package:airpedia/constants/constant.dart';
+import 'package:airpedia/utils/app_storage.dart';
 import 'package:airpedia/utils/app_utils.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -28,6 +30,10 @@ class UserInfoController extends GetxController {
         );
 
         dataUser.value = dataUserUpdate;
+        await AppStorage.write(
+          key: CACHE_PIN,
+          value: dataUser.value.pinTransaction,
+        );
         logSys('cek data user : ${dataUser.value}');
       }
     } catch (e) {

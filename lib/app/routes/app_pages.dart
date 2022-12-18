@@ -12,6 +12,8 @@ import 'package:airpedia/app/modules/onboarding/views/onboarding_view.dart';
 import 'package:airpedia/app/modules/order/bindings/order_binding.dart';
 import 'package:airpedia/app/modules/order/views/order_detail_view.dart';
 import 'package:airpedia/app/modules/order/views/order_view.dart';
+import 'package:airpedia/app/modules/pin/bindings/pin_binding.dart';
+import 'package:airpedia/app/modules/pin/views/pin_view.dart';
 import 'package:airpedia/app/modules/register/bindings/register_binding.dart';
 import 'package:airpedia/app/modules/register/views/register_success_view.dart';
 import 'package:airpedia/app/modules/register/views/register_view.dart';
@@ -90,6 +92,11 @@ class AppPages {
       name: _Paths.TOPUP,
       page: () => const TopupView(),
       binding: TopupBinding(),
+    ),
+    GetPage(
+      name: _Paths.PIN,
+      page: () => const PinView(),
+      binding: PinBinding(),
     ),
   ];
 }
