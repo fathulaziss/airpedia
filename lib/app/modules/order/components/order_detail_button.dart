@@ -105,7 +105,7 @@ class OrderDetailButton extends GetView<OrderController> {
             ),
             verticalSpace(Insets.sm),
             ButtonPrimary(
-              onTap: () {},
+              onTap: controller.submit,
               label: controller.cUserInfo.dataUser.value.balance >
                       controller.total.value
                   ? 'Pay Now'

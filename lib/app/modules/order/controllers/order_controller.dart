@@ -2,6 +2,7 @@ import 'package:airpedia/app/controllers/user_info_controller.dart';
 import 'package:airpedia/app/data/seat_data.dart';
 import 'package:airpedia/app/models/seat_model.dart';
 import 'package:airpedia/app/modules/destination/controllers/destination_controller.dart';
+import 'package:airpedia/app/routes/app_pages.dart';
 import 'package:airpedia/utils/app_utils.dart';
 import 'package:get/get.dart';
 
@@ -66,6 +67,13 @@ class OrderController extends GetxController {
           (cDestination.destinationTicket.value.price * selectedSeat.length) *
               cDestination.destinationTicket.value.vat;
       total.value = (totalSeatPrice.value + totalVatPrice.value).truncate();
+    }
+  }
+
+  void submit() {
+    if (cUserInfo.dataUser.value.balance > total.value) {
+    } else {
+      Get.toNamed(Routes.TOPUP);
     }
   }
 }

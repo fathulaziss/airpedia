@@ -3,6 +3,7 @@ import 'package:airpedia/utils/app_utils.dart';
 import 'package:airpedia/widgets/inputs/input_primary.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class InputCurrency extends StatefulWidget {
   const InputCurrency({
@@ -97,8 +98,9 @@ class _InputCurrencyState extends State<InputCurrency> {
           Padding(
             padding: EdgeInsets.all(Insets.med),
             child: Text(
-              'Rp',
-              style: TextStyles.button.copyWith(color: widget.textColor),
+              'IDR',
+              style: TextStyles.title
+                  .copyWith(color: widget.textColor, fontSize: 14.w),
             ),
           ),
       suffixIcon: widget.suffixIcon,

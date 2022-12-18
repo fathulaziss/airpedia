@@ -16,6 +16,8 @@ import 'package:airpedia/app/modules/register/bindings/register_binding.dart';
 import 'package:airpedia/app/modules/register/views/register_success_view.dart';
 import 'package:airpedia/app/modules/register/views/register_view.dart';
 import 'package:airpedia/app/modules/splash_screen_view.dart';
+import 'package:airpedia/app/modules/topup/bindings/topup_binding.dart';
+import 'package:airpedia/app/modules/topup/views/topup_view.dart';
 import 'package:airpedia/app/modules/under_development.dart';
 import 'package:get/get.dart';
 
@@ -83,6 +85,11 @@ class AppPages {
       name: _Paths.ORDER_DETAIL,
       page: () => const OrderDetailView(),
       binding: OrderBinding(),
+    ),
+    GetPage(
+      name: _Paths.TOPUP,
+      page: () => const TopupView(),
+      binding: TopupBinding(),
     ),
   ];
 }
