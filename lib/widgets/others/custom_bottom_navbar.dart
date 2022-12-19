@@ -1,5 +1,6 @@
 import 'package:airpedia/styles/colors.dart';
 import 'package:airpedia/styles/styles.dart';
+import 'package:airpedia/utils/app_asset.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -39,37 +40,27 @@ class CustomBottomNavBar extends StatelessWidget {
           ItemNavbar(
             isSelected: selectedIndex == 0,
             label: 'Home',
-            // assetIcon: AppAsset.icon('ic_home.png'),
-            icon: Icons.home,
+            assetIcon: AppAsset.icon('ic_home.png'),
             onTap: () => onTap(0),
           ),
           ItemNavbar(
             isSelected: selectedIndex == 1,
-            label: 'Explore',
-            // assetIcon: AppAsset.icon('ic_opac.png'),
-            icon: Icons.explore,
+            label: 'Ticket',
+            assetIcon: AppAsset.icon('ic_ticket.png'),
             onTap: () => onTap(1),
           ),
+          SizedBox(width: Get.width / 5),
           ItemNavbar(
             isSelected: selectedIndex == 2,
-            label: 'Dashboard',
-            // assetIcon: AppAsset.icon('ic_dashboard.png'),
-            icon: Icons.dashboard,
+            label: 'History',
+            assetIcon: AppAsset.icon('ic_history.png'),
             onTap: () => onTap(2),
           ),
           ItemNavbar(
             isSelected: selectedIndex == 3,
-            label: 'History',
-            // assetIcon: AppAsset.icon('ic_history.png'),
-            icon: Icons.history,
+            label: 'Setting',
+            assetIcon: AppAsset.icon('ic_setting.png'),
             onTap: () => onTap(3),
-          ),
-          ItemNavbar(
-            isSelected: selectedIndex == 4,
-            label: 'Account',
-            // assetIcon: AppAsset.icon('ic_account.png'),
-            icon: Icons.person,
-            onTap: () => onTap(4),
           ),
         ],
       ),

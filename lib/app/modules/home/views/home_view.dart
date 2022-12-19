@@ -1,9 +1,8 @@
 import 'package:airpedia/app/modules/home/controllers/home_controller.dart';
-import 'package:airpedia/app/modules/home/tab/tab_account.dart';
-import 'package:airpedia/app/modules/home/tab/tab_dashboard.dart';
-import 'package:airpedia/app/modules/home/tab/tab_explore.dart';
 import 'package:airpedia/app/modules/home/tab/tab_history.dart';
 import 'package:airpedia/app/modules/home/tab/tab_home.dart';
+import 'package:airpedia/app/modules/home/tab/tab_setting.dart';
+import 'package:airpedia/app/modules/home/tab/tab_ticket.dart';
 import 'package:airpedia/widgets/others/custom_bottom_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,10 +26,9 @@ class HomeView extends GetView<HomeController> {
           physics: const NeverScrollableScrollPhysics(),
           children: const [
             TabHome(),
-            TabExplore(),
-            TabDashboard(),
+            TabTicket(),
             TabHistory(),
-            TabAccount(),
+            TabSetting(),
           ],
         ),
       );
