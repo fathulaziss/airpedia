@@ -128,7 +128,7 @@ class RegisterController extends GetxController {
 
       isLoading(false);
 
-      await Get.offNamed(Routes.REGISTER_SUCCESS);
+      await Get.offAllNamed(Routes.REGISTER_SUCCESS);
     } catch (e) {
       isLoading(false);
       showPopUpInfo(title: 'Error', description: e.toString());

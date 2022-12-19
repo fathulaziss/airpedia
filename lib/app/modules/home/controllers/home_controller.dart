@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 class HomeController extends GetxController {
   final cUserInfo = Get.find<UserInfoController>();
 
-  final pageController = PageController();
+  PageController pageController = PageController();
   RxInt selectedPage = 0.obs;
 
   RxList<DestinationModel> listRecommendedDestination =
@@ -20,6 +20,12 @@ class HomeController extends GetxController {
 
   @override
   void onInit() {
+    final args = Get.arguments;
+    if (args != null) {
+      final pageIndex = args['index'];
+      pageController = PageController(initialPage: pageIndex);
+      selectedPage(pageIndex);
+    }
     cUserInfo.getDataUser();
     getRecommendedDestination();
     getNewDestination();

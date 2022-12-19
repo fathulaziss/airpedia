@@ -17,6 +17,7 @@ abstract class Routes {
   static const DESTINATION = _Paths.DESTINATION;
   static const ORDER = _Paths.ORDER;
   static const ORDER_DETAIL = _Paths.ORDER_DETAIL;
+  static const ORDER_SUCCESS = _Paths.ORDER_SUCCESS;
   static const TOPUP = _Paths.TOPUP;
   static const PIN = _Paths.PIN;
 }
@@ -35,6 +36,7 @@ abstract class _Paths {
   static const DESTINATION = '/destination';
   static const ORDER = '/order';
   static const ORDER_DETAIL = '/order-detail';
+  static const ORDER_SUCCESS = '/order-success';
   static const TOPUP = '/topup';
   static const PIN = '/pin';
 }
