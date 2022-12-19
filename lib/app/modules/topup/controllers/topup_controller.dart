@@ -1,9 +1,17 @@
+import 'package:airpedia/app/controllers/user_info_controller.dart';
+import 'package:airpedia/app/models/user_model.dart';
+import 'package:airpedia/app/routes/app_pages.dart';
 import 'package:airpedia/utils/app_utils.dart';
 import 'package:airpedia/utils/format_currency.dart';
+import 'package:airpedia/widgets/others/show_dialog.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class TopupController extends GetxController {
+  final cUserInfo = Get.find<UserInfoController>();
+
   final cNominal = TextEditingController();
   RxInt nominal = 0.obs;
   RxBool isValidNominal = false.obs;
@@ -38,6 +46,53 @@ class TopupController extends GetxController {
       isValidNominal(true);
     } else {
       isValidNominal(false);
+    }
+  }
+
+  Future<void> submit() async {
+    final pin = await Get.toNamed(Routes.PIN);
+    if (pin != null) {
+      await topup();
+    }
+  }
+
+  Future<void> topup() async {
+    try {
+      AppUtils.dismissKeyboard();
+      isLoading(true);
+      final collectionTransaction =
+          FirebaseFirestore.instance.collection('transactions');
+      final user = FirebaseAuth.instance.currentUser;
+      if (user != null) {
+        await collectionTransaction.add({
+          'transaction_type': 'Top Up',
+          'title': 'Top Up E-Wallet',
+          'amount': nominal.value,
+          'transaction_date': DateTime.now().millisecondsSinceEpoch,
+          'user_id': user.uid,
+        });
+
+        final dataUser = UserModel(
+          balance: cUserInfo.dataUser.value.balance + nominal.value,
+          dateOfBirth: cUserInfo.dataUser.value.dateOfBirth,
+          email: cUserInfo.dataUser.value.email,
+          fullName: cUserInfo.dataUser.value.fullName,
+          imageProfile: cUserInfo.dataUser.value.imageProfile,
+          pinTransaction: cUserInfo.dataUser.value.pinTransaction,
+          userId: cUserInfo.dataUser.value.userId,
+        );
+
+        await cUserInfo.updateDataUser(data: dataUser);
+        await cUserInfo.getDataUser();
+        await Future.delayed(const Duration(seconds: 2));
+
+        isLoading(false);
+        showPopUpInfo(title: 'Success', description: 'Top Up Success');
+      }
+      isLoading(false);
+    } catch (e) {
+      isLoading(false);
+      logSys(e.toString());
     }
   }
 }

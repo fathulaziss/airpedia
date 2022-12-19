@@ -7,13 +7,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 
 class UserInfoController extends GetxController {
+  final collectionUser = FirebaseFirestore.instance.collection('users');
   Rx<UserModel> dataUser = const UserModel().obs;
 
   void setDataUser(UserModel value) => dataUser(value);
 
   Future<void> getDataUser() async {
     try {
-      final collectionUser = FirebaseFirestore.instance.collection('users');
       final user = FirebaseAuth.instance.currentUser;
 
       if (user != null) {
@@ -34,11 +34,18 @@ class UserInfoController extends GetxController {
           key: CACHE_PIN,
           value: dataUser.value.pinTransaction,
         );
-        logSys('cek data user : ${dataUser.value}');
       }
     } catch (e) {
       logSys(e.toString());
       rethrow;
+    }
+  }
+
+  Future<void> updateDataUser({required UserModel data}) async {
+    try {
+      await collectionUser.doc(data.userId).set(data.toJson());
+    } catch (e) {
+      logSys(e.toString());
     }
   }
 }

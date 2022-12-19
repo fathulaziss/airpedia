@@ -1,7 +1,6 @@
 import 'package:airpedia/app/data/nominal_topup_data.dart';
 import 'package:airpedia/app/modules/topup/components/topup_item.dart';
 import 'package:airpedia/app/modules/topup/controllers/topup_controller.dart';
-import 'package:airpedia/app/routes/app_pages.dart';
 import 'package:airpedia/styles/styles.dart';
 import 'package:airpedia/utils/format_currency.dart';
 import 'package:airpedia/widgets/buttons/button_primary.dart';
@@ -79,7 +78,7 @@ class TopupView extends GetView<TopupController> {
                 verticalSpace(Insets.lg),
                 ButtonPrimary(
                   label: 'Top Up',
-                  onTap: () => Get.toNamed(Routes.PIN),
+                  onTap: controller.submit,
                   enabled: controller.isValidNominal.value,
                   isLoading: controller.isLoading.value,
                 )
