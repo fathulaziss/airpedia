@@ -1,10 +1,13 @@
 import 'package:airpedia/app/controllers/user_info_controller.dart';
 import 'package:airpedia/app/data/seat_data.dart';
 import 'package:airpedia/app/models/seat_model.dart';
+import 'package:airpedia/app/models/user_model.dart';
 import 'package:airpedia/app/modules/destination/controllers/destination_controller.dart';
 import 'package:airpedia/app/routes/app_pages.dart';
 import 'package:airpedia/utils/app_utils.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 
 class OrderController extends GetxController {
   final cDestination = Get.find<DestinationController>();
@@ -21,6 +24,8 @@ class OrderController extends GetxController {
   RxInt totalSeatPrice = 0.obs;
   RxDouble totalVatPrice = 0.0.obs;
   RxInt total = 0.obs;
+
+  RxBool isLoading = false.obs;
 
   @override
   void onInit() {
@@ -70,10 +75,70 @@ class OrderController extends GetxController {
     }
   }
 
-  void submit() {
+  Future<void> submit() async {
     if (cUserInfo.dataUser.value.balance > total.value) {
+      final pin = await Get.toNamed(Routes.PIN);
+      if (pin != null) {
+        await payment();
+      }
     } else {
-      Get.toNamed(Routes.TOPUP);
+      await Get.toNamed(Routes.TOPUP);
+    }
+  }
+
+  Future<void> payment() async {
+    try {
+      isLoading(true);
+      final collectionTicketTransaction =
+          FirebaseFirestore.instance.collection('ticket_transactions');
+      final collectionTransaction =
+          FirebaseFirestore.instance.collection('transactions');
+
+      await Future.delayed(const Duration(seconds: 2));
+
+      await collectionTicketTransaction.add({
+        'destination': cDestination.data.value.toJson(),
+        'ticket': cDestination.destinationTicket.value.toJson(),
+        'departure_schedule': DateFormat('yyyy-MM-dd hh:mm')
+            .parse(
+              '${cDestination.dateDaparture.year}-${cDestination.dateDaparture.month}-${cDestination.dateDaparture.day} ${cDestination.destinationTicket.value.departureSchedule}',
+            )
+            .millisecondsSinceEpoch,
+        'transaction_date': DateTime.now().millisecondsSinceEpoch,
+        'total_passenger': selectedSeat.length,
+        'selected_seat':
+            selectedSeat.map((item) => item.name).toList().join(', '),
+        'total': total.value,
+        'ref_number': 'TRX${DateTime.now().millisecondsSinceEpoch}',
+        'user_id': cUserInfo.dataUser.value.userId,
+      });
+
+      await collectionTransaction.add({
+        'transaction_type': 'Ticket',
+        'title':
+            'Ticket ${cDestination.destinationTicket.value.airlineName} : ${cDestination.destinationTicket.value.airportDepartureCode.toUpperCase()} - ${cDestination.destinationTicket.value.airportArrivalCode.toUpperCase()}',
+        'amount': total.value,
+        'transaction_date': DateTime.now().millisecondsSinceEpoch,
+        'user_id': cUserInfo.dataUser.value.userId,
+      });
+
+      final dataUser = UserModel(
+        balance: cUserInfo.dataUser.value.balance - total.value,
+        dateOfBirth: cUserInfo.dataUser.value.dateOfBirth,
+        email: cUserInfo.dataUser.value.email,
+        fullName: cUserInfo.dataUser.value.fullName,
+        imageProfile: cUserInfo.dataUser.value.imageProfile,
+        pinTransaction: cUserInfo.dataUser.value.pinTransaction,
+        userId: cUserInfo.dataUser.value.userId,
+      );
+
+      await cUserInfo.updateDataUser(data: dataUser);
+      await cUserInfo.getDataUser();
+
+      isLoading(false);
+    } catch (e) {
+      isLoading(false);
+      logSys(e.toString());
     }
   }
 }

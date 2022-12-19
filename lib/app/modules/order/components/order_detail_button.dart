@@ -110,6 +110,7 @@ class OrderDetailButton extends GetView<OrderController> {
                       controller.total.value
                   ? 'Pay Now'
                   : 'Top Up',
+              isLoading: controller.isLoading.value,
             ),
           ],
         ),
