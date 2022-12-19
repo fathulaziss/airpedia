@@ -16,7 +16,7 @@ class PinPreview extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: Get.width,
-      height: Get.height / 2.1,
+      height: Get.height / 2.65,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

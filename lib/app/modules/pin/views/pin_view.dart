@@ -1,6 +1,7 @@
 import 'package:airpedia/app/modules/pin/components/pin_numpad.dart';
 import 'package:airpedia/app/modules/pin/components/pin_preview.dart';
 import 'package:airpedia/app/modules/pin/controllers/pin_controller.dart';
+import 'package:airpedia/widgets/pages/page_default.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -9,8 +10,9 @@ class PinView extends GetView<PinController> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Obx(() {
+    return PageDefault(
+      title: 'Verification PIN',
+      child: Obx(() {
         return Flex(
           direction: Axis.vertical,
           children: [

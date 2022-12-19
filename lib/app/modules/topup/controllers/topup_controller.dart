@@ -86,7 +86,15 @@ class TopupController extends GetxController {
 
       isLoading(false);
 
-      showPopUpInfo(title: 'Success', description: 'Top Up Success');
+      showPopUpInfo(
+        title: 'Success',
+        description: 'Top Up Success',
+        onPress: () {
+          Get
+            ..back()
+            ..back();
+        },
+      );
     } catch (e) {
       isLoading(false);
       logSys(e.toString());

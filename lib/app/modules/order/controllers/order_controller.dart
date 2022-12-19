@@ -137,7 +137,7 @@ class OrderController extends GetxController {
 
       isLoading(false);
 
-      await Get.toNamed(Routes.ORDER_SUCCESS);
+      await Get.offAllNamed(Routes.ORDER_SUCCESS);
     } catch (e) {
       isLoading(false);
       logSys(e.toString());

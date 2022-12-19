@@ -5,6 +5,7 @@ import 'package:airpedia/styles/styles.dart';
 import 'package:airpedia/utils/format_currency.dart';
 import 'package:airpedia/widgets/buttons/button_primary.dart';
 import 'package:airpedia/widgets/inputs/input_currency.dart';
+import 'package:airpedia/widgets/pages/page_default.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -16,15 +17,14 @@ class TopupView extends GetView<TopupController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Obx(() {
-        return SafeArea(
+        return PageDefault(
+          title: 'Top Up',
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: Insets.xl),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 verticalSpace(Insets.xl),
-                Text('Top Up\nYour Wallet', style: TextStyles.title),
-                verticalSpace(Insets.lg),
                 InputCurrency(
                   label: 'Nominal Top Up',
                   hint: '0',

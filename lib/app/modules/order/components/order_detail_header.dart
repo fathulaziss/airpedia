@@ -13,6 +13,7 @@ class OrderDetailHeader extends GetView<OrderController> {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        verticalSpace(Insets.xs),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 5.w),
           child: Image.asset(
