@@ -1,7 +1,7 @@
 import 'package:airpedia/app/modules/home/components/history_empty.dart';
+import 'package:airpedia/app/modules/home/components/history_item.dart';
 import 'package:airpedia/app/modules/home/controllers/history_controller.dart';
 import 'package:airpedia/styles/styles.dart';
-import 'package:airpedia/widgets/cards/card_app.dart';
 import 'package:airpedia/widgets/cards/card_wallet.dart';
 import 'package:airpedia/widgets/others/loading_indicator.dart';
 import 'package:flutter/material.dart';
@@ -30,6 +30,7 @@ class TabHistory extends GetView<HistoryController> {
               style: TextStyles.title.copyWith(fontSize: 14.w),
             ),
           ),
+          verticalSpace(10.w),
           Expanded(
             child: controller.isLoading.value
                 ? LoadingIndicatorBounce(size: 25.w)
@@ -38,18 +39,17 @@ class TabHistory extends GetView<HistoryController> {
                         padding: EdgeInsets.zero,
                         itemCount: controller.listHistoryTransaction.length,
                         itemBuilder: (context, index) {
-                          return CardApp(
-                            margin: EdgeInsets.fromLTRB(
-                              20.w,
-                              10.w,
-                              20.w,
-                              index ==
+                          return Padding(
+                            padding: EdgeInsets.only(
+                              bottom: index ==
                                       controller.listHistoryTransaction.length -
                                           1
-                                  ? 75.w
-                                  : 10.w,
+                                  ? 65.w
+                                  : 0.w,
                             ),
-                            color: Colors.amber,
+                            child: HistoryItem(
+                              data: controller.listHistoryTransaction[index],
+                            ),
                           );
                         },
                       )
