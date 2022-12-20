@@ -16,24 +16,9 @@ class CustomBottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: 55.w,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(Insets.xxl),
-          topRight: Radius.circular(Insets.xxl),
-        ),
-        color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.3),
-            spreadRadius: 5,
-            blurRadius: 5,
-            offset: const Offset(0, 5),
-          )
-        ],
-      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -95,8 +80,8 @@ class ItemNavbar extends StatelessWidget {
           children: [
             AnimatedContainer(
               duration: const Duration(milliseconds: 300),
-              width: isSelected ? 16.w : 15.w,
-              height: isSelected ? 16.w : 15.w,
+              width: isSelected ? 24.w : 20.w,
+              height: isSelected ? 24.w : 20.w,
               child: assetIcon.isNotEmpty
                   ? Image.asset(
                       assetIcon,
@@ -105,13 +90,13 @@ class ItemNavbar extends StatelessWidget {
                   : Icon(
                       icon,
                       color: isSelected ? AppColor.primaryColor : Colors.grey,
-                      size: isSelected ? 16.w : 15.w,
+                      size: isSelected ? 24.w : 20.w,
                     ),
             ),
             verticalSpace(Insets.xs),
             Text(
               label,
-              style: TextStyles.text.copyWith(
+              style: TextStyles.desc.copyWith(
                 fontSize: 10.w,
                 color: isSelected ? AppColor.primaryColor : Colors.grey,
               ),
