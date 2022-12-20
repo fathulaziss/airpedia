@@ -1,12 +1,14 @@
 import 'package:airpedia/app/controllers/user_info_controller.dart';
 import 'package:airpedia/app/data/destination_data.dart';
 import 'package:airpedia/app/models/destination_model.dart';
+import 'package:airpedia/app/modules/home/controllers/history_controller.dart';
 import 'package:airpedia/utils/app_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
   final cUserInfo = Get.find<UserInfoController>();
+  final cHistory = Get.find<HistoryController>();
 
   PageController pageController = PageController();
   RxInt selectedPage = 0.obs;
@@ -35,6 +37,12 @@ class HomeController extends GetxController {
   void navigation(int index) {
     selectedPage(index);
     pageController.jumpToPage(index);
+
+    switch (index) {
+      case 2:
+        cHistory.getHistoryTransaction();
+        break;
+    }
   }
 
   Future<void> getRecommendedDestination() async {
