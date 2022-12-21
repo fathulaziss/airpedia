@@ -31,6 +31,10 @@ class HistoryController extends GetxController {
         listHistoryTransaction(
           RxList.from(document.map((e) => HistoryModel.fromJson(e.data()))),
         );
+
+        listHistoryTransaction.sort(
+          (a, b) => b.transactionDate.compareTo(a.transactionDate),
+        );
       }
 
       isLoading(false);

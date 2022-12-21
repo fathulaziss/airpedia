@@ -76,7 +76,7 @@ class OrderDetailFlight extends GetView<OrderController> {
                                 .departureSchedule,
                             style: TextStyles.title.copyWith(fontSize: 12.w),
                           ),
-                          verticalSpace(4.h),
+                          verticalSpace(Insets.xs),
                           Text(
                             FormatDateTime.format(
                               value: controller.cDestination.dateDaparture,
@@ -122,7 +122,7 @@ class OrderDetailFlight extends GetView<OrderController> {
                             textAlign: TextAlign.end,
                             style: TextStyles.title.copyWith(fontSize: 12.w),
                           ),
-                          verticalSpace(4.h),
+                          verticalSpace(Insets.xs),
                           Text(
                             FormatDateTime.format(
                               value: FormatDateTime.getArrivalDate(

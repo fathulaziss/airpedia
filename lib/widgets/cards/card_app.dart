@@ -1,7 +1,6 @@
 import 'package:airpedia/styles/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 
 class CardApp extends StatelessWidget {
   const CardApp({
@@ -40,7 +39,7 @@ class CardApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: width ?? Get.width,
+      width: width,
       height: height,
       margin: margin ?? EdgeInsets.zero,
       padding: padding ?? EdgeInsets.all(Insets.med),

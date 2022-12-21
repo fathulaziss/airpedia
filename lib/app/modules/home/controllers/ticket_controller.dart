@@ -47,10 +47,18 @@ class TicketController extends GetxController {
           RxList.from(ticketActive.map((e) => TicketModel.fromJson(e.data()))),
         );
 
+        listTicketActive.sort(
+          (a, b) => b.transactionDate.compareTo(a.transactionDate),
+        );
+
         listTicketComplete(
           RxList.from(
             ticketComplete.map((e) => TicketModel.fromJson(e.data())),
           ),
+        );
+
+        listTicketComplete.sort(
+          (a, b) => b.transactionDate.compareTo(a.transactionDate),
         );
       }
 

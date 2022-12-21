@@ -29,6 +29,11 @@ class HomeController extends GetxController {
       final pageIndex = args['index'];
       pageController = PageController(initialPage: pageIndex);
       selectedPage(pageIndex);
+      switch (pageIndex) {
+        case 1:
+          cTicket.getTicket();
+          break;
+      }
     }
     cUserInfo.getDataUser();
     getRecommendedDestination();
