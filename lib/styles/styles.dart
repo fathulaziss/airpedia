@@ -119,6 +119,14 @@ class Shadows {
           offset: const Offset(-1, 0),
         ),
       ];
+
+  static List<BoxShadow> get shadowsDown => [
+        BoxShadow(
+          color: AppColor.greyColor1.withOpacity(0.5),
+          blurRadius: 3,
+          offset: const Offset(0, 4),
+        ),
+      ];
 }
 
 InputDecoration inputDecoration({
