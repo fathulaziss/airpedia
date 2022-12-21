@@ -35,8 +35,8 @@ class DestinationModel extends Equatable {
   final String country;
   final String destinationName;
   final String image;
-  final List<String> interests;
-  final List<String> photos;
+  final List interests;
+  final List photos;
   final double rating;
 
   Map<String, dynamic> toJson() => {
