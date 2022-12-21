@@ -11,8 +11,8 @@ class CardTransactionTicket extends StatelessWidget {
   Widget build(BuildContext context) {
     return CardApp(
       width: 60.w,
-      height: 90.w,
-      constraints: BoxConstraints(minHeight: 90.w),
+      height: 80.w,
+      constraints: BoxConstraints(minHeight: 80.w),
       padding: EdgeInsets.all(10.w),
       color: AppColor.primaryColor3,
       radius: 10.w,

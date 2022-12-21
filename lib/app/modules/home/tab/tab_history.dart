@@ -30,7 +30,7 @@ class TabHistory extends GetView<HistoryController> {
               style: TextStyles.title.copyWith(fontSize: 14.w),
             ),
           ),
-          verticalSpace(10.w),
+          verticalSpace(Insets.xs),
           Expanded(
             child: controller.isLoading.value
                 ? LoadingIndicatorBounce(size: 25.w)
@@ -41,6 +41,7 @@ class TabHistory extends GetView<HistoryController> {
                         itemBuilder: (context, index) {
                           return Padding(
                             padding: EdgeInsets.only(
+                              top: index == 0 ? 10.w : 0,
                               bottom: index ==
                                       controller.listHistoryTransaction.length -
                                           1

@@ -28,7 +28,7 @@ class HistoryItem extends StatelessWidget {
             const CardTransactionTicket()
           else
             const CardTransactionTopup(),
-          horizontalSpace(Insets.med),
+          horizontalSpace(Insets.sm),
           Expanded(
             child: Flex(
               direction: Axis.vertical,
@@ -36,7 +36,7 @@ class HistoryItem extends StatelessWidget {
               children: [
                 Text(
                   data.title,
-                  style: TextStyles.title.copyWith(fontSize: 14.w),
+                  style: TextStyles.title.copyWith(fontSize: 12.w),
                 ),
                 verticalSpace(Insets.xs),
                 Text(
