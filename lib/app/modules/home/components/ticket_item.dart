@@ -10,101 +10,52 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 
 class TicketItem extends StatelessWidget {
-  const TicketItem({super.key, required this.data});
+  const TicketItem({super.key, required this.data, required this.onTap});
 
   final TicketModel data;
+  final Function() onTap;
 
   @override
   Widget build(BuildContext context) {
-    return CardApp(
-      radius: 16.w,
-      margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.w),
-      isShowShadows: true,
-      shadows: Shadows.shadowsUp,
-      child: Column(
-        children: [
-          Row(
-            children: [
-              CardApp(
-                width: 40.w,
-                constraints: BoxConstraints(minHeight: 40.w),
-                margin: EdgeInsets.only(right: Insets.med),
-                padding: EdgeInsets.all(Insets.xs),
-                isShowShadows: true,
-                shadows: Shadows.shadowsUp,
-                radius: 10.w,
-                child: Image.asset(
-                  AppAsset.logoAirline(data.ticket.airlineCode),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      data.refNumber,
-                      style: TextStyles.title.copyWith(fontSize: 12.w),
-                    ),
-                    Text(data.ticket.airlineCode, style: TextStyles.desc)
-                  ],
-                ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Text(
-                    FormatDateTime.format(
-                      value: DateTime.fromMillisecondsSinceEpoch(
-                        data.departureSchedule,
-                      ),
-                      format: DateFormat('dd MMM yyyy'),
-                    ),
-                    style: TextStyles.desc.copyWith(color: AppColor.greyColor1),
+    return InkWell(
+      onTap: onTap,
+      child: CardApp(
+        radius: 16.w,
+        margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.w),
+        isShowShadows: true,
+        shadows: Shadows.shadowsUp,
+        child: Column(
+          children: [
+            Row(
+              children: [
+                CardApp(
+                  width: 40.w,
+                  constraints: BoxConstraints(minHeight: 40.w),
+                  margin: EdgeInsets.only(right: Insets.med),
+                  padding: EdgeInsets.all(Insets.xs),
+                  isShowShadows: true,
+                  shadows: Shadows.shadowsUp,
+                  radius: 10.w,
+                  child: Image.asset(
+                    AppAsset.logoAirline(data.ticket.airlineCode),
+                    fit: BoxFit.cover,
                   ),
-                  CardApp(
-                    constraints: BoxConstraints(minHeight: 20.w),
-                    padding: EdgeInsets.symmetric(horizontal: Insets.med),
-                    color: DateTime.fromMillisecondsSinceEpoch(
-                              data.departureSchedule,
-                            ).isAfter(DateTime.now()) ==
-                            true
-                        ? AppColor.yellowColor1
-                        : AppColor.greenColor,
-                    radius: 4.w,
-                    child: Center(
-                      child: Text(
-                        DateTime.fromMillisecondsSinceEpoch(
-                                  data.departureSchedule,
-                                ).isAfter(DateTime.now()) ==
-                                true
-                            ? 'On Going'
-                            : 'Used',
-                        style: TextStyles.title
-                            .copyWith(fontSize: 12.w, color: Colors.white),
+                ),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        '#${data.refNumber}',
+                        style: TextStyles.title.copyWith(fontSize: 12.w),
                       ),
-                    ),
-                  )
-                ],
-              ),
-            ],
-          ),
-          verticalSpace(Insets.xs),
-          const Divider(color: AppColor.primaryColor2, thickness: 1),
-          Row(
-            children: [
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                      Text(data.ticket.airlineCode, style: TextStyles.desc)
+                    ],
+                  ),
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Text(
-                      data.ticket.airportDepartureCode.toUpperCase(),
-                      style: TextStyles.desc,
-                    ),
-                    Text(
-                      data.ticket.departureSchedule,
-                      style: TextStyles.title.copyWith(fontSize: 12.w),
-                    ),
                     Text(
                       FormatDateTime.format(
                         value: DateTime.fromMillisecondsSinceEpoch(
@@ -112,84 +63,138 @@ class TicketItem extends StatelessWidget {
                         ),
                         format: DateFormat('dd MMM yyyy'),
                       ),
-                      style: TextStyles.desc,
+                      style:
+                          TextStyles.desc.copyWith(color: AppColor.greyColor1),
                     ),
+                    CardApp(
+                      constraints: BoxConstraints(minHeight: 20.w),
+                      padding: EdgeInsets.symmetric(horizontal: Insets.med),
+                      color: DateTime.fromMillisecondsSinceEpoch(
+                                data.departureSchedule,
+                              ).isAfter(DateTime.now()) ==
+                              true
+                          ? AppColor.yellowColor1
+                          : AppColor.greenColor,
+                      radius: 4.w,
+                      child: Center(
+                        child: Text(
+                          DateTime.fromMillisecondsSinceEpoch(
+                                    data.departureSchedule,
+                                  ).isAfter(DateTime.now()) ==
+                                  true
+                              ? 'On Going'
+                              : 'Used',
+                          style: TextStyles.title
+                              .copyWith(fontSize: 12.w, color: Colors.white),
+                        ),
+                      ),
+                    )
                   ],
                 ),
-              ),
-              Column(
-                children: [
-                  Text('Duration', style: TextStyles.desc),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+              ],
+            ),
+            verticalSpace(Insets.xs),
+            const Divider(color: AppColor.primaryColor2, thickness: 1),
+            Row(
+              children: [
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        width: 80.w,
-                        height: 1.w,
-                        margin: EdgeInsets.only(right: Insets.sm),
-                        color: AppColor.primaryColor2,
+                      Text(
+                        data.ticket.airportDepartureCode.toUpperCase(),
+                        style: TextStyles.desc,
                       ),
-                      Transform.rotate(
-                        angle: 180 * math.pi / 360,
-                        child: Icon(
-                          Icons.airplanemode_active,
-                          size: 14.w,
-                          color: AppColor.primaryColor3,
+                      Text(
+                        data.ticket.departureSchedule,
+                        style: TextStyles.title.copyWith(fontSize: 12.w),
+                      ),
+                      Text(
+                        FormatDateTime.format(
+                          value: DateTime.fromMillisecondsSinceEpoch(
+                            data.departureSchedule,
+                          ),
+                          format: DateFormat('dd MMM yyyy'),
                         ),
-                      )
+                        style: TextStyles.desc,
+                      ),
                     ],
                   ),
-                  Text(
-                    FormatDateTime.getDuration(
-                      FormatDateTime.getArrivalDate(
-                        departureDate: DateTime.fromMillisecondsSinceEpoch(
-                          data.departureSchedule,
-                        ),
-                        arrivalSchedule: data.ticket.arrivalSchedule,
-                      )
-                          .difference(
-                            DateTime.fromMillisecondsSinceEpoch(
-                              data.departureSchedule,
-                            ),
-                          )
-                          .inMinutes,
-                    ),
-                    style: TextStyles.title.copyWith(fontSize: 12.w),
-                  ),
-                ],
-              ),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
+                ),
+                Column(
                   children: [
-                    Text(
-                      data.ticket.airportArrivalCode.toUpperCase(),
-                      style: TextStyles.desc,
+                    Text('Duration', style: TextStyles.desc),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: 80.w,
+                          height: 1.w,
+                          margin: EdgeInsets.only(right: Insets.sm),
+                          color: AppColor.primaryColor2,
+                        ),
+                        Transform.rotate(
+                          angle: 180 * math.pi / 360,
+                          child: Icon(
+                            Icons.airplanemode_active,
+                            size: 14.w,
+                            color: AppColor.primaryColor3,
+                          ),
+                        )
+                      ],
                     ),
                     Text(
-                      data.ticket.arrivalSchedule,
-                      textAlign: TextAlign.end,
-                      style: TextStyles.title.copyWith(fontSize: 12.w),
-                    ),
-                    Text(
-                      FormatDateTime.format(
-                        value: FormatDateTime.getArrivalDate(
+                      FormatDateTime.getDuration(
+                        FormatDateTime.getArrivalDate(
                           departureDate: DateTime.fromMillisecondsSinceEpoch(
                             data.departureSchedule,
                           ),
                           arrivalSchedule: data.ticket.arrivalSchedule,
-                        ),
-                        format: DateFormat('dd MMM yyyy'),
+                        )
+                            .difference(
+                              DateTime.fromMillisecondsSinceEpoch(
+                                data.departureSchedule,
+                              ),
+                            )
+                            .inMinutes,
                       ),
-                      textAlign: TextAlign.end,
-                      style: TextStyles.desc,
+                      style: TextStyles.title.copyWith(fontSize: 12.w),
                     ),
                   ],
                 ),
-              )
-            ],
-          ),
-        ],
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        data.ticket.airportArrivalCode.toUpperCase(),
+                        style: TextStyles.desc,
+                      ),
+                      Text(
+                        data.ticket.arrivalSchedule,
+                        textAlign: TextAlign.end,
+                        style: TextStyles.title.copyWith(fontSize: 12.w),
+                      ),
+                      Text(
+                        FormatDateTime.format(
+                          value: FormatDateTime.getArrivalDate(
+                            departureDate: DateTime.fromMillisecondsSinceEpoch(
+                              data.departureSchedule,
+                            ),
+                            arrivalSchedule: data.ticket.arrivalSchedule,
+                          ),
+                          format: DateFormat('dd MMM yyyy'),
+                        ),
+                        textAlign: TextAlign.end,
+                        style: TextStyles.desc,
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

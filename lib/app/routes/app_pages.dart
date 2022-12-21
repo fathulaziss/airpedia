@@ -19,6 +19,8 @@ import 'package:airpedia/app/modules/register/bindings/register_binding.dart';
 import 'package:airpedia/app/modules/register/views/register_success_view.dart';
 import 'package:airpedia/app/modules/register/views/register_view.dart';
 import 'package:airpedia/app/modules/splash_screen_view.dart';
+import 'package:airpedia/app/modules/ticket_detail/bindings/ticket_detail_binding.dart';
+import 'package:airpedia/app/modules/ticket_detail/views/ticket_detail_view.dart';
 import 'package:airpedia/app/modules/topup/bindings/topup_binding.dart';
 import 'package:airpedia/app/modules/topup/views/topup_view.dart';
 import 'package:airpedia/app/modules/under_development.dart';
@@ -103,6 +105,11 @@ class AppPages {
       name: _Paths.PIN,
       page: () => const PinView(),
       binding: PinBinding(),
+    ),
+    GetPage(
+      name: _Paths.TICKET_DETAIL,
+      page: () => const TicketDetailView(),
+      binding: TicketDetailBinding(),
     ),
   ];
 }

@@ -20,6 +20,7 @@ abstract class Routes {
   static const ORDER_SUCCESS = _Paths.ORDER_SUCCESS;
   static const TOPUP = _Paths.TOPUP;
   static const PIN = _Paths.PIN;
+  static const TICKET_DETAIL = _Paths.TICKET_DETAIL;
 }
 
 abstract class _Paths {
@@ -39,4 +40,5 @@ abstract class _Paths {
   static const ORDER_SUCCESS = '/order-success';
   static const TOPUP = '/topup';
   static const PIN = '/pin';
+  static const TICKET_DETAIL = '/ticket-detail';
 }

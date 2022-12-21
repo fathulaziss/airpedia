@@ -1,6 +1,7 @@
 import 'package:airpedia/app/modules/home/components/ticket_empty.dart';
 import 'package:airpedia/app/modules/home/components/ticket_item.dart';
 import 'package:airpedia/app/modules/home/controllers/ticket_controller.dart';
+import 'package:airpedia/app/routes/app_pages.dart';
 import 'package:airpedia/widgets/others/loading_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -23,6 +24,12 @@ class TicketActive extends GetView<TicketController> {
                     itemBuilder: (context, index) {
                       return TicketItem(
                         data: controller.listTicketActive[index],
+                        onTap: () => Get.toNamed(
+                          Routes.TICKET_DETAIL,
+                          arguments: {
+                            'data': controller.listTicketActive[index]
+                          },
+                        ),
                       );
                     },
                   ),
