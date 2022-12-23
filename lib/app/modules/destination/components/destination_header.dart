@@ -21,6 +21,7 @@ class DestinationHeader extends StatelessWidget {
             child: Image.asset(
               AppAsset.image(data.image),
               width: Get.width,
+              height: Get.height,
               fit: BoxFit.cover,
             ),
           ),

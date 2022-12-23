@@ -77,7 +77,7 @@ const List airportDepartureData = [
   {
     'code': 'lop',
     'name': 'Zainuddin Abdul Madjid',
-    'location': 'Central Lombok',
+    'location': 'Lombok',
   },
   {
     'code': 'koe',
