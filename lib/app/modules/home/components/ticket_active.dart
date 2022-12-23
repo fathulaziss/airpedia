@@ -22,13 +22,21 @@ class TicketActive extends GetView<TicketController> {
                     padding: EdgeInsets.zero,
                     itemCount: controller.listTicketActive.length,
                     itemBuilder: (context, index) {
-                      return TicketItem(
-                        data: controller.listTicketActive[index],
-                        onTap: () => Get.toNamed(
-                          Routes.TICKET_DETAIL,
-                          arguments: {
-                            'data': controller.listTicketActive[index]
-                          },
+                      return Padding(
+                        padding: EdgeInsets.only(
+                          bottom:
+                              index == controller.listTicketActive.length - 1
+                                  ? 70.w
+                                  : 0,
+                        ),
+                        child: TicketItem(
+                          data: controller.listTicketActive[index],
+                          onTap: () => Get.toNamed(
+                            Routes.TICKET_DETAIL,
+                            arguments: {
+                              'data': controller.listTicketActive[index]
+                            },
+                          ),
                         ),
                       );
                     },

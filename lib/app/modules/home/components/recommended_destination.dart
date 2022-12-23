@@ -16,7 +16,10 @@ class RecommendedDestination extends GetView<HomeController> {
       () => Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Recommended', style: TextStyles.title),
+          Padding(
+            padding: EdgeInsets.only(left: 20.w),
+            child: Text('Recommended', style: TextStyles.title),
+          ),
           SizedBox(
             width: double.infinity,
             height: 313.w,
@@ -34,8 +37,7 @@ class RecommendedDestination extends GetView<HomeController> {
                       if (controller.isLoadingRecommendedDestination.value) {
                         return RecommendedDestinationShimmerItem(
                           margin: EdgeInsets.only(
-                            left: (index == 0) ? 5.w : 24.w,
-                            right: (index == 4) ? 5.w : 0,
+                            left: 20.w,
                             top: 16.w,
                             bottom: 16.w,
                           ),
@@ -51,13 +53,7 @@ class RecommendedDestination extends GetView<HomeController> {
                           ),
                           data: controller.listRecommendedDestination[index],
                           margin: EdgeInsets.only(
-                            left: (index == 0) ? 5.w : 24.w,
-                            right: (index ==
-                                    controller
-                                            .listRecommendedDestination.length -
-                                        1)
-                                ? 5.w
-                                : 0,
+                            left: 20.w,
                             top: 16.w,
                             bottom: 16.w,
                           ),

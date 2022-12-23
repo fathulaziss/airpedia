@@ -38,6 +38,10 @@ showPopUpInfo({
             ButtonPrimary(
               onTap: onPress ?? Get.back,
               label: labelButton ?? 'OK',
+              height: 35.w,
+              textStyle: TextStyles.title
+                  .copyWith(fontSize: 14.w, color: Colors.white),
+              radius: 12.w,
             ),
             SizedBox(height: 20.w),
           ],
@@ -83,10 +87,13 @@ showPopUpConfirmation({
               children: [
                 Expanded(
                   child: ButtonPrimary(
+                    height: 35.w,
                     onTap: onPressNegative ?? Get.back,
                     label: labelButtonNegative ?? 'CANCEL',
-                    textColor: AppColor.primaryColor,
+                    textStyle: TextStyles.title
+                        .copyWith(fontSize: 14.w, color: AppColor.primaryColor),
                     color: Colors.white,
+                    radius: 12.w,
                     isOutline: true,
                     outlineColor: AppColor.primaryColor,
                   ),
@@ -94,6 +101,10 @@ showPopUpConfirmation({
                 horizontalSpace(Insets.sm),
                 Expanded(
                   child: ButtonPrimary(
+                    height: 35.w,
+                    textStyle: TextStyles.title
+                        .copyWith(fontSize: 14.w, color: Colors.white),
+                    radius: 12.w,
                     onTap: onPressPositive ?? Get.back,
                     label: labelButtonPostive ?? 'YES',
                   ),

@@ -16,7 +16,10 @@ class NewDestination extends GetView<HomeController> {
       () => Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('New This Year', style: TextStyles.title),
+          Padding(
+            padding: EdgeInsets.only(left: 20.w),
+            child: Text('New This Year', style: TextStyles.title),
+          ),
           verticalSpace(Insets.lg),
           if (controller.isLoadingNewDestination.value)
             Column(
@@ -45,11 +48,12 @@ class NewDestination extends GetView<HomeController> {
                   bottom: (index == controller.listNewDestination.length - 1)
                       ? 0.w
                       : 16.w,
-                  left: 5.w,
-                  right: 5.w,
+                  left: 20.w,
+                  right: 20.w,
                 ),
               );
             }),
+          verticalSpace(70.w),
         ],
       ),
     );

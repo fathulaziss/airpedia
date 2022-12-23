@@ -22,13 +22,21 @@ class TicketComplete extends GetView<TicketController> {
                     padding: EdgeInsets.zero,
                     itemCount: controller.listTicketComplete.length,
                     itemBuilder: (context, index) {
-                      return TicketItem(
-                        data: controller.listTicketComplete[index],
-                        onTap: () => Get.toNamed(
-                          Routes.TICKET_DETAIL,
-                          arguments: {
-                            'data': controller.listTicketComplete[index]
-                          },
+                      return Padding(
+                        padding: EdgeInsets.only(
+                          bottom:
+                              index == controller.listTicketComplete.length - 1
+                                  ? 70.w
+                                  : 0,
+                        ),
+                        child: TicketItem(
+                          data: controller.listTicketComplete[index],
+                          onTap: () => Get.toNamed(
+                            Routes.TICKET_DETAIL,
+                            arguments: {
+                              'data': controller.listTicketComplete[index]
+                            },
+                          ),
                         ),
                       );
                     },
