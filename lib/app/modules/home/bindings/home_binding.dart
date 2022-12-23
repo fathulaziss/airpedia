@@ -1,6 +1,7 @@
 // ignore_for_file: directives_ordering
 
 import 'package:airpedia/app/modules/home/controllers/history_controller.dart';
+import 'package:airpedia/app/modules/home/controllers/setting_controller.dart';
 import 'package:airpedia/app/modules/home/controllers/ticket_controller.dart';
 import 'package:get/get.dart';
 import 'package:airpedia/app/modules/home/controllers/home_controller.dart';
@@ -11,6 +12,7 @@ class HomeBinding extends Bindings {
     Get
       ..lazyPut<HomeController>(() => HomeController())
       ..lazyPut<TicketController>(() => TicketController())
-      ..lazyPut<HistoryController>(() => HistoryController());
+      ..lazyPut<HistoryController>(() => HistoryController())
+      ..lazyPut<SettingController>(() => SettingController());
   }
 }

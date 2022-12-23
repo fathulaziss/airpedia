@@ -1,3 +1,4 @@
+import 'package:airpedia/styles/colors.dart';
 import 'package:airpedia/styles/styles.dart';
 import 'package:airpedia/widgets/buttons/button_primary.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,7 @@ showPopUpInfo({
           children: [
             Text(
               title ?? '',
-              style: TextStyles.title.copyWith(fontSize: 16.w),
+              style: TextStyles.title.copyWith(fontSize: 14.w),
               textAlign: TextAlign.center,
             ),
             verticalSpace(Insets.med),
@@ -38,7 +39,68 @@ showPopUpInfo({
               onTap: onPress ?? Get.back,
               label: labelButton ?? 'OK',
             ),
-            SizedBox(height: 20.h),
+            SizedBox(height: 20.w),
+          ],
+        ),
+      ),
+    ),
+    barrierDismissible: false,
+  );
+}
+
+showPopUpConfirmation({
+  String? title,
+  String? description,
+  String? labelButtonPostive,
+  String? labelButtonNegative,
+  Function()? onPressPositive,
+  Function()? onPressNegative,
+}) {
+  Get.dialog(
+    Dialog(
+      backgroundColor: Colors.transparent,
+      insetPadding: EdgeInsets.symmetric(horizontal: 24.w),
+      child: Container(
+        padding: EdgeInsets.fromLTRB(20.w.w, 20.w, 20.w, 4.w),
+        decoration:
+            BoxDecoration(borderRadius: Corners.smBorder, color: Colors.white),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              title ?? '',
+              style: TextStyles.title.copyWith(fontSize: 14.w),
+              textAlign: TextAlign.center,
+            ),
+            verticalSpace(Insets.med),
+            Text(
+              description ?? '',
+              style: TextStyles.text,
+              textAlign: TextAlign.center,
+            ),
+            verticalSpace(Insets.xl),
+            Row(
+              children: [
+                Expanded(
+                  child: ButtonPrimary(
+                    onTap: onPressNegative ?? Get.back,
+                    label: labelButtonNegative ?? 'CANCEL',
+                    textColor: AppColor.primaryColor,
+                    color: Colors.white,
+                    isOutline: true,
+                    outlineColor: AppColor.primaryColor,
+                  ),
+                ),
+                horizontalSpace(Insets.sm),
+                Expanded(
+                  child: ButtonPrimary(
+                    onTap: onPressPositive ?? Get.back,
+                    label: labelButtonPostive ?? 'YES',
+                  ),
+                )
+              ],
+            ),
+            SizedBox(height: 20.w),
           ],
         ),
       ),
