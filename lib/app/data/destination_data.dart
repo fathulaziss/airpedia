@@ -109,18 +109,23 @@ const List recommendedDestination = [
 const List newDestination = [
   {
     'about':
-        'Berada di jalur jalan provinsi yang menghubungkan Denpasar Singaraja serta letaknya yang dekat dengan Kebun Raya Eka Karya menjadikan tempat Bali.',
+        'Meski ukurannya kecil, pulau Ambon tetap menawarkan banyak pengalaman untuk para petualang. Dari menjelajahi Kota Ambon yang menawan, mendaki gunung melalui vegetasi tropis yang rimbun, dan ada banyak permata yang belum ditemukan untuk dinikmati pengunjung.',
     'airport_destination_code': 'amq',
     'airport_destination_location': 'Ambon',
     'airport_destination_name': 'Pattimura',
     'country': 'Indonesia',
     'destination_name': 'Ambon',
-    'image': 'img_new_destination4.png',
-    'interests': ['Kids Park', 'Honor Bridge', 'City Musseum', 'Central Mall'],
+    'image': 'img_destination_ambon.jpeg',
+    'interests': [
+      'Bair Island',
+      'Molana Island',
+      'Ora Beach',
+      'Ngurtavur Beach'
+    ],
     'photos': [
-      'img_destination_detail1.png',
-      'img_destination_detail2.png',
-      'img_destination_detail3.png',
+      'img_destination_ambon1.jpeg',
+      'img_destination_ambon2.jpeg',
+      'img_destination_ambon3.jpeg',
     ],
     'rating': 4.5,
   },
