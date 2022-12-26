@@ -1,4 +1,64 @@
 {
+    "aboutLombok": "Berada di provinsi Nusa Tenggara Barat dan merupakan salah satu pulau yang memiliki beragam wisata terutama dengan kekayaan alamnya yang menakjubkan di Indonesia, mulai dari wisata Gunung Rinjani, Gili Trawangan, dan masih banyak pantai dengan berbagai macam keindahannya.",
+    "attractionLombok1": "Gunung Rinjani",
+    "attractionLombok2": "Gili Trawangan",
+    "attractionLombok3": "Bukit Merese",
+    "attractionLombok4": "Pantai Senggigi",
+
+    "aboutBandung": "Bandung merupakan salah satu kota bersejarah di Indonesia. Kota berjuluk Paris van Java ini memiliki segudang destinasi wisata yang layak untuk dikunjungi, seperti Kawah Putih Ciwidey, Desa Dago hingga Lembang.",
+    "attractionBandung1": "Kawah Putih Ciwidey",
+    "attractionBandung2": "Lembang",
+    "attractionBandung3": "Desa Dago",
+    "attractionBandung4": "Pusat Perbelanjaan",
+
+    "aboutYogyakarta": "Daerah Istimewa Yogyakarta terletak di bagian selatan pulau Jawa, berbatasan dengan provinsi Jawa Tengah. Daya tarik kota ini bisa dikatakan terbagi menjadi tiga, wisata keraton, belanja batik, dan wisata kuliner.",
+    "attractionYogyakarta1": "Jalan Malioboro",
+    "attractionYogyakarta2": "Candi",
+    "attractionYogyakarta3": "Pusat Kuliner",
+    "attractionYogyakarta4": "Pusat Perbelanjaan",
+
+    "aboutSurabaya": "Kota Surabaya merupakan kota terbesar kedua di Indonesia sekaligus menjadi ibu kota Provinsi Jawa Timur. Meski berstatus kota metropolitan, Surabaya tetap memiliki beragam keindahan alam yang cocok dijadikan tempat liburan bersama keluarga seperti Kebun Raya Mangrove, Pantai Kenjeran, dan Taman Hutan Raya.",
+    "attractionSurabaya1": "Pantai Kenjeran",
+    "attractionSurabaya2": "Kebun Mangrove",
+    "attractionSurabaya3": "Museum Kota",
+    "attractionSurabaya4": "Taman Hutan Raya",
+
+    "aboutJakarta": "Tempat wisata di Jakarta menawarkan sejuta pesona pusat kota. Tidak hanya wisata modern, namun wisata sejarah, budaya dan alam yang cocok untuk wisata keluarga di akhir pekan.",
+    "attractionJakarta1": "Taman Suropati",
+    "attractionJakarta2": "Akuarium Jakarta",
+    "attractionJakarta3": "Museum Kota",
+    "attractionJakarta4": "Pusat Perbelanjaan",
+
+    "aboutAmbon": "Meski ukurannya kecil, pulau Ambon tetap menawarkan banyak pengalaman untuk para petualang. Dari menjelajahi Kota Ambon yang menawan, mendaki gunung melalui vegetasi tropis yang rimbun, dan ada banyak permata yang belum ditemukan untuk dinikmati pengunjung.",
+    "attractionAmbon1": "Pulau Bair",
+    "attractionAmbon2": "Pulau Molana",
+    "attractionAmbon3": "Pantai Ora",
+    "attractionAmbon4": "Pantai Ngurtavur",
+
+    "aboutPapua": "Papua yang terletak di Indonesia Timur menjadi titik awal bagi banyak orang yang ingin mengunjungi keindahan alam Indonesia. Wisatawan datang ke sini untuk semua jenis petualangan. Anda bisa mulai dari Lembah Baliem yang terpencil, atau sekedar mengabadikan keajaiban Danau Sentani dan budayanya di kamera.",
+    "attractionPapua1": "Danau Sentani",
+    "attractionPapua2": "Raja Ampat",
+    "attractionPapua3": "Lembah Baliem",
+    "attractionPapua4": "Taman Nasional Wasur",
+
+    "aboutBali": "Pulau Bali adalah pulau kecil yang indah dan bagian dari kepulauan Indonesia, dan pariwisata Indonesia yang paling terkenal di dunia. Memiliki panorama dan budaya unik yang membuat pulau ini eksklusif dari yang lain. Selain itu, lokasinya berada dalam situasi tropis sebagai Pulau Impian untuk berlibur. Pulau Bali memiliki banyak tempat menarik seperti sawah, panorama yang indah, gunung berapi, kegiatan pariwisata serta atraksi.",
+    "attractionBali1": "Desa Ubud",
+    "attractionBali2": "Pantai Sanur",
+    "attractionBali3": "Museum Kota",
+    "attractionBali4": "Danau Beratan",
+
+    "aboutPadang": "Terkenal di seluruh Indonesia karena masakan khasnya. Padang adalah tempat untuk mencicipi makanan nasi padang pedas terkenal yang telah menyebar ke seluruh negeri dan dunia, termasuk makanan lezat seperti rendang, dendeng, dan sate padang. Padang juga menyimpan keindahan alam yang mempesona karena berbatasan langsung dengan Samudera Hindia serta memiliki topografi dan landscape yang beragam.",
+    "attractionPadang1": "Bukit Nobita",
+    "attractionPadang2": "Pulau Mentawai",
+    "attractionPadang3": "Pusat Kuliner",
+    "attractionPadang4": "Pantai Bungus",
+
+    "aboutMakassar": "Makassar adalah Pintu Gerbang ke Indonesia Timur, sekaligus titik masuk untuk tur petualangan ke dataran tinggi Tana Toraja, di mana pemandangan gunung yang menakjubkan dan ritual unik masyarakat Toraja menanti. Hanya berjarak 50 km dari kota, Taman Nasional Bantimurung Bulusaraung akan menyambut Anda dengan air terjunnya yang menakjubkan dan gerombolan kupu-kupu yang mempesona.",
+    "attractionMakassar1": "Dataran Tinggi Malino",
+    "attractionMakassar2": "Pegunungan Karst",
+    "attractionMakassar3": "Museum Kota",
+    "attractionMakassar4": "Pulau Samalona",
+
     "login": "Masuk",
     "register": "Daftar"
 }
