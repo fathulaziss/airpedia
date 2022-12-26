@@ -1,5 +1,5 @@
 // Recommended destination = [Lombok, Bandung, Yogyakarta, Surabaya, Jakarta]
-// New destination = [Ambon, Raja Ampat, Bali, Padang, Makassar]
+// New destination = [Ambon, Papua, Bali, Padang, Makassar]
 
 const Map<String, dynamic> destinationTicketData = {
   // destination to Lombok
@@ -5859,7 +5859,7 @@ const Map<String, dynamic> destinationTicketData = {
       }
     ],
   },
-  // destination to Raja Ampat
+  // destination to Papua
   'djj': {
     // departure from Jakarta cgk
     'cgk': [
