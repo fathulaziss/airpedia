@@ -117,6 +117,6 @@ const List airportDepartureData = [
   {
     'code': 'djj',
     'name': 'Sentani',
-    'location': 'Jayapura',
+    'location': 'Papua',
   }
 ];

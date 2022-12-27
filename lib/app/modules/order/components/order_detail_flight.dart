@@ -80,7 +80,10 @@ class OrderDetailFlight extends GetView<OrderController> {
                           Text(
                             FormatDateTime.format(
                               value: controller.cDestination.dateDaparture,
-                              format: DateFormat('dd MMM yyyy'),
+                              format: DateFormat(
+                                'dd MMM yyyy',
+                                '${Get.locale!.languageCode}_${Get.locale!.countryCode}',
+                              ),
                             ),
                             style: TextStyles.desc,
                           ),
@@ -131,7 +134,10 @@ class OrderDetailFlight extends GetView<OrderController> {
                                 arrivalSchedule: controller.cDestination
                                     .destinationTicket.value.arrivalSchedule,
                               ),
-                              format: DateFormat('dd MMM yyyy'),
+                              format: DateFormat(
+                                'dd MMM yyyy',
+                                '${Get.locale!.languageCode}_${Get.locale!.countryCode}',
+                              ),
                             ),
                             textAlign: TextAlign.end,
                             style: TextStyles.desc,

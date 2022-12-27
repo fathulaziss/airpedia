@@ -12,4 +12,20 @@ class TicketDetailController extends GetxController {
     }
     super.onInit();
   }
+
+  String checkBenefit(String value) {
+    if (value == 'Baggage 20 Kg' || value == 'Bagasi 20 Kg') {
+      return 'benefit1'.tr;
+    }
+    if (value == 'Food' || value == 'Makanan') {
+      return 'benefit2'.tr;
+    }
+    if (value == 'Entertainment' || value == 'Hiburan') {
+      return 'benefit3'.tr;
+    }
+    if (value == 'USB Port / Power' || value == 'Port USB / Daya') {
+      return 'benefit4'.tr;
+    }
+    return '';
+  }
 }

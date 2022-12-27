@@ -19,6 +19,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_jailbreak_detection: ^1.8.0
+  flutter_localization: ^0.1.9
   flutter_screenutil: ^5.6.0
   flutter_spinkit: ^5.1.0
   flutter_typeahead: ^4.1.1

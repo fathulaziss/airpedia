@@ -1,3 +1,4 @@
+import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 class FormatDateTime {
@@ -5,7 +6,10 @@ class FormatDateTime {
     required DateTime value,
     DateFormat? format,
   }) {
-    format ??= DateFormat('yyyy-MM-dd');
+    format ??= DateFormat(
+      'yyyy-MM-dd',
+      '${Get.locale!.languageCode}_${Get.locale!.countryCode}',
+    );
     try {
       return format.format(value);
     } catch (e) {
@@ -37,6 +41,6 @@ class FormatDateTime {
   static String getDuration(int minutes) {
     final d = Duration(minutes: minutes);
     final parts = d.toString().split(':');
-    return '${parts[0]}h ${parts[1].padLeft(2, '0')}m';
+    return '${parts[0]}${Get.locale!.countryCode == 'ID' ? 'j' : 'h'} ${parts[1].padLeft(2, '0')}m';
   }
 }

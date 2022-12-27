@@ -1,3 +1,4 @@
+import 'package:airpedia/app/controllers/utility_controller.dart';
 import 'package:airpedia/app/data/airport_departure_data.dart';
 import 'package:airpedia/app/data/destination_ticket_data.dart';
 import 'package:airpedia/app/models/airport_model.dart';
@@ -10,6 +11,7 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 class DestinationController extends GetxController {
+  final cUtility = Get.find<UtilityController>();
   Rx<DestinationModel> data = const DestinationModel().obs;
 
   final cDateDeparture = TextEditingController();

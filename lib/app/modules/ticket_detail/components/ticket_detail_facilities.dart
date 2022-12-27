@@ -1,11 +1,13 @@
 import 'package:airpedia/app/models/ticket_model.dart';
+import 'package:airpedia/app/modules/ticket_detail/controllers/ticket_detail_controller.dart';
 import 'package:airpedia/styles/colors.dart';
 import 'package:airpedia/styles/styles.dart';
 import 'package:airpedia/widgets/cards/card_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
-class TicketDetailFacilities extends StatelessWidget {
+class TicketDetailFacilities extends GetView<TicketDetailController> {
   const TicketDetailFacilities({super.key, required this.data});
 
   final TicketModel data;
@@ -70,7 +72,9 @@ class TicketDetailFacilities extends StatelessWidget {
                     horizontalSpace(Insets.xxl),
                     Expanded(
                       child: Text(
-                        data.ticket.benefit.join(', '),
+                        data.ticket.benefit
+                            .map((e) => controller.checkBenefit(e))
+                            .join(', '),
                         style: TextStyles.title.copyWith(fontSize: 10.w),
                         textAlign: TextAlign.end,
                       ),

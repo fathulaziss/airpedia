@@ -61,6 +61,10 @@ class LocaleKeys {
   static const attractionMakassar2 = 'attractionMakassar2';
   static const attractionMakassar3 = 'attractionMakassar3';
   static const attractionMakassar4 = 'attractionMakassar4';
+  static const benefit1 = 'benefit1';
+  static const benefit2 = 'benefit2';
+  static const benefit3 = 'benefit3';
+  static const benefit4 = 'benefit4';
   static const login = 'login';
   static const register = 'register';
 }
@@ -127,6 +131,10 @@ class Locales {
     'attractionMakassar2': 'Pegunungan Karst',
     'attractionMakassar3': 'Museum Kota',
     'attractionMakassar4': 'Pulau Samalona',
+    'benefit1': 'Bagasi 20 Kg',
+    'benefit2': 'Makanan',
+    'benefit3': 'Hiburan',
+    'benefit4': 'Port USB / Daya',
     'login': 'Masuk',
     'register': 'Daftar',
   };
@@ -191,6 +199,10 @@ class Locales {
     'attractionMakassar2': 'Karst Mountains',
     'attractionMakassar3': 'City Museum',
     'attractionMakassar4': 'Samalona Island',
+    'benefit1': 'Baggage 20 Kg',
+    'benefit2': 'Food',
+    'benefit3': 'Entertainment',
+    'benefit4': 'USB Port / Power',
     'login': 'Login',
     'register': 'Register',
   };

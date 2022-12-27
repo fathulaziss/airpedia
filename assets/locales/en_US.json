@@ -59,6 +59,11 @@
     "attractionMakassar3": "City Museum",
     "attractionMakassar4": "Samalona Island",
 
+    "benefit1": "Baggage 20 Kg",
+    "benefit2": "Food",
+    "benefit3": "Entertainment",
+    "benefit4": "USB Port / Power",
+
     "login": "Login",
     "register": "Register"
 }

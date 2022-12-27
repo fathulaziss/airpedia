@@ -132,7 +132,7 @@ class DestinationTicketItem extends StatelessWidget {
                     child: SizedBox(
                       width: 97.w,
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        // mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image.asset(
                             AppAsset.icon('ic_check.png'),
@@ -140,7 +140,7 @@ class DestinationTicketItem extends StatelessWidget {
                           ),
                           horizontalSpace(Insets.xs),
                           Text(
-                            e == 'Baggage 20kg' ? '$e   ' : e,
+                            e == 'Bagasi 20Kg' ? '$e   ' : e,
                             style: TextStyles.desc.copyWith(fontSize: 10.w),
                           ),
                         ],

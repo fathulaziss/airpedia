@@ -8,6 +8,7 @@ import 'package:airpedia/widgets/cards/card_transaction_ticket.dart';
 import 'package:airpedia/widgets/cards/card_transaction_topup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 class HistoryItem extends StatelessWidget {
@@ -50,7 +51,10 @@ class HistoryItem extends StatelessWidget {
                 verticalSpace(Insets.xs),
                 Text(
                   FormatDateTime.format(
-                    format: DateFormat('dd MMM yyyy'),
+                    format: DateFormat(
+                      'dd MMM yyyy',
+                      '${Get.locale!.languageCode}_${Get.locale!.countryCode}',
+                    ),
                     value: data.transactionDate,
                   ),
                   style: TextStyles.desc.copyWith(color: AppColor.greyColor1),

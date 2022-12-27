@@ -1,7 +1,9 @@
 // Recommended destination = [Lombok, Bandung, Yogyakarta, Surabaya, Jakarta]
 // New destination = [Ambon, Papua, Bali, Padang, Makassar]
 
-const Map<String, dynamic> destinationTicketData = {
+import 'package:get/get.dart';
+
+Map<String, dynamic> destinationTicketData = {
   // destination to Lombok
   'lop': {
     // departure from Jakarta cgk
@@ -21,7 +23,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -38,7 +40,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -55,7 +57,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1450000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -72,12 +74,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1800000,
-        'benefit': [
-          'Baggage 20kg',
-          'Food',
-          'Entertainment',
-          'USB Port / Power',
-        ],
+        'benefit': ['benefit1'.tr, 'benefit3'.tr, 'benefit4'.tr, 'benefit2'.tr],
       },
     ],
     // departure from Surabaya sub
@@ -97,7 +94,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -114,7 +111,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 850000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -131,7 +128,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 960000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
     ],
     // departure from Solo soc
@@ -151,7 +148,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'soc',
@@ -168,12 +165,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 960000,
-        'benefit': [
-          'Baggage 20kg',
-          'Food',
-          'Entertainment',
-          'USB Port / Power'
-        ],
+        'benefit': ['benefit1'.tr, 'benefit3'.tr, 'benefit4'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Yogyakarta jog
@@ -193,7 +185,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Bandung bdo
@@ -213,7 +205,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
     ],
     // departure from Banda Aceh btj
@@ -233,7 +225,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
     ],
     // departure from Medan kno
@@ -253,12 +245,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3600000,
-        'benefit': [
-          'Baggage 20kg',
-          'Food',
-          'Entertainment',
-          'USB Port / Power'
-        ],
+        'benefit': ['benefit1'.tr, 'benefit3'.tr, 'benefit4'.tr, 'benefit2'.tr],
       },
     ],
     // departure from Batam bth
@@ -278,7 +265,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -295,7 +282,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -312,12 +299,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': [
-          'Baggage 20kg',
-          'Food',
-          'Entertainment',
-          'USB Port / Power'
-        ],
+        'benefit': ['benefit1'.tr, 'benefit3'.tr, 'benefit4'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -334,7 +316,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
     ],
     // departure from Tanjung Pinang tnj
@@ -354,12 +336,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6200000,
-        'benefit': [
-          'Baggage 20kg',
-          'Food',
-          'Entertainment',
-          'USB Port / Power'
-        ],
+        'benefit': ['benefit1'.tr, 'benefit3'.tr, 'benefit4'.tr, 'benefit2'.tr],
       },
     ],
     // departure from Pekanbaru pku
@@ -379,7 +356,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -396,12 +373,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': [
-          'Baggage 20kg',
-          'Food',
-          'Entertainment',
-          'USB Port / Power'
-        ],
+        'benefit': ['benefit1'.tr, 'benefit3'.tr, 'benefit4'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -418,7 +390,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3400000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
     ],
     // departure from Padang pdg
@@ -438,7 +410,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pdg',
@@ -455,7 +427,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
     ],
     // departure from Palembang plm
@@ -475,12 +447,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2600000,
-        'benefit': [
-          'Baggage 20kg',
-          'Food',
-          'Entertainment',
-          'USB Port / Power'
-        ],
+        'benefit': ['benefit1'.tr, 'benefit3'.tr, 'benefit4'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -497,7 +464,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2800000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
     ],
     // departure from Bengkulu bks
@@ -517,7 +484,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Bandar Lampung tkg
@@ -537,12 +504,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2450000,
-        'benefit': [
-          'Baggage 20kg',
-          'Food',
-          'Entertainment',
-          'USB Port / Power'
-        ],
+        'benefit': ['benefit1'.tr, 'benefit3'.tr, 'benefit4'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Denpasar dps
@@ -579,7 +541,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -596,12 +558,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3100000,
-        'benefit': [
-          'Baggage 20kg',
-          'Food',
-          'Entertainment',
-          'USB Port / Power'
-        ],
+        'benefit': ['benefit1'.tr, 'benefit3'.tr, 'benefit4'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -618,7 +575,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Kupang koe
@@ -638,7 +595,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2600000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'koe',
@@ -655,7 +612,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'koe',
@@ -672,7 +629,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Balikpapan bpn
@@ -692,7 +649,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -709,7 +666,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3800000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Pontianak pnk
@@ -729,7 +686,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -746,7 +703,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2600000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -763,7 +720,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2700000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -780,7 +737,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3200000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
     ],
     // departure from Tarakan trk
@@ -800,7 +757,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Makassar upg
@@ -820,7 +777,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -837,7 +794,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -854,7 +811,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4000000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Manado mdc
@@ -874,7 +831,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -891,7 +848,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -908,7 +865,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4800000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Ambon amq
@@ -928,15 +885,15 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3150000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
-    // departure from Jayapura djj
+    // departure from Papua djj
     'djj': [
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'lop',
         'airport_arrival_name': 'Zainuddin Abdul Madjid',
         'airport_arrival_location': 'Lombok',
@@ -948,17 +905,12 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6500000,
-        'benefit': [
-          'Baggage 20kg',
-          'Food',
-          'Entertainment',
-          'USB Port / Power'
-        ],
+        'benefit': ['benefit1'.tr, 'benefit3'.tr, 'benefit4'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'lop',
         'airport_arrival_name': 'Zainuddin Abdul Madjid',
         'airport_arrival_location': 'Lombok',
@@ -970,12 +922,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 7100000,
-        'benefit': [
-          'Baggage 20kg',
-          'Food',
-          'Entertainment',
-          'USB Port / Power'
-        ],
+        'benefit': ['benefit1'.tr, 'benefit3'.tr, 'benefit4'.tr, 'benefit2'.tr],
       }
     ],
   },
@@ -998,7 +945,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -1015,12 +962,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': [
-          'Baggage 20kg',
-          'Food',
-          'Entertainment',
-          'USB Port / Power'
-        ],
+        'benefit': ['benefit1'.tr, 'benefit3'.tr, 'benefit4'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Surabaya sub
@@ -1057,7 +999,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Solo soc
@@ -1077,7 +1019,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Yogyakarta jog
@@ -1117,7 +1059,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5400000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Medan kno
@@ -1137,7 +1079,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1600000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -1154,7 +1096,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Batam bth
@@ -1174,7 +1116,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Tanjung Pinang tnj
@@ -1194,7 +1136,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4100000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Pekanbaru pku
@@ -1214,7 +1156,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3700000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Padang pdg
@@ -1234,7 +1176,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3900000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Palembang plm
@@ -1254,7 +1196,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Bengkulu bks
@@ -1274,7 +1216,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Bandar Lampung tkg
@@ -1294,7 +1236,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Denpasar dps
@@ -1314,7 +1256,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -1331,7 +1273,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2600000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Lombok lop
@@ -1351,7 +1293,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'lop',
@@ -1368,7 +1310,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Kupang koe
@@ -1388,7 +1330,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Balikpapan bpn
@@ -1408,7 +1350,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -1425,7 +1367,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Pontianak pnk
@@ -1445,7 +1387,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Tarakan trk
@@ -1465,7 +1407,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Makassar upg
@@ -1485,7 +1427,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Manado mdc
@@ -1505,7 +1447,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Ambon amq
@@ -1525,15 +1467,15 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
-    // departure from Jayapura djj
+    // departure from Papua djj
     'djj': [
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'bdo',
         'airport_arrival_name': 'Husein Sastranegara',
         'airport_arrival_location': 'Bandung',
@@ -1545,12 +1487,12 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'bdo',
         'airport_arrival_name': 'Husein Sastranegara',
         'airport_arrival_location': 'Bandung',
@@ -1562,7 +1504,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5200000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
   },
@@ -1585,7 +1527,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -1602,7 +1544,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2400000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Surabaya sub
@@ -1719,7 +1661,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2600000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Batam bth
@@ -1739,7 +1681,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Tanjung Pinang tnj
@@ -1759,7 +1701,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Pekanbaru pku
@@ -1779,7 +1721,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3100000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Padang pdg
@@ -1799,7 +1741,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Palembang plm
@@ -1819,7 +1761,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4000000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Bengkulu bks
@@ -1839,7 +1781,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3800000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Bandar Lampung tkg
@@ -1859,7 +1801,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3400000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Denpasar dps
@@ -1879,7 +1821,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -1896,7 +1838,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Lombok lop
@@ -1916,7 +1858,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Kupang koe
@@ -1936,7 +1878,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Balikpapan bpn
@@ -1956,7 +1898,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -1973,7 +1915,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Pontianak pnk
@@ -1993,7 +1935,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Tarakan trk
@@ -2013,7 +1955,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3190000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Makassar upg
@@ -2033,7 +1975,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2450000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -2050,7 +1992,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Manado mdc
@@ -2070,7 +2012,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Ambon amq
@@ -2090,15 +2032,15 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
-    // departure from Jayapura djj
+    // departure from Papua djj
     'djj': [
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'jog',
         'airport_arrival_name': 'Adi Sucipto',
         'airport_arrival_location': 'Yogyakarta',
@@ -2110,7 +2052,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
   },
@@ -2133,7 +2075,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -2150,7 +2092,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -2167,7 +2109,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 950000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -2184,7 +2126,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -2201,7 +2143,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Solo soc
@@ -2221,7 +2163,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'soc',
@@ -2238,7 +2180,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Yogyakarta jog
@@ -2315,7 +2257,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'btj',
@@ -2332,7 +2274,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'btj',
@@ -2349,7 +2291,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3700000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Medan kno
@@ -2369,7 +2311,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -2386,7 +2328,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2300000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -2403,7 +2345,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Batam bth
@@ -2423,7 +2365,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -2440,7 +2382,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -2457,7 +2399,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2150000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Tanjung Pinang tnj
@@ -2477,7 +2419,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tnj',
@@ -2494,7 +2436,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Pekanbaru pku
@@ -2514,7 +2456,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1700000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -2531,7 +2473,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -2548,7 +2490,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2600000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Padang pdg
@@ -2568,7 +2510,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1800000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'pdg',
@@ -2585,7 +2527,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pdg',
@@ -2602,7 +2544,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Palembang plm
@@ -2622,7 +2564,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -2639,7 +2581,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -2656,7 +2598,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Bengkulu bks
@@ -2676,7 +2618,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bks',
@@ -2693,7 +2635,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bks',
@@ -2710,7 +2652,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2600000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Bandar Lampung tkg
@@ -2730,7 +2672,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tkg',
@@ -2747,7 +2689,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Denpasar dps
@@ -2767,7 +2709,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 600000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -2784,7 +2726,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 680000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Lombok lop
@@ -2804,7 +2746,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'lop',
@@ -2821,7 +2763,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 830000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Kupang koe
@@ -2841,7 +2783,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1750000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'koe',
@@ -2858,7 +2800,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1750000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Balikpapan bpn
@@ -2878,7 +2820,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -2895,7 +2837,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Pontianak pnk
@@ -2915,7 +2857,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -2932,7 +2874,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2100000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Tarakan trk
@@ -2952,7 +2894,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'trk',
@@ -2969,7 +2911,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Makassar upg
@@ -2989,7 +2931,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 965000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -3006,7 +2948,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Manado mdc
@@ -3026,7 +2968,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2150000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -3043,7 +2985,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Ambon amq
@@ -3063,7 +3005,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -3080,15 +3022,15 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
-    // departure from Jayapura djj
+    // departure from Papua djj
     'djj': [
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'sub',
         'airport_arrival_name': 'Juanda',
         'airport_arrival_location': 'Surabaya',
@@ -3100,12 +3042,12 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'sub',
         'airport_arrival_name': 'Juanda',
         'airport_arrival_location': 'Surabaya',
@@ -3117,7 +3059,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4500000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
   },
@@ -3140,7 +3082,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1030000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -3157,7 +3099,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1080000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -3174,7 +3116,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1080000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -3191,7 +3133,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1080000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -3208,7 +3150,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1080000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -3225,7 +3167,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1090000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -3242,7 +3184,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1090000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -3259,7 +3201,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1140000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -3276,7 +3218,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1140000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -3293,7 +3235,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1200000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -3310,7 +3252,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1200000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -3327,7 +3269,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Solo soc
@@ -3347,7 +3289,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 945000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'soc',
@@ -3364,7 +3306,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 945000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'soc',
@@ -3381,7 +3323,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1030000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'soc',
@@ -3398,7 +3340,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1050000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Yogyakarta jog
@@ -3418,7 +3360,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'jog',
@@ -3452,7 +3394,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entetainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'Entetainment'],
       }
     ],
     // departure from Bandung bdo
@@ -3472,7 +3414,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3050000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bdo',
@@ -3489,7 +3431,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3050000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bdo',
@@ -3506,7 +3448,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3250000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Banda Aceh btj
@@ -3526,7 +3468,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2600000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'btj',
@@ -3543,7 +3485,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2650000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'btj',
@@ -3560,7 +3502,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2700000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Medan kno
@@ -3580,7 +3522,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -3597,7 +3539,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -3614,7 +3556,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -3631,7 +3573,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -3648,7 +3590,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -3665,7 +3607,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Batam bth
@@ -3685,7 +3627,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1350000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -3702,7 +3644,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1350000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -3719,7 +3661,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1550000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -3736,7 +3678,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1600000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Tanjung Pinang tnj
@@ -3756,7 +3698,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1250000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tnj',
@@ -3773,7 +3715,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1750000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Pekanbaru pku
@@ -3793,7 +3735,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -3810,7 +3752,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1350000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -3827,7 +3769,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -3844,7 +3786,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1490000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Padang pdg
@@ -3864,7 +3806,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1150000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pdg',
@@ -3881,7 +3823,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pdg',
@@ -3898,7 +3840,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pdg',
@@ -3915,7 +3857,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Palembang plm
@@ -3935,7 +3877,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 880000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -3952,7 +3894,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 880000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -3969,7 +3911,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 925000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -3986,7 +3928,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 978000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -4003,7 +3945,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1125000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -4020,7 +3962,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1550000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Bengkulu bks
@@ -4040,7 +3982,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1150000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bks',
@@ -4057,7 +3999,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1250000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bks',
@@ -4074,7 +4016,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1300000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'bks',
@@ -4091,7 +4033,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1400000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Bandar Lampung tkg
@@ -4111,7 +4053,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 980000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'tkg',
@@ -4128,7 +4070,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 850000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tkg',
@@ -4145,7 +4087,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 840000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Denpasar dps
@@ -4165,7 +4107,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1320000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -4182,7 +4124,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1280000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -4199,7 +4141,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -4216,7 +4158,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1450000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -4233,7 +4175,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1600000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -4250,7 +4192,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1800000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -4267,7 +4209,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1850000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Lombok lop
@@ -4287,7 +4229,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -4304,7 +4246,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1350000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -4321,7 +4263,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1340000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -4338,7 +4280,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1750000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Kupang koe
@@ -4358,7 +4300,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'koe',
@@ -4375,7 +4317,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2450000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'koe',
@@ -4392,7 +4334,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2850000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Balikpapan bpn
@@ -4412,7 +4354,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -4429,7 +4371,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -4446,7 +4388,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -4463,7 +4405,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2000000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Pontianak pnk
@@ -4483,7 +4425,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 980000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -4500,7 +4442,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1050000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -4517,7 +4459,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1120000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -4534,7 +4476,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1250000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Tarakan trk
@@ -4554,7 +4496,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2400000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'trk',
@@ -4571,7 +4513,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'trk',
@@ -4588,7 +4530,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2950000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Makassar upg
@@ -4608,7 +4550,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1120000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -4625,7 +4567,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1220000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -4642,7 +4584,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -4659,7 +4601,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -4676,7 +4618,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1650000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -4693,7 +4635,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2300000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Manado mdc
@@ -4713,7 +4655,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2250000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -4730,7 +4672,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2650000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -4747,7 +4689,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2800000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -4764,7 +4706,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3100000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Ambon amq
@@ -4784,7 +4726,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -4801,7 +4743,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -4818,7 +4760,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3100000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -4835,15 +4777,15 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4000000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
     ],
-    // departure from Jayapura djj
+    // departure from Papua djj
     'djj': [
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'cgk',
         'airport_arrival_name': 'Soekarno Hatta',
         'airport_arrival_location': 'Jakarta',
@@ -4855,12 +4797,12 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4600000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'cgk',
         'airport_arrival_name': 'Soekarno Hatta',
         'airport_arrival_location': 'Jakarta',
@@ -4872,12 +4814,12 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4650000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'cgk',
         'airport_arrival_name': 'Soekarno Hatta',
         'airport_arrival_location': 'Jakarta',
@@ -4889,7 +4831,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4200000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
   },
@@ -4912,7 +4854,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2890000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -4929,7 +4871,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2950000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -4946,7 +4888,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2680000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Surabaya sub
@@ -4966,7 +4908,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2150000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -4983,7 +4925,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2250000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -5000,7 +4942,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Solo soc
@@ -5020,7 +4962,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'soc',
@@ -5037,7 +4979,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Yogyakarta jog
@@ -5057,7 +4999,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Bandung bdo
@@ -5077,7 +5019,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Banda Aceh btj
@@ -5097,7 +5039,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4750000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'btj',
@@ -5114,7 +5056,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5400000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Medan kno
@@ -5134,7 +5076,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -5151,7 +5093,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -5168,7 +5110,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4100000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Batam bth
@@ -5188,7 +5130,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -5205,7 +5147,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -5222,7 +5164,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4500000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Tanjung Pinang tnj
@@ -5242,12 +5184,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6500000,
-        'benefit': [
-          'Baggage 20kg',
-          'Food',
-          'Entertainment',
-          'USB Port / Power'
-        ],
+        'benefit': ['benefit1'.tr, 'benefit3'.tr, 'benefit4'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Pekanbaru pku
@@ -5267,7 +5204,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3850000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -5284,7 +5221,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -5301,12 +5238,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4500000,
-        'benefit': [
-          'Baggage 20kg',
-          'Food',
-          'Entertainment',
-          'USB Port / Power'
-        ],
+        'benefit': ['benefit1'.tr, 'benefit3'.tr, 'benefit4'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Padang pdg
@@ -5326,7 +5258,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3650000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pdg',
@@ -5343,7 +5275,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Palembang plm
@@ -5363,7 +5295,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -5380,7 +5312,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -5397,7 +5329,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3800000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Bengkulu bks
@@ -5417,7 +5349,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bks',
@@ -5434,7 +5366,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4150000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Bandar Lampung tkg
@@ -5454,7 +5386,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tkg',
@@ -5471,7 +5403,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Denpasar dps
@@ -5491,7 +5423,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2450000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -5508,7 +5440,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4000000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Lombok lop
@@ -5528,7 +5460,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'lop',
@@ -5545,7 +5477,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3150000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Kupang koe
@@ -5565,7 +5497,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'koe',
@@ -5582,7 +5514,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3150000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Balikpapan bpn
@@ -5602,7 +5534,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -5619,7 +5551,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4700000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Pontianak pnk
@@ -5639,7 +5571,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -5656,7 +5588,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4100000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Tarakan trk
@@ -5676,7 +5608,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'trk',
@@ -5693,7 +5625,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Makassar upg
@@ -5713,7 +5645,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1150000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -5730,7 +5662,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -5747,7 +5679,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1450000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -5764,7 +5696,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3400000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Manado mdc
@@ -5784,7 +5716,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2745000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -5804,12 +5736,12 @@ const Map<String, dynamic> destinationTicketData = {
         'benefit': ['Baggage not included'],
       }
     ],
-    // departure from Jayapura djj
+    // departure from Papua djj
     'djj': [
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'amq',
         'airport_arrival_name': 'Pattimura',
         'airport_arrival_location': 'Ambon',
@@ -5821,12 +5753,12 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'amq',
         'airport_arrival_name': 'Pattimura',
         'airport_arrival_location': 'Ambon',
@@ -5838,12 +5770,12 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 7500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'amq',
         'airport_arrival_name': 'Pattimura',
         'airport_arrival_location': 'Ambon',
@@ -5855,7 +5787,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
   },
@@ -5869,7 +5801,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Jakarta',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'SJ-598',
         'airline_name': 'Sriwijaya Air',
         'departure_schedule': '09:00',
@@ -5878,7 +5810,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3800000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -5886,7 +5818,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Jakarta',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'ID-2108',
         'airline_name': 'Batik Air',
         'departure_schedule': '11:40',
@@ -5895,7 +5827,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3900000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -5903,7 +5835,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Jakarta',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-3762',
         'airline_name': 'Lion Air',
         'departure_schedule': '07:00',
@@ -5912,7 +5844,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -5920,7 +5852,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Jakarta',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'GA-952',
         'airline_name': 'Garuda Indonesia',
         'departure_schedule': '08:00',
@@ -5929,7 +5861,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5500000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Surabaya sub
@@ -5940,7 +5872,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Surabaya',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'SJ-562',
         'airline_name': 'Sriwijaya Air',
         'departure_schedule': '09:00',
@@ -5949,7 +5881,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -5957,7 +5889,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Surabaya',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-800',
         'airline_name': 'Lion Air',
         'departure_schedule': '07:00',
@@ -5966,7 +5898,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -5974,7 +5906,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Surabaya',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'ID-9462',
         'airline_name': 'Batik Air',
         'departure_schedule': '10:00',
@@ -5983,7 +5915,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6500000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Solo soc
@@ -5994,7 +5926,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Solo',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-472',
         'airline_name': 'Lion Air',
         'departure_schedule': '07:00',
@@ -6003,7 +5935,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'soc',
@@ -6011,7 +5943,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Solo',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-283',
         'airline_name': 'Lion Air',
         'departure_schedule': '10:00',
@@ -6020,7 +5952,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Yogyakarta jog
@@ -6031,7 +5963,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Yogyakarta',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-189',
         'airline_name': 'Lion Air',
         'departure_schedule': '07:00',
@@ -6040,7 +5972,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'jog',
@@ -6048,7 +5980,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Yogyakarta',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-387',
         'airline_name': 'Lion Air',
         'departure_schedule': '10:00',
@@ -6057,7 +5989,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Bandung bdo
@@ -6068,7 +6000,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Bandung',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'IW-1826',
         'airline_name': 'Wings Air',
         'departure_schedule': '09:00',
@@ -6077,7 +6009,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bdo',
@@ -6085,7 +6017,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Bandung',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-752',
         'airline_name': 'Lion Air',
         'departure_schedule': '07:00',
@@ -6094,7 +6026,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Banda Aceh btj
@@ -6105,7 +6037,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Banda Aceh',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-754',
         'airline_name': 'Lion Air',
         'departure_schedule': '07:00',
@@ -6114,7 +6046,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'btj',
@@ -6122,7 +6054,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Banda Aceh',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'IW-1982',
         'airline_name': 'Wings Air',
         'departure_schedule': '09:00',
@@ -6131,7 +6063,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'btj',
@@ -6139,7 +6071,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Banda Aceh',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'ID-7547',
         'airline_name': 'Batik Air',
         'departure_schedule': '12:00',
@@ -6148,7 +6080,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 7000000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Medan kno
@@ -6159,7 +6091,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Medan',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-639',
         'airline_name': 'Lion Air',
         'departure_schedule': '07:00',
@@ -6168,7 +6100,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -6176,7 +6108,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Medan',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'QG-917',
         'airline_name': 'Citilink',
         'departure_schedule': '10:00',
@@ -6185,7 +6117,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -6193,7 +6125,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Medan',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'ID-9625',
         'airline_name': 'Batik Air',
         'departure_schedule': '11:00',
@@ -6202,7 +6134,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6000000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Batam bth
@@ -6213,7 +6145,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Batam',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-854',
         'airline_name': 'Lion Air',
         'departure_schedule': '07:00',
@@ -6222,7 +6154,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -6230,7 +6162,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Batam',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'QG-945',
         'airline_name': 'Citilink',
         'departure_schedule': '09:00',
@@ -6239,7 +6171,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -6247,7 +6179,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Batam',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'ID-5945',
         'airline_name': 'Batik Air',
         'departure_schedule': '10:00',
@@ -6256,7 +6188,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5700000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Tanjung Pinang tnj
@@ -6267,7 +6199,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Tanjung Pinang',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-4854',
         'airline_name': 'Lion Air',
         'departure_schedule': '07:00',
@@ -6276,7 +6208,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tnj',
@@ -6284,7 +6216,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Tanjung Pinang',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'ID-1729',
         'airline_name': 'Batik Air',
         'departure_schedule': '09:00',
@@ -6293,7 +6225,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5300000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'tnj',
@@ -6301,7 +6233,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Tanjung Pinang',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'ID-2864',
         'airline_name': 'Batik Air',
         'departure_schedule': '10:00',
@@ -6310,7 +6242,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5500000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Pekanbaru pku
@@ -6321,7 +6253,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Pekanbaru',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'ID-5954',
         'airline_name': 'Batik Air',
         'departure_schedule': '07:00',
@@ -6330,7 +6262,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4700000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -6338,7 +6270,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Pekanbaru',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'QG-554',
         'airline_name': 'Citilink',
         'departure_schedule': '08:00',
@@ -6347,7 +6279,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -6355,7 +6287,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Pekanbaru',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'GA-954',
         'airline_name': 'Garuda Indonesia',
         'departure_schedule': '09:00',
@@ -6364,7 +6296,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6500000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -6372,7 +6304,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Pekanbaru',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-529',
         'airline_name': 'Lion Air',
         'departure_schedule': '10:00',
@@ -6381,7 +6313,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Padang pdg
@@ -6392,7 +6324,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Padang',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-355',
         'airline_name': 'Lion Air',
         'departure_schedule': '06:00',
@@ -6401,7 +6333,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pdg',
@@ -6409,7 +6341,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Padang',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'ID-8815',
         'airline_name': 'Batik Air',
         'departure_schedule': '10:00',
@@ -6418,7 +6350,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Palembang plm
@@ -6429,7 +6361,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Palembang',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-333',
         'airline_name': 'Lion Air',
         'departure_schedule': '06:00',
@@ -6438,7 +6370,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -6446,7 +6378,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Palembang',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'QG-983',
         'airline_name': 'Citilink',
         'departure_schedule': '09:00',
@@ -6455,7 +6387,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -6463,7 +6395,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Palembang',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'ID-6871',
         'airline_name': 'Batik Air',
         'departure_schedule': '11:00',
@@ -6472,7 +6404,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Bengkulu bks
@@ -6483,7 +6415,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Bengkulu',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-631',
         'airline_name': 'Lion Air',
         'departure_schedule': '06:00',
@@ -6492,7 +6424,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bks',
@@ -6500,7 +6432,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Bengkulu',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'ID-7128',
         'airline_name': 'Batik Air',
         'departure_schedule': '07:00',
@@ -6509,7 +6441,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5650000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'bks',
@@ -6517,7 +6449,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Bengkulu',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'GA-297',
         'airline_name': 'Garuda Indonesia',
         'departure_schedule': '09:00',
@@ -6526,7 +6458,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6700000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Bandar Lampung tkg
@@ -6537,7 +6469,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Bandar Lampung',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-123',
         'airline_name': 'Lion Air',
         'departure_schedule': '07:00',
@@ -6546,7 +6478,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tkg',
@@ -6554,7 +6486,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Bandar Lampung',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-321',
         'airline_name': 'Lion Air',
         'departure_schedule': '09:00',
@@ -6563,7 +6495,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 52150000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Denpasar dps
@@ -6574,7 +6506,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Denpasar',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-5744',
         'airline_name': 'Lion Air',
         'departure_schedule': '07:00',
@@ -6583,7 +6515,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -6591,7 +6523,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Denpasar',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'SJ-726',
         'airline_name': 'Sriwijaya Air',
         'departure_schedule': '08:00',
@@ -6600,7 +6532,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3580000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -6608,7 +6540,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Denpasar',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'ID-8519',
         'airline_name': 'Batik Air',
         'departure_schedule': '10:00',
@@ -6617,7 +6549,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 7000000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Lombok lop
@@ -6628,7 +6560,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Lombok',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'ID-6659',
         'airline_name': 'Batik Air',
         'departure_schedule': '05:00',
@@ -6637,12 +6569,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6800000,
-        'benefit': [
-          'Baggage 20kg',
-          'Food',
-          'Entertainment',
-          'USB Port / Power'
-        ],
+        'benefit': ['benefit1'.tr, 'benefit3'.tr, 'benefit4'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'lop',
@@ -6650,7 +6577,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Lombok',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-865',
         'airline_name': 'Lion Air',
         'departure_schedule': '09:00',
@@ -6659,7 +6586,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Kupang koe
@@ -6670,7 +6597,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Kupang',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'ID-7798',
         'airline_name': 'Batik Air',
         'departure_schedule': '05:00',
@@ -6679,12 +6606,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6800000,
-        'benefit': [
-          'Baggage 20kg',
-          'Food',
-          'Entertainment',
-          'USB Port / Power'
-        ],
+        'benefit': ['benefit1'.tr, 'benefit3'.tr, 'benefit4'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'koe',
@@ -6692,7 +6614,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Kupang',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-820',
         'airline_name': 'Lion Air',
         'departure_schedule': '09:00',
@@ -6701,7 +6623,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Balikpapan bpn
@@ -6712,7 +6634,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Balikpapan',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-675',
         'airline_name': 'Lion Air',
         'departure_schedule': '07:00',
@@ -6721,7 +6643,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -6729,7 +6651,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Balikpapan',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'ID-6255',
         'airline_name': 'Batik Air',
         'departure_schedule': '07:00',
@@ -6738,7 +6660,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6200000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Pontianak pnk
@@ -6749,7 +6671,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Pontianak',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-687',
         'airline_name': 'Lion Air',
         'departure_schedule': '07:00',
@@ -6758,7 +6680,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4980000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -6766,7 +6688,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Pontianak',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'SJ-185',
         'airline_name': 'Sriwijaya Air',
         'departure_schedule': '08:00',
@@ -6775,7 +6697,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5200000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -6783,7 +6705,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Pontianak',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'ID-6229',
         'airline_name': 'Batik Air',
         'departure_schedule': '09:00',
@@ -6792,7 +6714,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6300000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Tarakan trk
@@ -6803,7 +6725,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Tarakan',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-786',
         'airline_name': 'Lion Air',
         'departure_schedule': '07:00',
@@ -6812,7 +6734,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'trk',
@@ -6820,7 +6742,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Tarakan',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'SJ-581',
         'airline_name': 'Sriwijaya Air',
         'departure_schedule': '08:00',
@@ -6829,7 +6751,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5400000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'trk',
@@ -6837,7 +6759,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Tarakan',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'ID-6229',
         'airline_name': 'Batik Air',
         'departure_schedule': '09:00',
@@ -6846,7 +6768,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Makassar upg
@@ -6857,7 +6779,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Makassar',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-3798',
         'airline_name': 'Lion Air',
         'departure_schedule': '03:15',
@@ -6866,7 +6788,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2615000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -6874,7 +6796,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Makassar',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'SJ-588',
         'airline_name': 'Sriwijaya Air',
         'departure_schedule': '04:15',
@@ -6883,7 +6805,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -6891,7 +6813,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Makassar',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'ID-6260',
         'airline_name': 'Batik Air',
         'departure_schedule': '06:45',
@@ -6900,7 +6822,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2750000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -6908,7 +6830,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Makassar',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'ID-6265',
         'airline_name': 'Batik Air',
         'departure_schedule': '13:45',
@@ -6917,7 +6839,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6700000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Manado mdc
@@ -6928,7 +6850,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Manado',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'JT-796',
         'airline_name': 'Lion Air',
         'departure_schedule': '07:00',
@@ -6937,7 +6859,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -6945,7 +6867,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Manado',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'ID-6275',
         'airline_name': 'Batik Air',
         'departure_schedule': '09:00',
@@ -6954,7 +6876,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5200000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -6962,7 +6884,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Manado',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'GA-601',
         'airline_name': 'Garuda Indonesia',
         'departure_schedule': '10:00',
@@ -6971,7 +6893,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 7500000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Ambon amq
@@ -6982,7 +6904,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Ambon',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'SJ-663',
         'airline_name': 'Sriwijaya Air',
         'departure_schedule': '07:00',
@@ -6991,7 +6913,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3250000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -6999,7 +6921,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Ambon',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'GA-641',
         'airline_name': 'Garuda Indonesia',
         'departure_schedule': '08:00',
@@ -7008,7 +6930,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4900000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -7016,7 +6938,7 @@ const Map<String, dynamic> destinationTicketData = {
         'airport_departure_location': 'Ambon',
         'airport_arrival_code': 'djj',
         'airport_arrival_name': 'Sentani',
-        'airport_arrival_location': 'Jayapura',
+        'airport_arrival_location': 'Papua',
         'airline_code': 'IW-2173',
         'airline_name': 'Sriwijaya Air',
         'departure_schedule': '09:00',
@@ -7025,7 +6947,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6600000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
   },
@@ -7048,7 +6970,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1450000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -7065,7 +6987,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -7082,7 +7004,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1550000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -7099,7 +7021,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1575000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -7116,7 +7038,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1590000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -7133,7 +7055,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1800000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Surabaya sub
@@ -7153,7 +7075,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1850000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -7170,7 +7092,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1850000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -7187,7 +7109,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3280000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Solo soc
@@ -7207,7 +7129,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'soc',
@@ -7224,7 +7146,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2435000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'soc',
@@ -7241,7 +7163,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Yogyakarta jog
@@ -7261,7 +7183,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'jog',
@@ -7278,7 +7200,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2435000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'jog',
@@ -7295,7 +7217,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Bandung bdo
@@ -7315,7 +7237,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bdo',
@@ -7332,7 +7254,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2435000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bdo',
@@ -7349,7 +7271,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Banda Aceh btj
@@ -7369,7 +7291,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'btj',
@@ -7386,7 +7308,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'btj',
@@ -7403,7 +7325,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Medan kno
@@ -7423,7 +7345,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -7440,7 +7362,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -7457,7 +7379,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -7474,7 +7396,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Batam bth
@@ -7494,7 +7416,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -7511,7 +7433,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -7528,7 +7450,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -7545,7 +7467,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Tanjung Pinang tnj
@@ -7565,7 +7487,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tnj',
@@ -7582,7 +7504,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tnj',
@@ -7599,7 +7521,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tnj',
@@ -7616,7 +7538,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Pekanbaru pku
@@ -7636,7 +7558,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -7653,7 +7575,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -7670,7 +7592,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -7687,7 +7609,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Padang pdg
@@ -7707,7 +7629,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pdg',
@@ -7724,7 +7646,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pdg',
@@ -7741,7 +7663,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pdg',
@@ -7758,7 +7680,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Palembang plm
@@ -7778,7 +7700,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -7795,7 +7717,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -7812,7 +7734,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -7829,7 +7751,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Bengkulu bks
@@ -7849,7 +7771,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bks',
@@ -7866,7 +7788,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2600000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bks',
@@ -7883,7 +7805,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bks',
@@ -7900,7 +7822,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3200000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Bandar Lampung tkg
@@ -7920,7 +7842,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tkg',
@@ -7937,7 +7859,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2600000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tkg',
@@ -7954,7 +7876,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tkg',
@@ -7971,7 +7893,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3200000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Lombok lop
@@ -7991,7 +7913,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'lop',
@@ -8008,7 +7930,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'lop',
@@ -8025,7 +7947,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'lop',
@@ -8042,7 +7964,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Kupang koe
@@ -8062,7 +7984,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'koe',
@@ -8079,7 +8001,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'koe',
@@ -8096,7 +8018,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'koe',
@@ -8113,7 +8035,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       }
     ],
     // departure from Balikpapan bpn
@@ -8133,7 +8055,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -8150,7 +8072,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -8167,7 +8089,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -8184,7 +8106,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Pontianak pnk
@@ -8204,7 +8126,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -8221,7 +8143,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -8238,7 +8160,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -8255,7 +8177,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Tarakan trk
@@ -8275,7 +8197,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'trk',
@@ -8292,7 +8214,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2600000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'trk',
@@ -8309,7 +8231,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'trk',
@@ -8326,7 +8248,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3200000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Makassar upg
@@ -8346,7 +8268,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -8363,7 +8285,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -8380,7 +8302,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -8397,7 +8319,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1700000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Manado mdc
@@ -8417,7 +8339,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -8434,7 +8356,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -8451,7 +8373,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -8468,7 +8390,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Ambon amq
@@ -8488,7 +8410,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2350000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -8505,7 +8427,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -8522,7 +8444,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2350000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -8539,15 +8461,15 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
-    // departure from Jayapura djj
+    // departure from Papua djj
     'djj': [
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'dps',
         'airport_arrival_name': 'Ngurah Rai',
         'airport_arrival_location': 'Denpasar',
@@ -8559,7 +8481,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -8576,7 +8498,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -8593,7 +8515,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -8610,7 +8532,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6500000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
   },
@@ -8633,7 +8555,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1250000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -8650,7 +8572,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1280000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -8667,7 +8589,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -8684,7 +8606,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1350000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -8701,7 +8623,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1450000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -8718,7 +8640,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1950000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Surabaya sub
@@ -8738,7 +8660,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2450000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -8755,7 +8677,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2600000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -8772,7 +8694,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2850000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -8789,7 +8711,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -8806,7 +8728,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -8823,7 +8745,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Solo soc
@@ -8843,7 +8765,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2120000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'soc',
@@ -8860,7 +8782,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2220000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'soc',
@@ -8877,7 +8799,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2350000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'soc',
@@ -8894,7 +8816,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2950000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'soc',
@@ -8911,7 +8833,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2600000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'soc',
@@ -8928,7 +8850,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3900000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Yogyakarta jog
@@ -8948,7 +8870,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2220000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'jog',
@@ -8965,7 +8887,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2320000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'jog',
@@ -8982,7 +8904,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2450000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'jog',
@@ -8999,7 +8921,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3050000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'jog',
@@ -9016,7 +8938,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'jog',
@@ -9033,7 +8955,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4000000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Bandung bdo
@@ -9053,7 +8975,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4450000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bdo',
@@ -9070,7 +8992,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4650000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bdo',
@@ -9087,7 +9009,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4750000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bdo',
@@ -9104,7 +9026,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5250000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'bdo',
@@ -9121,7 +9043,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4950000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bdo',
@@ -9138,7 +9060,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5750000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Banda Aceh btj
@@ -9158,7 +9080,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'btj',
@@ -9175,7 +9097,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'btj',
@@ -9192,7 +9114,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'btj',
@@ -9209,7 +9131,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4000000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'btj',
@@ -9226,7 +9148,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'btj',
@@ -9243,7 +9165,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Medan kno
@@ -9263,7 +9185,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -9280,7 +9202,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -9297,7 +9219,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -9314,7 +9236,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -9331,7 +9253,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -9348,7 +9270,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Batam bth
@@ -9368,7 +9290,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -9385,7 +9307,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -9402,7 +9324,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1150000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -9419,7 +9341,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -9436,7 +9358,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1250000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -9453,7 +9375,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2000000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Tanjung Pinang tnj
@@ -9473,7 +9395,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tnj',
@@ -9490,7 +9412,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tnj',
@@ -9507,7 +9429,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2450000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tnj',
@@ -9524,7 +9446,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'tnj',
@@ -9541,7 +9463,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tnj',
@@ -9558,7 +9480,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Pekanbaru pku
@@ -9578,7 +9500,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -9595,7 +9517,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -9612,7 +9534,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2450000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -9629,7 +9551,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -9646,7 +9568,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -9663,7 +9585,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Palembang plm
@@ -9683,7 +9605,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2150000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -9700,7 +9622,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2150000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -9717,7 +9639,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2250000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -9734,7 +9656,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2650000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -9751,7 +9673,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2350000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -9768,7 +9690,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4150000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Bengkulu bks
@@ -9788,7 +9710,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2350000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bks',
@@ -9805,7 +9727,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2350000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bks',
@@ -9822,7 +9744,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2450000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bks',
@@ -9839,7 +9761,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2850000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'bks',
@@ -9856,7 +9778,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2550000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bks',
@@ -9873,7 +9795,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3200000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Bandar Lampung tkg
@@ -9893,7 +9815,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tkg',
@@ -9910,7 +9832,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2050000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tkg',
@@ -9927,7 +9849,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tkg',
@@ -9944,7 +9866,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'tkg',
@@ -9961,7 +9883,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tkg',
@@ -9978,7 +9900,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Denpasar dps
@@ -9998,7 +9920,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -10015,7 +9937,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -10032,7 +9954,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2750000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -10049,7 +9971,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3200000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -10066,7 +9988,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -10083,7 +10005,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3700000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Lombok lop
@@ -10103,7 +10025,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'lop',
@@ -10120,7 +10042,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'lop',
@@ -10137,7 +10059,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2850000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'lop',
@@ -10154,7 +10076,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3300000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'lop',
@@ -10171,7 +10093,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'lop',
@@ -10188,7 +10110,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3800000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Kupang koe
@@ -10208,7 +10130,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'koe',
@@ -10225,7 +10147,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'koe',
@@ -10242,7 +10164,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2950000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'koe',
@@ -10259,7 +10181,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3400000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'koe',
@@ -10276,7 +10198,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'koe',
@@ -10293,7 +10215,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3900000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Balikpapan bpn
@@ -10313,7 +10235,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -10330,7 +10252,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -10347,7 +10269,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2950000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -10364,7 +10286,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3400000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -10381,7 +10303,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -10398,7 +10320,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3900000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Pontianak pnk
@@ -10418,7 +10340,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -10435,7 +10357,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -10452,7 +10374,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3050000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -10469,7 +10391,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -10486,7 +10408,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -10503,7 +10425,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4000000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Tarakan trk
@@ -10523,7 +10445,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'trk',
@@ -10540,7 +10462,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'trk',
@@ -10557,7 +10479,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3150000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'trk',
@@ -10574,7 +10496,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3600000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'trk',
@@ -10591,7 +10513,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'trk',
@@ -10608,7 +10530,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4100000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Makassar upg
@@ -10628,7 +10550,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -10645,7 +10567,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -10662,7 +10584,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3250000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -10679,7 +10601,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3700000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -10696,7 +10618,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'upg',
@@ -10713,7 +10635,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4200000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Manado mdc
@@ -10733,7 +10655,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -10750,7 +10672,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3600000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -10767,7 +10689,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -10784,7 +10706,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4200000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -10801,7 +10723,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -10818,7 +10740,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5200000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
     // departure from Ambon amq
@@ -10838,7 +10760,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -10855,7 +10777,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -10872,7 +10794,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -10889,7 +10811,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -10906,7 +10828,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -10923,15 +10845,15 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
-    // departure from Jayapura djj
+    // departure from Papua djj
     'djj': [
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'pdg',
         'airport_arrival_name': 'Minangkabau',
         'airport_arrival_location': 'Padang',
@@ -10943,12 +10865,12 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'pdg',
         'airport_arrival_name': 'Minangkabau',
         'airport_arrival_location': 'Padang',
@@ -10960,12 +10882,12 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'pdg',
         'airport_arrival_name': 'Minangkabau',
         'airport_arrival_location': 'Padang',
@@ -10977,12 +10899,12 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'pdg',
         'airport_arrival_name': 'Minangkabau',
         'airport_arrival_location': 'Padang',
@@ -10994,12 +10916,12 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 6800000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'pdg',
         'airport_arrival_name': 'Minangkabau',
         'airport_arrival_location': 'Padang',
@@ -11011,12 +10933,12 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'pdg',
         'airport_arrival_name': 'Minangkabau',
         'airport_arrival_location': 'Padang',
@@ -11028,7 +10950,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 7800000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       }
     ],
   },
@@ -11051,7 +10973,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1460000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -11068,7 +10990,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1350000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -11085,7 +11007,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1480000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -11102,7 +11024,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1650000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -11119,7 +11041,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1700000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'cgk',
@@ -11136,7 +11058,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2050000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Surabaya sub
@@ -11156,7 +11078,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1000000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -11173,7 +11095,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1100000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -11190,7 +11112,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1050000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -11207,7 +11129,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -11224,7 +11146,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1500000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'sub',
@@ -11241,7 +11163,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2050000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Solo soc
@@ -11261,7 +11183,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'soc',
@@ -11278,7 +11200,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2300000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'soc',
@@ -11295,7 +11217,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2250000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'soc',
@@ -11312,7 +11234,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'soc',
@@ -11329,7 +11251,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2700000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'soc',
@@ -11346,7 +11268,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3700000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Yogyakarta jog
@@ -11366,7 +11288,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'jog',
@@ -11383,7 +11305,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2400000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'jog',
@@ -11400,7 +11322,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2350000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'jog',
@@ -11417,7 +11339,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'jog',
@@ -11434,7 +11356,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2800000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'jog',
@@ -11451,7 +11373,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3800000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Bandung bdo
@@ -11471,7 +11393,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bdo',
@@ -11488,7 +11410,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2600000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'bdo',
@@ -11505,7 +11427,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2550000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bdo',
@@ -11522,7 +11444,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bdo',
@@ -11539,7 +11461,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'bdo',
@@ -11556,7 +11478,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4000000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Banda Aceh btj
@@ -11576,7 +11498,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'btj',
@@ -11593,7 +11515,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3900000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'btj',
@@ -11610,7 +11532,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3850000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'btj',
@@ -11627,7 +11549,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'btj',
@@ -11644,7 +11566,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4300000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'btj',
@@ -11661,7 +11583,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5300000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Medan kno
@@ -11681,7 +11603,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -11698,7 +11620,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3500000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -11715,7 +11637,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3450000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -11732,7 +11654,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3600000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -11749,7 +11671,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3900000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'kno',
@@ -11766,7 +11688,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4900000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Batam bth
@@ -11786,7 +11708,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -11803,7 +11725,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -11820,7 +11742,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2950000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -11837,7 +11759,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -11854,7 +11776,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3400000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'bth',
@@ -11871,7 +11793,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4400000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Tanjung Pinang tnj
@@ -11891,7 +11813,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tnj',
@@ -11908,7 +11830,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'tnj',
@@ -11925,7 +11847,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2950000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tnj',
@@ -11942,7 +11864,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tnj',
@@ -11959,7 +11881,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3400000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'tnj',
@@ -11976,7 +11898,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4400000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Pekanbaru pku
@@ -11996,7 +11918,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -12013,7 +11935,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2600000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -12030,7 +11952,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2550000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -12047,7 +11969,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2700000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -12064,7 +11986,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3000000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'pku',
@@ -12081,7 +12003,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4000000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Padang pdg
@@ -12101,7 +12023,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2600000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pdg',
@@ -12118,7 +12040,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2700000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'pdg',
@@ -12135,7 +12057,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2650000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pdg',
@@ -12152,7 +12074,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pdg',
@@ -12169,7 +12091,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3100000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'pdg',
@@ -12186,7 +12108,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4100000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Palembang plm
@@ -12206,7 +12128,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2350000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -12223,7 +12145,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2450000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -12240,7 +12162,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -12257,7 +12179,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2650000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -12274,7 +12196,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2850000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'plm',
@@ -12291,7 +12213,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3850000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Bengkulu bks
@@ -12311,7 +12233,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2450000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bks',
@@ -12328,7 +12250,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2550000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'bks',
@@ -12345,7 +12267,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bks',
@@ -12362,7 +12284,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2750000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bks',
@@ -12379,7 +12301,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2950000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'bks',
@@ -12396,7 +12318,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3950000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Bandar Lampung tkg
@@ -12416,7 +12338,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2250000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tkg',
@@ -12433,7 +12355,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2350000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'tkg',
@@ -12450,7 +12372,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tkg',
@@ -12467,7 +12389,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2550000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'tkg',
@@ -12484,7 +12406,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2750000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'tkg',
@@ -12501,7 +12423,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3750000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Denpasar dps
@@ -12521,7 +12443,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -12538,7 +12460,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1300000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -12555,7 +12477,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1250000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -12572,7 +12494,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -12589,7 +12511,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1700000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'dps',
@@ -12606,7 +12528,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2700000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Lombok lop
@@ -12626,7 +12548,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'lop',
@@ -12643,7 +12565,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1400000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'lop',
@@ -12660,7 +12582,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1350000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'lop',
@@ -12677,7 +12599,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'lop',
@@ -12694,7 +12616,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1800000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'lop',
@@ -12711,7 +12633,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2800000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Kupang koe
@@ -12731,7 +12653,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1400000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'koe',
@@ -12748,7 +12670,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1500000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'koe',
@@ -12765,7 +12687,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1450000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'koe',
@@ -12782,7 +12704,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1600000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'koe',
@@ -12799,7 +12721,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1900000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'koe',
@@ -12816,7 +12738,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2900000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Balikpapan bpn
@@ -12836,7 +12758,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1050000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -12853,7 +12775,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1150000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -12870,7 +12792,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1100000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -12887,7 +12809,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1350000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -12904,7 +12826,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1650000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'bpn',
@@ -12921,7 +12843,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2250000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Pontianak pnk
@@ -12941,7 +12863,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1150000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -12958,7 +12880,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1250000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -12975,7 +12897,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1200000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -12992,7 +12914,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1450000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -13009,7 +12931,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1750000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'pnk',
@@ -13026,7 +12948,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2350000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Tarakan trk
@@ -13046,7 +12968,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1250000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'trk',
@@ -13063,7 +12985,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1350000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'trk',
@@ -13080,7 +13002,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1300000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'trk',
@@ -13097,7 +13019,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1550000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'trk',
@@ -13114,7 +13036,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1850000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'trk',
@@ -13131,7 +13053,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2450000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Manado mdc
@@ -13151,7 +13073,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1450000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -13168,7 +13090,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1550000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -13185,7 +13107,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1500000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -13202,7 +13124,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1650000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -13219,7 +13141,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1950000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'mdc',
@@ -13236,7 +13158,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2550000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
     // departure from Ambon amq
@@ -13256,7 +13178,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1050000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -13273,7 +13195,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 950000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -13290,7 +13212,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1150000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -13307,7 +13229,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1350000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -13324,7 +13246,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 1550000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'amq',
@@ -13341,15 +13263,15 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 2050000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
-    // departure from Jayapura djj
+    // departure from Papua djj
     'djj': [
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'upg',
         'airport_arrival_name': 'Sultan Hasanuddin',
         'airport_arrival_location': 'Makassar',
@@ -13361,12 +13283,12 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3600000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'upg',
         'airport_arrival_name': 'Sultan Hasanuddin',
         'airport_arrival_location': 'Makassar',
@@ -13378,12 +13300,12 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3200000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       },
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'upg',
         'airport_arrival_name': 'Sultan Hasanuddin',
         'airport_arrival_location': 'Makassar',
@@ -13395,12 +13317,12 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3650000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'upg',
         'airport_arrival_name': 'Sultan Hasanuddin',
         'airport_arrival_location': 'Makassar',
@@ -13412,12 +13334,12 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 3800000,
-        'benefit': ['Baggage 20kg'],
+        'benefit': ['benefit1'.tr],
       },
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'upg',
         'airport_arrival_name': 'Sultan Hasanuddin',
         'airport_arrival_location': 'Makassar',
@@ -13429,12 +13351,12 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 4100000,
-        'benefit': ['Baggage 20kg', 'Food', 'Entertainment'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr, 'benefit3'.tr],
       },
       {
         'airport_departure_code': 'djj',
         'airport_departure_name': 'Sentani',
-        'airport_departure_location': 'Jayapura',
+        'airport_departure_location': 'Papua',
         'airport_arrival_code': 'upg',
         'airport_arrival_name': 'Sultan Hasanuddin',
         'airport_arrival_location': 'Makassar',
@@ -13446,7 +13368,7 @@ const Map<String, dynamic> destinationTicketData = {
         'insurance': true,
         'vat': 0.11,
         'price': 5150000,
-        'benefit': ['Baggage 20kg', 'Food'],
+        'benefit': ['benefit1'.tr, 'benefit2'.tr],
       }
     ],
   },

@@ -7,6 +7,7 @@ import 'package:airpedia/utils/format_date_time.dart';
 import 'package:airpedia/widgets/cards/card_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 class TicketItem extends StatelessWidget {
@@ -61,7 +62,10 @@ class TicketItem extends StatelessWidget {
                         value: DateTime.fromMillisecondsSinceEpoch(
                           data.departureSchedule,
                         ),
-                        format: DateFormat('dd MMM yyyy'),
+                        format: DateFormat(
+                          'dd MMM yyyy',
+                          '${Get.locale!.languageCode}_${Get.locale!.countryCode}',
+                        ),
                       ),
                       style:
                           TextStyles.desc.copyWith(color: AppColor.greyColor1),
@@ -114,7 +118,10 @@ class TicketItem extends StatelessWidget {
                           value: DateTime.fromMillisecondsSinceEpoch(
                             data.departureSchedule,
                           ),
-                          format: DateFormat('dd MMM yyyy'),
+                          format: DateFormat(
+                            'dd MMM yyyy',
+                            '${Get.locale!.languageCode}_${Get.locale!.countryCode}',
+                          ),
                         ),
                         style: TextStyles.desc,
                       ),
@@ -183,7 +190,10 @@ class TicketItem extends StatelessWidget {
                             ),
                             arrivalSchedule: data.ticket.arrivalSchedule,
                           ),
-                          format: DateFormat('dd MMM yyyy'),
+                          format: DateFormat(
+                            'dd MMM yyyy',
+                            '${Get.locale!.languageCode}_${Get.locale!.countryCode}',
+                          ),
                         ),
                         textAlign: TextAlign.end,
                         style: TextStyles.desc,

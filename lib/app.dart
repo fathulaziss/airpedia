@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:airpedia/app/bindings/initial_bindings.dart';
 import 'package:airpedia/app/controllers/utility_controller.dart';
 import 'package:airpedia/app/modules/api_log/components/api_log_overlay_button.dart';
@@ -8,6 +10,7 @@ import 'package:airpedia/utils/app_utils.dart';
 import 'package:airpedia/widgets/pages/page_info.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
@@ -78,6 +81,7 @@ class _AppState extends State<App> {
             if (value != null) updatePageRoute(value);
           },
           translationsKeys: AppTranslation.translations,
+          localizationsDelegates: const [GlobalMaterialLocalizations.delegate],
         );
       },
     );

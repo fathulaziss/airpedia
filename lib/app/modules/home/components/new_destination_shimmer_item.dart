@@ -12,7 +12,7 @@ class NewDestinationShimmerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return CardApp(
       width: double.infinity,
-      margin: EdgeInsets.only(bottom: Insets.lg),
+      margin: EdgeInsets.fromLTRB(20.w, 0, 20.w, 16.w),
       radius: 18.w,
       isShowShadows: true,
       shadows: Shadows.universal,
