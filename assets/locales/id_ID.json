@@ -64,6 +64,36 @@
     "benefit3": "Hiburan",
     "benefit4": "Port USB / Daya",
 
-    "login": "Masuk",
-    "register": "Daftar"
+    "greetingTitle": "Selamat Datang Traveler",
+    "greetingDesc": "Jelajahi lebih banyak kota dan dapatkan pengalaman luar biasa bersama kami",
+
+    "loginTitle": "Masuk dan\nmulai perjalananmu",
+    "emailAddressLabel": "Alamat Email",
+    "emailAddressHint": "Masukkan Alamat Email",
+    "emailAddressValidationText": "Email tidak boleh kosong",
+    "emailAddressValidationText2": "Email tidak valid",
+    "passwordLabel": "Kata Sandi",
+    "passwordHint": "Masukkan Kata Sandi",
+    "passwordValidationText": "Kata Sandi tidak boleh kosong",
+    "passwordValidationText2": "- Kata Sandi minimal 8 karakter\n- Kata Sandi terdiri dari huruf besar, huruf kecil dan angka",
+
+    "registerTitle": "Buat akun dan\nnikmati perjalananmu",
+    "registerSuccessTitle": "Khusus Untukmu 🎉",
+    "registerSuccessDesc": "Kami memberimu saldo awal agar dapat mencoba layanan kami",
+    "fullNameLabel": "Nama Lengkap",
+    "fullNameHint": "Masukkan Nama Lengkap",
+    "dateOfBirthLabel": "Tanggal Lahir",
+    "dateOfBirthHint": "Pilih Tanggal Lahir",
+    "pinTransactionLabel": "PIN Transaksi",
+    "pinTransactionHint": "Masukkan PIN Transaksi",
+    "pinTransactionValidationText": "Pin harus 6 karakter numerik",
+
+    "start": "Mulai",
+    "signIn": "Masuk",
+    "dontHaveAccount": "Belum memiliki akun ? ",
+    "haveAccount": "Sudah memiliki akun ? ",
+    "signUp": "Daftar",
+    "balance": "Saldo",
+    "cardHolder": "Pemegang Kartu",
+    "cardId": "ID Kartu"
 }

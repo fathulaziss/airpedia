@@ -86,7 +86,7 @@ class CardWallet extends GetView<UserInfoController> {
                   ),
                   verticalSpace(Insets.lg),
                   Text(
-                    'Balance',
+                    'balance'.tr,
                     style: TextStyles.desc.copyWith(color: Colors.white),
                   ),
                   Text(
@@ -99,14 +99,14 @@ class CardWallet extends GetView<UserInfoController> {
                       Expanded(
                         flex: 6,
                         child: Text(
-                          'Card Holder',
+                          'cardHolder'.tr,
                           style: TextStyles.desc.copyWith(color: Colors.white),
                         ),
                       ),
                       Expanded(
                         flex: 2,
                         child: Text(
-                          'Card ID',
+                          'cardId'.tr,
                           textAlign: TextAlign.left,
                           style: TextStyles.desc.copyWith(color: Colors.white),
                         ),

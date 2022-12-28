@@ -27,20 +27,20 @@ class RegisterSuccessView extends StatelessWidget {
             const CardWallet(),
             verticalSpace(Insets.lg),
             Text(
-              'Big Bonus 🎉',
+              'registerSuccessTitle'.tr,
               style: TextStyles.title
                   .copyWith(fontSize: 18.w, color: Colors.black),
             ),
             verticalSpace(Insets.xs),
             Text(
-              'We give you early balance so that you can try our services',
+              'registerSuccessDesc'.tr,
               textAlign: TextAlign.center,
               style: TextStyles.text.copyWith(color: AppColor.greyColor1),
             ),
             verticalSpace(Insets.lg),
             ButtonPrimary(
               onTap: () => Get.offNamed(Routes.HOME),
-              label: 'Start Now',
+              label: 'start'.tr,
               width: 200.w,
             ),
           ],

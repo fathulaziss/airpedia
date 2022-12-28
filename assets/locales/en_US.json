@@ -64,6 +64,36 @@
     "benefit3": "Entertainment",
     "benefit4": "USB Port / Power",
 
-    "login": "Login",
-    "register": "Register"
+    "greetingTitle": "Wellcome Traveler",
+    "greetingDesc": "Explore more cities and get an amazing experiences with us",
+
+    "loginTitle": "Sign In and\nLet's start your journey",
+    "emailAddressLabel": "Email Address",
+    "emailAddressHint": "Enter Email Address",
+    "emailAddressValidationText": "Email can't be empty",
+    "emailAddressValidationText2": "Invalid Email",
+    "passwordLabel": "Password",
+    "passwordHint": "Enter Password",
+    "passwordValidationText": "Password can't be empty",
+    "passwordValidationText2": "- Password minimum 8 character\n- Password consists of uppercase, lowercase and number",
+
+    "registerTitle": "Create account and\nenjoy your journey",
+    "registerSuccessTitle": "Special For You 🎉",
+    "registerSuccessDesc": "We give you early balance so that you can try our services",
+    "fullNameLabel": "Full Name",
+    "fullNameHint": "Enter Full Name",
+    "dateOfBirthLabel": "Date of Birth",
+    "dateOfBirthHint": "Choose Date of Birth",
+    "pinTransactionLabel": "PIN Transaction",
+    "pinTransactionHint": "Enter PIN Transaction",
+    "pinTransactionValidationText": "Pin must be 6 numeric character",
+
+    "start": "Get Started",
+    "signIn": "Sign In",
+    "dontHaveAccount": "Don't have an account ? ",
+    "haveAccount": "Have an account ? ",
+    "signUp": "Sign Up",
+    "balance": "Balance",
+    "cardHolder": "Card Holder",
+    "cardId": "Card ID"
 }

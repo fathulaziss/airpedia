@@ -21,7 +21,7 @@ class RegisterView extends GetView<RegisterController> {
   Widget build(BuildContext context) {
     return Obx(() {
       return PageDefault(
-        title: 'Register',
+        title: 'signUp'.tr,
         bottomBarHeight: 90.w,
         bottomBar: Column(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -30,15 +30,15 @@ class RegisterView extends GetView<RegisterController> {
               padding: EdgeInsets.symmetric(horizontal: Get.width / 10),
               child: ButtonPrimary(
                 onTap: controller.register,
-                label: 'Register',
+                label: 'signUp'.tr,
                 margin: EdgeInsets.symmetric(horizontal: 24.w),
                 isLoading: controller.isLoading.value,
                 enabled: controller.isValidForm.value,
               ),
             ),
             ButtonTextRich(
-              label1: 'Have an account? ',
-              label2: 'Sign In',
+              label1: 'haveAccount'.tr,
+              label2: 'signIn'.tr,
               onPressed: Get.back,
             ),
           ],
@@ -51,7 +51,7 @@ class RegisterView extends GetView<RegisterController> {
               SizedBox(
                 width: Get.width,
                 child: Text(
-                  'Join us and\nget your next journey',
+                  'registerTitle'.tr,
                   style: TextStyles.title,
                 ),
               ),
@@ -67,21 +67,22 @@ class RegisterView extends GetView<RegisterController> {
                     child: Column(
                       children: [
                         InputPrimary(
-                          label: 'Full Name',
-                          hint: 'Enter Full Name',
+                          label: 'fullNameLabel'.tr,
+                          hint: 'fullNameHint'.tr,
                           controller: controller.cFullName,
                           onChanged: controller.setFullName,
                           validation: (value) => value.isNotEmpty,
                         ),
                         InputEmail(
-                          label: 'Email Address',
-                          hint: 'Enter Email Address',
+                          label: 'emailAddressLabel'.tr,
+                          hint: 'emailAddressHint'.tr,
                           controller: controller.cEmail,
                           value: controller.setEmail,
+                          validationText: 'emailAddressValidationText2'.tr,
                         ),
                         InputDate(
-                          label: 'Date of Birth',
-                          hint: 'Choose Date of Birth',
+                          label: 'dateOfBirthLabel'.tr,
+                          hint: 'dateOfBirthHint'.tr,
                           initialDate: DateTime.now(),
                           firstDate: DateTime(1945),
                           suffixIcon: Padding(
@@ -96,14 +97,15 @@ class RegisterView extends GetView<RegisterController> {
                           value: controller.setDateOfBirth,
                         ),
                         InputPassword(
-                          label: 'Password',
-                          hint: 'Enter Password',
+                          label: 'passwordLabel'.tr,
+                          hint: 'passwordHint'.tr,
                           controller: controller.cPassword,
                           value: controller.setPassword,
+                          validationText: 'passwordValidationText2'.tr,
                         ),
                         InputPassword(
-                          label: 'PIN Transaction',
-                          hint: 'Enter PIN Transaction',
+                          label: 'pinTransactionLabel'.tr,
+                          hint: 'pinTransactionHint'.tr,
                           controller: controller.cPinTransaction,
                           value: controller.setPinTransaction,
                           keyboardType: TextInputType.number,
@@ -118,7 +120,7 @@ class RegisterView extends GetView<RegisterController> {
                               return true;
                             }
                           },
-                          validationText: 'Pin must be 6 numeric character',
+                          validationText: 'pinTransactionValidationText'.tr,
                         ),
                       ],
                     ),

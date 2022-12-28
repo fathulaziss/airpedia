@@ -27,20 +27,20 @@ class OnboardingView extends GetView<OnboardingController> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Text(
-              'Wellcome Traveler',
+              'greetingTitle'.tr,
               textAlign: TextAlign.center,
               style: TextStyles.title.copyWith(color: Colors.white),
             ),
             verticalSpace(10.w),
             Text(
-              'Explore more countries and get an amazing experiences with us',
+              'greetingDesc'.tr,
               textAlign: TextAlign.center,
               style: TextStyles.text.copyWith(color: AppColor.greyColor1),
             ),
             verticalSpace(50.w),
             ButtonPrimary(
               onTap: controller.getStarted,
-              label: 'Get Started',
+              label: 'start'.tr,
               width: 220.w,
             ),
           ],

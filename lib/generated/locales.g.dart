@@ -65,8 +65,35 @@ class LocaleKeys {
   static const benefit2 = 'benefit2';
   static const benefit3 = 'benefit3';
   static const benefit4 = 'benefit4';
-  static const login = 'login';
-  static const register = 'register';
+  static const greetingTitle = 'greetingTitle';
+  static const greetingDesc = 'greetingDesc';
+  static const loginTitle = 'loginTitle';
+  static const emailAddressLabel = 'emailAddressLabel';
+  static const emailAddressHint = 'emailAddressHint';
+  static const emailAddressValidationText = 'emailAddressValidationText';
+  static const emailAddressValidationText2 = 'emailAddressValidationText2';
+  static const passwordLabel = 'passwordLabel';
+  static const passwordHint = 'passwordHint';
+  static const passwordValidationText = 'passwordValidationText';
+  static const passwordValidationText2 = 'passwordValidationText2';
+  static const registerTitle = 'registerTitle';
+  static const registerSuccessTitle = 'registerSuccessTitle';
+  static const registerSuccessDesc = 'registerSuccessDesc';
+  static const fullNameLabel = 'fullNameLabel';
+  static const fullNameHint = 'fullNameHint';
+  static const dateOfBirthLabel = 'dateOfBirthLabel';
+  static const dateOfBirthHint = 'dateOfBirthHint';
+  static const pinTransactionLabel = 'pinTransactionLabel';
+  static const pinTransactionHint = 'pinTransactionHint';
+  static const pinTransactionValidationText = 'pinTransactionValidationText';
+  static const start = 'start';
+  static const signIn = 'signIn';
+  static const dontHaveAccount = 'dontHaveAccount';
+  static const haveAccount = 'haveAccount';
+  static const signUp = 'signUp';
+  static const balance = 'balance';
+  static const cardHolder = 'cardHolder';
+  static const cardId = 'cardId';
 }
 
 class Locales {
@@ -135,8 +162,38 @@ class Locales {
     'benefit2': 'Makanan',
     'benefit3': 'Hiburan',
     'benefit4': 'Port USB / Daya',
-    'login': 'Masuk',
-    'register': 'Daftar',
+    'greetingTitle': 'Selamat Datang Traveler',
+    'greetingDesc':
+        'Jelajahi lebih banyak kota dan dapatkan pengalaman luar biasa bersama kami',
+    'loginTitle': 'Masuk dan\nmulai perjalananmu',
+    'emailAddressLabel': 'Alamat Email',
+    'emailAddressHint': 'Masukkan Alamat Email',
+    'emailAddressValidationText': 'Email tidak boleh kosong',
+    'emailAddressValidationText2': 'Email tidak valid',
+    'passwordLabel': 'Kata Sandi',
+    'passwordHint': 'Masukkan Kata Sandi',
+    'passwordValidationText': 'Kata Sandi tidak boleh kosong',
+    'passwordValidationText2':
+        '- Kata Sandi minimal 8 karakter\n- Kata Sandi terdiri dari huruf besar, huruf kecil dan angka',
+    'registerTitle': 'Buat akun dan\nnikmati perjalananmu',
+    'registerSuccessTitle': 'Khusus Untukmu 🎉',
+    'registerSuccessDesc':
+        'Kami memberimu saldo awal agar dapat mencoba layanan kami',
+    'fullNameLabel': 'Nama Lengkap',
+    'fullNameHint': 'Masukkan Nama Lengkap',
+    'dateOfBirthLabel': 'Tanggal Lahir',
+    'dateOfBirthHint': 'Pilih Tanggal Lahir',
+    'pinTransactionLabel': 'PIN Transaksi',
+    'pinTransactionHint': 'Masukkan PIN Transaksi',
+    'pinTransactionValidationText': 'Pin harus 6 karakter numerik',
+    'start': 'Mulai',
+    'signIn': 'Masuk',
+    'dontHaveAccount': 'Belum memiliki akun ? ',
+    'haveAccount': 'Sudah memiliki akun ? ',
+    'signUp': 'Daftar',
+    'balance': 'Saldo',
+    'cardHolder': 'Pemegang Kartu',
+    'cardId': 'ID Kartu',
   };
   static const en_US = {
     'aboutLombok':
@@ -203,7 +260,37 @@ class Locales {
     'benefit2': 'Food',
     'benefit3': 'Entertainment',
     'benefit4': 'USB Port / Power',
-    'login': 'Login',
-    'register': 'Register',
+    'greetingTitle': 'Wellcome Traveler',
+    'greetingDesc':
+        'Explore more cities and get an amazing experiences with us',
+    'loginTitle': 'Sign In and\nLet\'s start your journey',
+    'emailAddressLabel': 'Email Address',
+    'emailAddressHint': 'Enter Email Address',
+    'emailAddressValidationText': 'Email can\'t be empty',
+    'emailAddressValidationText2': 'Invalid Email',
+    'passwordLabel': 'Password',
+    'passwordHint': 'Enter Password',
+    'passwordValidationText': 'Password can\'t be empty',
+    'passwordValidationText2':
+        '- Password minimum 8 character\n- Password consists of uppercase, lowercase and number',
+    'registerTitle': 'Create account and\nenjoy your journey',
+    'registerSuccessTitle': 'Special For You 🎉',
+    'registerSuccessDesc':
+        'We give you early balance so that you can try our services',
+    'fullNameLabel': 'Full Name',
+    'fullNameHint': 'Enter Full Name',
+    'dateOfBirthLabel': 'Date of Birth',
+    'dateOfBirthHint': 'Choose Date of Birth',
+    'pinTransactionLabel': 'PIN Transaction',
+    'pinTransactionHint': 'Enter PIN Transaction',
+    'pinTransactionValidationText': 'Pin must be 6 numeric character',
+    'start': 'Get Started',
+    'signIn': 'Sign In',
+    'dontHaveAccount': 'Don\'t have an account ? ',
+    'haveAccount': 'Have an account ? ',
+    'signUp': 'Sign Up',
+    'balance': 'Balance',
+    'cardHolder': 'Card Holder',
+    'cardId': 'Card ID',
   };
 }

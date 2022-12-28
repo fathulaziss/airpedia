@@ -26,7 +26,7 @@ class LoginView extends GetView<LoginController> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Sign In and\nLet's start the journey",
+                'loginTitle'.tr,
                 style: TextStyles.title,
               ),
               verticalSpace(30.w),
@@ -39,25 +39,26 @@ class LoginView extends GetView<LoginController> {
                 child: Column(
                   children: [
                     InputEmail(
-                      label: 'Email Address',
-                      hint: 'Enter Email Address',
+                      label: 'emailAddressLabel'.tr,
+                      hint: 'emailAddressHint'.tr,
                       controller: controller.cEmail,
                       value: controller.setEmail,
                       validation: (value) => value.isNotEmpty,
-                      validationText: "Email can't be empty",
+                      validationText: 'emailAddressValidationText'.tr,
                     ),
                     InputPassword(
-                      label: 'Password',
+                      label: 'passwordLabel'.tr,
+                      hint: 'passwordHint'.tr,
                       value: controller.setPassword,
                       validation: (value) => value.isNotEmpty,
-                      validationText: "Email can't be empty",
+                      validationText: 'passwordValidationText'.tr,
                     ),
                   ],
                 ),
               ),
               verticalSpace(30.w),
               ButtonPrimary(
-                label: 'Sign In',
+                label: 'signIn'.tr,
                 onTap: controller.login,
                 isLoading: controller.isLoading.value,
                 enabled: controller.isValidForm.value,
@@ -65,8 +66,8 @@ class LoginView extends GetView<LoginController> {
               SizedBox(
                 width: double.infinity,
                 child: ButtonTextRich(
-                  label1: "Don't have an account ? ",
-                  label2: 'Sign Up',
+                  label1: 'dontHaveAccount'.tr,
+                  label2: 'signUp'.tr,
                   onPressed: () => Get.toNamed(Routes.REGISTER),
                 ),
               ),
