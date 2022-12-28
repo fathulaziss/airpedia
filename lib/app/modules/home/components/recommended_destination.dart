@@ -18,7 +18,7 @@ class RecommendedDestination extends GetView<HomeController> {
         children: [
           Padding(
             padding: EdgeInsets.only(left: 20.w),
-            child: Text('Recommended', style: TextStyles.title),
+            child: Text('recommended'.tr, style: TextStyles.title),
           ),
           SizedBox(
             width: double.infinity,
@@ -26,7 +26,7 @@ class RecommendedDestination extends GetView<HomeController> {
             child: controller.listRecommendedDestination.isEmpty &&
                     !controller.isLoadingRecommendedDestination.value
                 ? Center(
-                    child: Text('Data Not Found', style: TextStyles.text),
+                    child: Text('dataNotFound'.tr, style: TextStyles.text),
                   )
                 : ListView.builder(
                     scrollDirection: Axis.horizontal,

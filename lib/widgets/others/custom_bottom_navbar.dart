@@ -24,26 +24,26 @@ class CustomBottomNavBar extends StatelessWidget {
         children: [
           ItemNavbar(
             isSelected: selectedIndex == 0,
-            label: 'Home',
+            label: 'home'.tr,
             assetIcon: AppAsset.icon('ic_home.png'),
             onTap: () => onTap(0),
           ),
           ItemNavbar(
             isSelected: selectedIndex == 1,
-            label: 'Ticket',
+            label: 'ticket'.tr,
             assetIcon: AppAsset.icon('ic_ticket.png'),
             onTap: () => onTap(1),
           ),
           SizedBox(width: Get.width / 5),
           ItemNavbar(
             isSelected: selectedIndex == 2,
-            label: 'History',
+            label: 'history'.tr,
             assetIcon: AppAsset.icon('ic_history.png'),
             onTap: () => onTap(2),
           ),
           ItemNavbar(
             isSelected: selectedIndex == 3,
-            label: 'Setting',
+            label: 'setting'.tr,
             assetIcon: AppAsset.icon('ic_setting.png'),
             onTap: () => onTap(3),
           ),

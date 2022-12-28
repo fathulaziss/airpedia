@@ -36,7 +36,9 @@ class HistoryItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  data.title,
+                  data.transactionType == 'Ticket'
+                      ? data.title.replaceAll(RegExp('Ticket'), 'ticket'.tr)
+                      : data.title.replaceAll(RegExp('Top Up'), 'topup'.tr),
                   style: TextStyles.title.copyWith(fontSize: 12.w),
                 ),
                 verticalSpace(Insets.xs),

@@ -18,7 +18,7 @@ class NewDestination extends GetView<HomeController> {
         children: [
           Padding(
             padding: EdgeInsets.only(left: 20.w),
-            child: Text('New This Year', style: TextStyles.title),
+            child: Text('newThisYear'.tr, style: TextStyles.title),
           ),
           verticalSpace(Insets.lg),
           if (controller.isLoadingNewDestination.value)
@@ -34,7 +34,7 @@ class NewDestination extends GetView<HomeController> {
               width: Get.width,
               height: 100.w,
               child: Align(
-                child: Text('Data Not Found', style: TextStyles.text),
+                child: Text('dataNotFound'.tr, style: TextStyles.text),
               ),
             )
           else

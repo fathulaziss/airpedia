@@ -94,6 +94,24 @@ class LocaleKeys {
   static const balance = 'balance';
   static const cardHolder = 'cardHolder';
   static const cardId = 'cardId';
+  static const recommended = 'recommended';
+  static const newThisYear = 'newThisYear';
+  static const whereToFlightToday = 'whereToFlightToday';
+  static const dataNotFound = 'dataNotFound';
+  static const home = 'home';
+  static const ticket = 'ticket';
+  static const history = 'history';
+  static const setting = 'setting';
+  static const active = 'active';
+  static const complete = 'complete';
+  static const dontHaveTicket = 'dontHaveTicket';
+  static const dontHaveCompletedFlight = 'dontHaveCompletedFlight';
+  static const dontHaveTransaction = 'dontHaveTransaction';
+  static const duration = 'duration';
+  static const onGoing = 'onGoing';
+  static const used = 'used';
+  static const transactionHistory = 'transactionHistory';
+  static const topup = 'topup';
 }
 
 class Locales {
@@ -194,6 +212,24 @@ class Locales {
     'balance': 'Saldo',
     'cardHolder': 'Pemegang Kartu',
     'cardId': 'ID Kartu',
+    'recommended': 'Rekomendasi',
+    'newThisYear': 'Baru Tahun Ini',
+    'whereToFlightToday': 'Ke mana penerbangan hari ini ?',
+    'dataNotFound': 'Data Tidak Ditemukan',
+    'home': 'Beranda',
+    'ticket': 'Tiket',
+    'history': 'Riwayat',
+    'setting': 'Pengaturan',
+    'active': 'Aktif',
+    'complete': 'Selesai',
+    'dontHaveTicket': 'Kamu tidak memiliki tiket.',
+    'dontHaveCompletedFlight': 'Kamu belum pernah menyelsaikan penerbangan.',
+    'dontHaveTransaction': 'Kamu tidak memiliki transaksi.',
+    'duration': 'Durasi',
+    'onGoing': 'Berlangsung',
+    'used': 'Digunakan',
+    'transactionHistory': 'Riwayat Transaksi',
+    'topup': 'Isi Saldo',
   };
   static const en_US = {
     'aboutLombok':
@@ -292,5 +328,23 @@ class Locales {
     'balance': 'Balance',
     'cardHolder': 'Card Holder',
     'cardId': 'Card ID',
+    'recommended': 'Recommended',
+    'newThisYear': 'New This Year',
+    'whereToFlightToday': 'Where to flight today ?',
+    'dataNotFound': 'Data Not Found',
+    'home': 'Home',
+    'ticket': 'Ticket',
+    'history': 'History',
+    'setting': 'Setting',
+    'active': 'Active',
+    'complete': 'Complete',
+    'dontHaveTicket': 'You don\'t have ticket.',
+    'dontHaveCompletedFlight': 'You don\'t have completed flight.',
+    'dontHaveTransaction': 'You don\'t have transaction.',
+    'duration': 'Duration',
+    'onGoing': 'On Going',
+    'used': 'Used',
+    'transactionHistory': 'Transaction History',
+    'topup': 'Top Up',
   };
 }

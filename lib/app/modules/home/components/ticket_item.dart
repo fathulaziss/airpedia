@@ -86,8 +86,8 @@ class TicketItem extends StatelessWidget {
                                     data.departureSchedule,
                                   ).isAfter(DateTime.now()) ==
                                   true
-                              ? 'On Going'
-                              : 'Used',
+                              ? 'onGoing'.tr
+                              : 'used'.tr,
                           style: TextStyles.title
                               .copyWith(fontSize: 12.w, color: Colors.white),
                         ),
@@ -130,7 +130,7 @@ class TicketItem extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Text('Duration', style: TextStyles.desc),
+                    Text('duration'.tr, style: TextStyles.desc),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

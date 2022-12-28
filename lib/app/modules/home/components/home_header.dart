@@ -5,6 +5,7 @@ import 'package:airpedia/utils/app_asset.dart';
 import 'package:airpedia/utils/regex.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({super.key, required this.data});
@@ -44,6 +45,8 @@ class HomeHeader extends StatelessWidget {
                     Text(
                       convertTitleCase(data.fullName),
                       style: TextStyles.title.copyWith(color: Colors.white),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ],
                 ),
@@ -61,7 +64,7 @@ class HomeHeader extends StatelessWidget {
             ],
           ),
           Text(
-            'Where to flight today ?',
+            'whereToFlightToday'.tr,
             style: TextStyles.text.copyWith(color: AppColor.primaryColor2),
           ),
         ],

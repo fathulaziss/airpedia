@@ -26,7 +26,7 @@ class TabHistory extends GetView<HistoryController> {
           Padding(
             padding: EdgeInsets.only(left: Insets.xl),
             child: Text(
-              'Transaction History',
+              'transactionHistory'.tr,
               style: TextStyles.title.copyWith(fontSize: 14.w),
             ),
           ),

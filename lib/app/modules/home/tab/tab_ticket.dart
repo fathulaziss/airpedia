@@ -13,9 +13,9 @@ class TabTicket extends GetView<TicketController> {
   Widget build(BuildContext context) {
     return TicketTabBar(
       onTapTabBarMenu: (index) {},
-      listTabBarMenu: const [
-        TicketTabBarItem(label: 'Active'),
-        TicketTabBarItem(label: 'Complete'),
+      listTabBarMenu: [
+        TicketTabBarItem(label: 'active'.tr),
+        TicketTabBarItem(label: 'complete'.tr),
       ],
       listTabBarView: const [
         TicketActive(),

@@ -2,6 +2,7 @@ import 'package:airpedia/styles/colors.dart';
 import 'package:airpedia/styles/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class TicketTabBar extends StatefulWidget {
   const TicketTabBar({
@@ -44,7 +45,7 @@ class _TicketTabBarState extends State<TicketTabBar>
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.w),
                 child: Text(
-                  'Ticket',
+                  'ticket'.tr,
                   style: TextStyles.title.copyWith(color: Colors.white),
                 ),
               ),

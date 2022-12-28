@@ -42,7 +42,7 @@ class TicketComplete extends GetView<TicketController> {
                     },
                   ),
                 )
-              : const TicketEmpty(desc: "You don't have completed flight.");
+              : TicketEmpty(desc: 'dontHaveCompletedFlight'.tr);
     });
   }
 }

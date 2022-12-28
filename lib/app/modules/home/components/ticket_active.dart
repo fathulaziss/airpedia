@@ -42,7 +42,7 @@ class TicketActive extends GetView<TicketController> {
                     },
                   ),
                 )
-              : const TicketEmpty(desc: "You don't have ticket.");
+              : TicketEmpty(desc: 'dontHaveTicket'.tr);
     });
   }
 }

@@ -18,7 +18,7 @@ class HistoryEmpty extends StatelessWidget {
           Image.asset(AppAsset.image('img_empty.png'), width: 200.w),
           verticalSpace(Insets.med),
           Text(
-            "You don't have transaction.",
+            'dontHaveTransaction'.tr,
             style: TextStyles.text.copyWith(color: AppColor.greyColor1),
           ),
           verticalSpace(55.w),
