@@ -17,17 +17,17 @@ class TabSetting extends GetView<SettingController> {
         SettingHeader(data: controller.cUserInfo.dataUser.value),
         SettingMenu(
           icon: const Icon(Icons.person_rounded, color: AppColor.yellowColor3),
-          label: 'Edit Profile',
+          label: 'editProfile'.tr,
           onTap: () {},
         ),
         SettingMenu(
           icon: const Icon(Icons.lock_open, color: AppColor.yellowColor3),
-          label: 'Change Password',
+          label: 'changePassword'.tr,
           onTap: () {},
         ),
         SettingMenu(
           icon: const Icon(Icons.pin, color: AppColor.yellowColor3),
-          label: 'Change PIN',
+          label: 'changePin'.tr,
           onTap: () {},
         ),
         SettingMenu(
@@ -35,12 +35,14 @@ class TabSetting extends GetView<SettingController> {
             Icons.power_settings_new,
             color: AppColor.yellowColor3,
           ),
-          label: 'Sign Out',
+          label: 'signOut'.tr,
           onTap: () {
             showPopUpConfirmation(
-              title: 'Confirmation',
-              description: 'Are you sure to exit application ?',
+              title: 'confirmation'.tr,
+              description: 'exitApp'.tr,
               onPressPositive: () => AppCycleService().onUserLogout(),
+              labelButtonPostive: 'yes'.tr.toUpperCase(),
+              labelButtonNegative: 'cancel'.tr.toUpperCase(),
             );
           },
         ),

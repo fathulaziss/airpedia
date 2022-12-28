@@ -17,7 +17,7 @@ class DestinationTicketForm extends GetView<DestinationController> {
     return Column(
       children: [
         InputDate(
-          label: 'Choose Date Departure',
+          label: 'chooseDepartureDateLabel'.tr,
           hint: 'DD/MM/YYYY',
           suffixIcon: Padding(
             padding: EdgeInsets.only(right: Insets.sm),
@@ -31,8 +31,8 @@ class DestinationTicketForm extends GetView<DestinationController> {
           value: controller.setDateDeparture,
         ),
         InputSearchDropdown(
-          label: 'Choose Airport Departure',
-          hint: 'Search Airport',
+          label: 'chooseDepartureAirportLabel'.tr,
+          hint: 'chooseDepartureAirportHint'.tr,
           suffixIcon: Padding(
             padding: EdgeInsets.only(right: Insets.sm),
             child: Icon(

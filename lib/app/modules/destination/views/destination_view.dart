@@ -25,7 +25,7 @@ class DestinationView extends GetView<DestinationController> {
             child: const DestinationTicketForm(),
             buttonBottom: Obx(() {
               return ButtonPrimary(
-                label: 'Search Flight',
+                label: 'searchFlight'.tr,
                 enabled: controller.isValidTicketForm.value,
                 onTap: () {
                   controller.getDestinationTicket();
@@ -36,7 +36,7 @@ class DestinationView extends GetView<DestinationController> {
                     child: const DestinationTicket(),
                     buttonBottom: Obx(() {
                       return ButtonPrimary(
-                        label: 'Choose Ticket',
+                        label: 'chooseTicket'.tr,
                         enabled: controller.destinationTicket.value !=
                             const DestinationTicketModel(),
                         onTap: controller.submit,

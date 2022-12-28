@@ -88,8 +88,20 @@
     "pinTransactionHint": "Masukkan PIN Transaksi",
     "pinTransactionValidationText": "Pin harus 6 karakter numerik",
 
+    "about": "Tentang",
+    "photos": "Foto",
+    "attraction": "Daya Tarik",
+    "bookNow": "Pesan Sekarang",
+    "chooseDepartureDateLabel": "Pilih Tanggal Keberangkatan",
+    "chooseDepartureAirportLabel": "Pilih Bandara Keberangkatan",
+    "chooseDepartureAirportHint": "Cari Bandara",
+    "searchFlight": "Cari Penerbangan",
+    "chooseTicket": "Pilih Tiket",
+    "flightNotAvailable": "Jadwal Penerbangan Tidak Tersedia",
+
     "start": "Mulai",
     "signIn": "Masuk",
+    "signOut": "Keluar",
     "dontHaveAccount": "Belum memiliki akun ? ",
     "haveAccount": "Sudah memiliki akun ? ",
     "signUp": "Daftar",
@@ -113,5 +125,12 @@
     "onGoing": "Berlangsung",
     "used": "Digunakan",
     "transactionHistory": "Riwayat Transaksi",
-    "topup" : "Isi Saldo"
+    "topup": "Isi Saldo",
+    "editProfile": "Sunting Profile",
+    "changePassword": "Ubah Kata Sandi",
+    "changePin": "Ubah PIN",
+    "confirmation": "Konfirmasi",
+    "exitApp": "Apakah kamu yakin untuk keluar dari aplikasi ?",
+    "cancel": "batal",
+    "yes": "ya"
 }

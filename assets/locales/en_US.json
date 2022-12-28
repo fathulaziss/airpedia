@@ -88,8 +88,20 @@
     "pinTransactionHint": "Enter PIN Transaction",
     "pinTransactionValidationText": "Pin must be 6 numeric character",
 
+    "about": "About",
+    "photos": "Photos",
+    "attraction": "Attraction",
+    "bookNow": "Book Now",
+    "chooseDepartureDateLabel": "Choose Departure Date",
+    "chooseDepartureAirportLabel": "Choose Departure Airport",
+    "chooseDepartureAirportHint": "Search Airport",
+    "searchFlight": "Search Flight",
+    "chooseTicket": "Choose Ticket",
+    "flightNotAvailable": "Flight Schedule Not Available",
+
     "start": "Get Started",
     "signIn": "Sign In",
+    "signOut": "Sign Out",
     "dontHaveAccount": "Don't have an account ? ",
     "haveAccount": "Have an account ? ",
     "signUp": "Sign Up",
@@ -113,5 +125,12 @@
     "onGoing": "On Going",
     "used": "Used",
     "transactionHistory": "Transaction History",
-    "topup" : "Top Up"
+    "topup": "Top Up",
+    "editProfile": "Edit Profile",
+    "changePassword": "Change Password",
+    "changePin": "Change PIN",
+    "confirmation": "Confirmation",
+    "exitApp": "Are you sure to exit application ?",
+    "cancel": "cancel",
+    "yes": "yes"
 }

@@ -3,6 +3,7 @@ import 'package:airpedia/widgets/buttons/button_primary.dart';
 import 'package:airpedia/widgets/cards/card_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class DestinationButton extends StatelessWidget {
   const DestinationButton({super.key, required this.onTap});
@@ -24,7 +25,7 @@ class DestinationButton extends StatelessWidget {
           offset: const Offset(0, 5),
         )
       ],
-      child: ButtonPrimary(onTap: onTap, label: 'Book Now'),
+      child: ButtonPrimary(onTap: onTap, label: 'bookNow'.tr),
     );
   }
 }

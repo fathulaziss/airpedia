@@ -19,11 +19,11 @@ class DestinationDetail extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('About', style: TextStyles.title),
+          Text('about'.tr, style: TextStyles.title),
           verticalSpace(Insets.xs),
           Text(data.about, style: TextStyles.text),
           verticalSpace(Insets.lg),
-          Text('Photos', style: TextStyles.title),
+          Text('photos'.tr, style: TextStyles.title),
           Row(
             children: [
               ...data.photos.map((e) {
@@ -48,7 +48,7 @@ class DestinationDetail extends StatelessWidget {
             ],
           ),
           verticalSpace(Insets.lg),
-          Text('Interest', style: TextStyles.title),
+          Text('attraction'.tr, style: TextStyles.title),
           GridView.builder(
             physics: const NeverScrollableScrollPhysics(),
             padding: EdgeInsets.zero,

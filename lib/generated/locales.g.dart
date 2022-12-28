@@ -86,8 +86,18 @@ class LocaleKeys {
   static const pinTransactionLabel = 'pinTransactionLabel';
   static const pinTransactionHint = 'pinTransactionHint';
   static const pinTransactionValidationText = 'pinTransactionValidationText';
+  static const about = 'about';
+  static const photos = 'photos';
+  static const attraction = 'attraction';
+  static const bookNow = 'bookNow';
+  static const chooseDepartureDateLabel = 'chooseDepartureDateLabel';
+  static const chooseDepartureAirportLabel = 'chooseDepartureAirportLabel';
+  static const chooseDepartureAirportHint = 'chooseDepartureAirportHint';
+  static const searchFlight = 'searchFlight';
+  static const chooseTicket = 'chooseTicket';
   static const start = 'start';
   static const signIn = 'signIn';
+  static const signOut = 'signOut';
   static const dontHaveAccount = 'dontHaveAccount';
   static const haveAccount = 'haveAccount';
   static const signUp = 'signUp';
@@ -112,6 +122,13 @@ class LocaleKeys {
   static const used = 'used';
   static const transactionHistory = 'transactionHistory';
   static const topup = 'topup';
+  static const editProfile = 'editProfile';
+  static const changePassword = 'changePassword';
+  static const changePin = 'changePin';
+  static const confirmation = 'confirmation';
+  static const exitApp = 'exitApp';
+  static const cancel = 'cancel';
+  static const yes = 'yes';
 }
 
 class Locales {
@@ -204,8 +221,18 @@ class Locales {
     'pinTransactionLabel': 'PIN Transaksi',
     'pinTransactionHint': 'Masukkan PIN Transaksi',
     'pinTransactionValidationText': 'Pin harus 6 karakter numerik',
+    'about': 'Tentang',
+    'photos': 'Foto',
+    'attraction': 'Daya Tarik',
+    'bookNow': 'Pesan Sekarang',
+    'chooseDepartureDateLabel': 'Pilih Tanggal Keberangkatan',
+    'chooseDepartureAirportLabel': 'Pilih Bandara Keberangkatan',
+    'chooseDepartureAirportHint': 'Cari Bandara',
+    'searchFlight': 'Cari Penerbangan',
+    'chooseTicket': 'Pilih Tiket',
     'start': 'Mulai',
     'signIn': 'Masuk',
+    'signOut': 'Keluar',
     'dontHaveAccount': 'Belum memiliki akun ? ',
     'haveAccount': 'Sudah memiliki akun ? ',
     'signUp': 'Daftar',
@@ -230,6 +257,13 @@ class Locales {
     'used': 'Digunakan',
     'transactionHistory': 'Riwayat Transaksi',
     'topup': 'Isi Saldo',
+    'editProfile': 'Sunting Profile',
+    'changePassword': 'Ubah Kata Sandi',
+    'changePin': 'Ubah PIN',
+    'confirmation': 'Konfirmasi',
+    'exitApp': 'Apakah kamu yakin untuk keluar dari aplikasi ?',
+    'cancel': 'batal',
+    'yes': 'ya',
   };
   static const en_US = {
     'aboutLombok':
@@ -320,8 +354,18 @@ class Locales {
     'pinTransactionLabel': 'PIN Transaction',
     'pinTransactionHint': 'Enter PIN Transaction',
     'pinTransactionValidationText': 'Pin must be 6 numeric character',
+    'about': 'About',
+    'photos': 'Photos',
+    'attraction': 'Attraction',
+    'bookNow': 'Book Now',
+    'chooseDepartureDateLabel': 'Choose Departure Date',
+    'chooseDepartureAirportLabel': 'Choose Departure Airport',
+    'chooseDepartureAirportHint': 'Search Airport',
+    'searchFlight': 'Search Flight',
+    'chooseTicket': 'Choose Ticket',
     'start': 'Get Started',
     'signIn': 'Sign In',
+    'signOut': 'Sign Out',
     'dontHaveAccount': 'Don\'t have an account ? ',
     'haveAccount': 'Have an account ? ',
     'signUp': 'Sign Up',
@@ -346,5 +390,12 @@ class Locales {
     'used': 'Used',
     'transactionHistory': 'Transaction History',
     'topup': 'Top Up',
+    'editProfile': 'Edit Profile',
+    'changePassword': 'Change Password',
+    'changePin': 'Change PIN',
+    'confirmation': 'Confirmation',
+    'exitApp': 'Are you sure to exit application ?',
+    'cancel': 'cancel',
+    'yes': 'yes',
   };
 }
