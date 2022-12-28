@@ -18,7 +18,7 @@ class TopupView extends GetView<TopupController> {
     return Scaffold(
       body: Obx(() {
         return PageDefault(
-          title: 'Top Up',
+          title: 'topup'.tr,
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: Insets.xl),
             child: Column(
@@ -26,7 +26,7 @@ class TopupView extends GetView<TopupController> {
               children: [
                 verticalSpace(Insets.xl),
                 InputCurrency(
-                  label: 'Nominal Top Up',
+                  label: 'Nominal ${'topup'.tr}',
                   hint: '0',
                   controller: controller.cNominal,
                   value: controller.setNominal,
@@ -48,7 +48,10 @@ class TopupView extends GetView<TopupController> {
                     ),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: Insets.sm),
-                      child: Text('Choose Nominal', style: TextStyles.text),
+                      child: Text(
+                        '${'choose'.tr} Nominal',
+                        style: TextStyles.text,
+                      ),
                     ),
                     const Expanded(
                       child: Divider(color: Colors.black, thickness: 1),
@@ -77,7 +80,7 @@ class TopupView extends GetView<TopupController> {
                 ),
                 verticalSpace(Insets.lg),
                 ButtonPrimary(
-                  label: 'Top Up',
+                  label: 'topup'.tr,
                   onTap: controller.submit,
                   enabled: controller.isValidNominal.value,
                   isLoading: controller.isLoading.value,

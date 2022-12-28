@@ -28,7 +28,7 @@ class OrderSeatButton extends GetView<OrderController> {
         ],
         child: ButtonPrimary(
           onTap: () => Get.toNamed(Routes.ORDER_DETAIL),
-          label: 'Continue',
+          label: 'continued'.tr,
           enabled: controller.selectedSeat.isNotEmpty,
         ),
       );

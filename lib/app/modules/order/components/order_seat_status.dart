@@ -2,6 +2,7 @@ import 'package:airpedia/app/modules/order/components/order_seat_status_item.dar
 import 'package:airpedia/styles/colors.dart';
 import 'package:airpedia/styles/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class OrderSeatStatus extends StatelessWidget {
   const OrderSeatStatus({super.key});
@@ -12,21 +13,21 @@ class OrderSeatStatus extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: Insets.lg),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: const [
+        children: [
           OrderSeatStatusItem(
             color: AppColor.primaryColor2,
             outlineColor: AppColor.primaryColor,
-            label: 'Available',
+            label: 'available'.tr,
           ),
           OrderSeatStatusItem(
             color: AppColor.primaryColor,
             outlineColor: AppColor.primaryColor,
-            label: 'Selected',
+            label: 'selected'.tr,
           ),
           OrderSeatStatusItem(
             color: AppColor.greyColor2,
             outlineColor: Colors.transparent,
-            label: 'Unavailable',
+            label: 'unavailable'.tr,
           ),
         ],
       ),

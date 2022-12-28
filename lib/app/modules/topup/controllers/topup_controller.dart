@@ -1,5 +1,6 @@
 import 'package:airpedia/app/controllers/user_info_controller.dart';
 import 'package:airpedia/app/models/user_model.dart';
+import 'package:airpedia/app/modules/home/controllers/history_controller.dart';
 import 'package:airpedia/app/routes/app_pages.dart';
 import 'package:airpedia/utils/app_utils.dart';
 import 'package:airpedia/utils/format_currency.dart';
@@ -10,6 +11,7 @@ import 'package:get/get.dart';
 
 class TopupController extends GetxController {
   final cUserInfo = Get.find<UserInfoController>();
+  final cHistory = Get.find<HistoryController>();
 
   final cNominal = TextEditingController();
   RxInt nominal = 0.obs;
@@ -82,13 +84,13 @@ class TopupController extends GetxController {
 
       await cUserInfo.updateDataUser(data: dataUser);
       await cUserInfo.getDataUser();
-      await Future.delayed(const Duration(seconds: 2));
+      await cHistory.getHistoryTransaction();
 
       isLoading(false);
 
       showPopUpInfo(
-        title: 'Success',
-        description: 'Top Up Success',
+        title: 'success'.tr,
+        description: '${'topup'.tr} ${'success'.tr}',
         onPress: () {
           Get
             ..back()

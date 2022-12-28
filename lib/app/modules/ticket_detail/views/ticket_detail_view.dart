@@ -14,7 +14,7 @@ class TicketDetailView extends GetView<TicketDetailController> {
   @override
   Widget build(BuildContext context) {
     return PageDefault(
-      title: 'Ticket Detail',
+      title: 'ticketDetail'.tr,
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: Insets.xl),
         child: SingleChildScrollView(

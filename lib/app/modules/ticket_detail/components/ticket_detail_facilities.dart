@@ -19,7 +19,7 @@ class TicketDetailFacilities extends GetView<TicketDetailController> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Flight Facilities', style: TextStyles.text),
+          Text('flightFacilities'.tr, style: TextStyles.text),
           verticalSpace(Insets.sm),
           CardApp(
             isShowShadows: true,
@@ -30,11 +30,13 @@ class TicketDetailFacilities extends GetView<TicketDetailController> {
               children: [
                 Row(
                   children: [
-                    Text('Insurance', style: TextStyles.desc),
+                    Text('insurance'.tr, style: TextStyles.desc),
                     horizontalSpace(Insets.sm),
                     Expanded(
                       child: Text(
-                        data.ticket.insurance ? 'YES' : 'NO',
+                        data.ticket.insurance
+                            ? 'yes'.tr.toUpperCase()
+                            : 'no'.tr.toUpperCase(),
                         style: TextStyles.title.copyWith(
                           fontSize: 12.w,
                           color: data.ticket.insurance
@@ -49,11 +51,13 @@ class TicketDetailFacilities extends GetView<TicketDetailController> {
                 verticalSpace(Insets.xs),
                 Row(
                   children: [
-                    Text('Refundable', style: TextStyles.desc),
+                    Text('refundable'.tr, style: TextStyles.desc),
                     horizontalSpace(Insets.sm),
                     Expanded(
                       child: Text(
-                        data.ticket.refundable ? 'YES' : 'NO',
+                        data.ticket.refundable
+                            ? 'yes'.tr.toUpperCase()
+                            : 'no'.tr.toUpperCase(),
                         style: TextStyles.title.copyWith(
                           fontSize: 12.w,
                           color: data.ticket.refundable
@@ -68,7 +72,7 @@ class TicketDetailFacilities extends GetView<TicketDetailController> {
                 verticalSpace(Insets.xs),
                 Row(
                   children: [
-                    Text('Others', style: TextStyles.desc),
+                    Text('others'.tr, style: TextStyles.desc),
                     horizontalSpace(Insets.xxl),
                     Expanded(
                       child: Text(

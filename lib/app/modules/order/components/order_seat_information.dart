@@ -22,7 +22,7 @@ class OrderSeatInformation extends GetView<OrderController> {
             Row(
               children: [
                 Text(
-                  'Your Seat',
+                  'yourSeat'.tr,
                   style: TextStyles.text.copyWith(color: AppColor.greyColor1),
                 ),
                 horizontalSpace(Insets.sm),

@@ -27,14 +27,14 @@ class OrderSuccessView extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: Insets.lg),
                 child: Text(
-                  'Well Booked',
+                  'ticketOrderSuccessTitle'.tr,
                   style: TextStyles.title.copyWith(fontSize: 24.w),
                 ),
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 40.w),
                 child: Text(
-                  'Your ticket has been successfully booked. Safe Flight',
+                  'ticketOrderSuccessDesc'.tr,
                   textAlign: TextAlign.center,
                   style: TextStyles.text
                       .copyWith(fontSize: 16.w, color: AppColor.greyColor1),
@@ -44,7 +44,7 @@ class OrderSuccessView extends StatelessWidget {
                 padding:
                     EdgeInsets.symmetric(horizontal: 48.w, vertical: Insets.lg),
                 child: ButtonPrimary(
-                  label: 'Check Your Ticket',
+                  label: 'checkYourTicket'.tr,
                   onTap: () =>
                       Get.offAllNamed(Routes.HOME, arguments: {'index': 1}),
                 ),

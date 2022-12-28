@@ -6,6 +6,7 @@ import 'package:airpedia/styles/styles.dart';
 import 'package:airpedia/widgets/pages/page_default.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class OrderView extends StatelessWidget {
   const OrderView({super.key});
@@ -13,7 +14,7 @@ class OrderView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PageDefault(
-      title: 'Ticket Order',
+      title: 'ticketOrder'.tr,
       bottomBarHeight: 90.w,
       bottomBar: const OrderSeatButton(),
       child: Padding(
@@ -23,7 +24,7 @@ class OrderView extends StatelessWidget {
           direction: Axis.vertical,
           children: [
             verticalSpace(Insets.sm),
-            Text('Select Your\nFavorite Seat', style: TextStyles.title),
+            Text('ticketOrderTitle'.tr, style: TextStyles.title),
             const OrderSeatStatus(),
             const OrderSeat(),
             const OrderSeatInformation(),

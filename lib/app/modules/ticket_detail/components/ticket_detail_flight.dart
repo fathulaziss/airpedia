@@ -21,7 +21,7 @@ class TicketDetailFlight extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Flight Detail', style: TextStyles.text),
+          Text('flightDetail'.tr, style: TextStyles.text),
           verticalSpace(Insets.sm),
           CardApp(
             isShowShadows: true,
@@ -93,7 +93,7 @@ class TicketDetailFlight extends StatelessWidget {
                     ),
                     Column(
                       children: [
-                        Text('Duration', style: TextStyles.desc),
+                        Text('duration'.tr, style: TextStyles.desc),
                         Container(
                           width: 70.w,
                           height: 1.w,

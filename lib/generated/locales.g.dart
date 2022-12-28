@@ -95,6 +95,32 @@ class LocaleKeys {
   static const chooseDepartureAirportHint = 'chooseDepartureAirportHint';
   static const searchFlight = 'searchFlight';
   static const chooseTicket = 'chooseTicket';
+  static const flightNotAvailable = 'flightNotAvailable';
+  static const ticketOrder = 'ticketOrder';
+  static const ticketDetail = 'ticketDetail';
+  static const ticketOrderTitle = 'ticketOrderTitle';
+  static const available = 'available';
+  static const selected = 'selected';
+  static const unavailable = 'unavailable';
+  static const yourSeat = 'yourSeat';
+  static const continued = 'continued';
+  static const ticketConfirmation = 'ticketConfirmation';
+  static const flightDetail = 'flightDetail';
+  static const flightFacilities = 'flightFacilities';
+  static const priceDetail = 'priceDetail';
+  static const seat = 'seat';
+  static const tax = 'tax';
+  static const passenger = 'passenger';
+  static const paymentMethod = 'paymentMethod';
+  static const insurance = 'insurance';
+  static const refundable = 'refundable';
+  static const others = 'others';
+  static const payNow = 'payNow';
+  static const ticketOrderSuccessTitle = 'ticketOrderSuccessTitle';
+  static const ticketOrderSuccessDesc = 'ticketOrderSuccessDesc';
+  static const checkYourTicket = 'checkYourTicket';
+  static const pinVerification = 'pinVerification';
+  static const enterYourPin = 'enterYourPin';
   static const start = 'start';
   static const signIn = 'signIn';
   static const signOut = 'signOut';
@@ -129,6 +155,13 @@ class LocaleKeys {
   static const exitApp = 'exitApp';
   static const cancel = 'cancel';
   static const yes = 'yes';
+  static const no = 'no';
+  static const choose = 'choose';
+  static const success = 'success';
+  static const information = 'information';
+  static const forgotPin = 'forgotPin';
+  static const underDevelopment = 'underDevelopment';
+  static const jailbreakDevice = 'jailbreakDevice';
 }
 
 class Locales {
@@ -230,6 +263,33 @@ class Locales {
     'chooseDepartureAirportHint': 'Cari Bandara',
     'searchFlight': 'Cari Penerbangan',
     'chooseTicket': 'Pilih Tiket',
+    'flightNotAvailable': 'Jadwal Penerbangan Tidak Tersedia',
+    'ticketOrder': 'Pemesanan Tiket',
+    'ticketDetail': 'Detil Tiket',
+    'ticketOrderTitle': 'Pilih Tempat Duduk\nFavoritmu',
+    'available': 'Tersedia',
+    'selected': 'Terpilih',
+    'unavailable': 'Tidak Tersedia',
+    'yourSeat': 'Tempat Duduk',
+    'continued': 'Lanjutkan',
+    'ticketConfirmation': 'Konfirmasi Tiket',
+    'flightDetail': 'Detil Penerbangan',
+    'flightFacilities': 'Detil Fasilitas',
+    'priceDetail': 'Detil Harga',
+    'seat': 'Tempat Duduk',
+    'tax': 'Pajak',
+    'passenger': 'Penumpang',
+    'paymentMethod': 'Cara Pembayaran',
+    'insurance': 'Asuransi',
+    'refundable': 'Dapat Dikembalikan',
+    'others': 'Lainnya',
+    'payNow': 'Bayar Sekarang',
+    'ticketOrderSuccessTitle': 'Tiket Berhasil Dipesan',
+    'ticketOrderSuccessDesc':
+        'Tiketmu telah berhasil dipesan. Semoga selamat dalam penerbangan',
+    'checkYourTicket': 'Periksa Tiket',
+    'pinVerification': 'PIN Verifikasi',
+    'enterYourPin': 'Masukkan PIN',
     'start': 'Mulai',
     'signIn': 'Masuk',
     'signOut': 'Keluar',
@@ -264,6 +324,14 @@ class Locales {
     'exitApp': 'Apakah kamu yakin untuk keluar dari aplikasi ?',
     'cancel': 'batal',
     'yes': 'ya',
+    'no': 'tidak',
+    'choose': 'Pilih',
+    'success': 'Berhasil',
+    'information': 'Informasi',
+    'forgotPin': 'Lupa PIN',
+    'underDevelopment': 'Fitur ini Sedang Dalam Pengembangan',
+    'jailbreakDevice':
+        'Aplikasi Ini Diblokir Untuk Anda Karena Perangkat Anda Telah Di-Root',
   };
   static const en_US = {
     'aboutLombok':
@@ -363,6 +431,33 @@ class Locales {
     'chooseDepartureAirportHint': 'Search Airport',
     'searchFlight': 'Search Flight',
     'chooseTicket': 'Choose Ticket',
+    'flightNotAvailable': 'Flight Schedule Not Available',
+    'ticketOrder': 'Ticket Order',
+    'ticketDetail': 'Ticket Detail',
+    'ticketOrderTitle': 'Select Your\nFavorite Seat',
+    'available': 'Available',
+    'selected': 'Selected',
+    'unavailable': 'Unavailable',
+    'yourSeat': 'Your Seat',
+    'continued': 'Continue',
+    'ticketConfirmation': 'Ticket Confirmation',
+    'flightDetail': 'Flight Detail',
+    'flightFacilities': 'Flight Facilities',
+    'priceDetail': 'Price Detail',
+    'seat': 'Seat',
+    'tax': 'Tax',
+    'passenger': 'Passenger',
+    'paymentMethod': 'Payment Method',
+    'insurance': 'Insurance',
+    'refundable': 'Refundable',
+    'others': 'Others',
+    'payNow': 'Pay Now',
+    'ticketOrderSuccessTitle': 'Well Booked',
+    'ticketOrderSuccessDesc':
+        'Your ticket has been successfully booked. Safe Flight',
+    'checkYourTicket': 'Check Ticket',
+    'pinVerification': 'Verification PIN',
+    'enterYourPin': 'Enter PIN',
     'start': 'Get Started',
     'signIn': 'Sign In',
     'signOut': 'Sign Out',
@@ -397,5 +492,13 @@ class Locales {
     'exitApp': 'Are you sure to exit application ?',
     'cancel': 'cancel',
     'yes': 'yes',
+    'no': 'no',
+    'choose': 'Choose',
+    'success': 'Success',
+    'information': 'Information',
+    'forgotPin': 'Forgot PIN',
+    'underDevelopment': 'This Feature is Under Development',
+    'jailbreakDevice':
+        'This App Blocked For You Because Your Device has been Rooted',
   };
 }

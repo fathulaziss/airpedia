@@ -16,7 +16,7 @@ class OrderDetailFacilities extends GetView<OrderController> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Flight Facilities', style: TextStyles.text),
+          Text('flightFacilities'.tr, style: TextStyles.text),
           verticalSpace(Insets.sm),
           CardApp(
             isShowShadows: true,
@@ -27,14 +27,14 @@ class OrderDetailFacilities extends GetView<OrderController> {
               children: [
                 Row(
                   children: [
-                    Text('Insurance', style: TextStyles.desc),
+                    Text('insurance'.tr, style: TextStyles.desc),
                     horizontalSpace(Insets.sm),
                     Expanded(
                       child: Text(
                         controller
                                 .cDestination.destinationTicket.value.insurance
-                            ? 'YES'
-                            : 'NO',
+                            ? 'yes'.tr.toUpperCase()
+                            : 'no'.tr.toUpperCase(),
                         style: TextStyles.title.copyWith(
                           fontSize: 12.w,
                           color: controller.cDestination.destinationTicket.value
@@ -50,14 +50,14 @@ class OrderDetailFacilities extends GetView<OrderController> {
                 verticalSpace(Insets.xs),
                 Row(
                   children: [
-                    Text('Refundable', style: TextStyles.desc),
+                    Text('refundable'.tr, style: TextStyles.desc),
                     horizontalSpace(Insets.sm),
                     Expanded(
                       child: Text(
                         controller
                                 .cDestination.destinationTicket.value.refundable
-                            ? 'YES'
-                            : 'NO',
+                            ? 'yes'.tr.toUpperCase()
+                            : 'no'.tr.toUpperCase(),
                         style: TextStyles.title.copyWith(
                           fontSize: 12.w,
                           color: controller.cDestination.destinationTicket.value
@@ -73,7 +73,7 @@ class OrderDetailFacilities extends GetView<OrderController> {
                 verticalSpace(Insets.xs),
                 Row(
                   children: [
-                    Text('Others', style: TextStyles.desc),
+                    Text('others'.tr, style: TextStyles.desc),
                     horizontalSpace(Insets.xxl),
                     Expanded(
                       child: Text(

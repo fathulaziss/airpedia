@@ -1,5 +1,6 @@
 import 'package:airpedia/styles/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class BlockedView extends StatelessWidget {
   const BlockedView({Key? key}) : super(key: key);
@@ -9,7 +10,7 @@ class BlockedView extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Text(
-          'This App Blocked For You Because Your Device has been Rooted',
+          'jailbreakDevice'.tr,
           style: TextStyles.title,
           textAlign: TextAlign.center,
         ),

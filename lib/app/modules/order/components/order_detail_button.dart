@@ -35,7 +35,7 @@ class OrderDetailButton extends GetView<OrderController> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Payment Method',
+                  'paymentMethod'.tr,
                   style: TextStyles.title.copyWith(fontSize: 12.w),
                 ),
                 CardApp(
@@ -83,7 +83,7 @@ class OrderDetailButton extends GetView<OrderController> {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Text(
-                        'Balance',
+                        'balance'.tr,
                         style: TextStyles.desc
                             .copyWith(color: AppColor.greyColor1),
                       ),
@@ -108,8 +108,8 @@ class OrderDetailButton extends GetView<OrderController> {
               onTap: controller.submit,
               label: controller.cUserInfo.dataUser.value.balance >
                       controller.total.value
-                  ? 'Pay Now'
-                  : 'Top Up',
+                  ? 'payNow'.tr
+                  : 'topup'.tr,
               isLoading: controller.isLoading.value,
             ),
           ],

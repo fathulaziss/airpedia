@@ -27,7 +27,7 @@ class PinPreview extends StatelessWidget {
           ),
           verticalSpace(Insets.xl),
           Text(
-            'Enter Your PIN',
+            'enterYourPin'.tr,
             style: TextStyles.title.copyWith(fontSize: 18.w),
           ),
           Padding(
@@ -98,11 +98,11 @@ class PinPreview extends StatelessWidget {
             child: ButtonPrimary(
               onTap: () {
                 showPopUpInfo(
-                  title: 'Information',
-                  description: 'This Feature is Under Development',
+                  title: 'information'.tr,
+                  description: 'underDevelopment'.tr,
                 );
               },
-              label: 'Forgot PIN',
+              label: 'forgotPin'.tr,
               height: 30.w,
               radius: 8.w,
               textStyle: TextStyles.title

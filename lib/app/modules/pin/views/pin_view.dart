@@ -11,7 +11,7 @@ class PinView extends GetView<PinController> {
   @override
   Widget build(BuildContext context) {
     return PageDefault(
-      title: 'Verification PIN',
+      title: 'pinVerification'.tr,
       child: Obx(() {
         return Flex(
           direction: Axis.vertical,

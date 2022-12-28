@@ -5,6 +5,7 @@ import 'package:airpedia/utils/format_currency.dart';
 import 'package:airpedia/widgets/cards/card_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class TicketDetailPrice extends StatelessWidget {
   const TicketDetailPrice({super.key, required this.data});
@@ -18,7 +19,7 @@ class TicketDetailPrice extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Price Detail', style: TextStyles.text),
+          Text('priceDetail'.tr, style: TextStyles.text),
           verticalSpace(Insets.sm),
           CardApp(
             isShowShadows: true,
@@ -29,7 +30,7 @@ class TicketDetailPrice extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text('Seat', style: TextStyles.desc),
+                    Text('seat'.tr, style: TextStyles.desc),
                     horizontalSpace(Insets.xl * 3),
                     Expanded(
                       child: Text(
@@ -44,7 +45,7 @@ class TicketDetailPrice extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      'Passenger x ${data.totalPassenger}',
+                      '${'passenger'.tr} x ${data.totalPassenger}',
                       style: TextStyles.desc,
                     ),
                     horizontalSpace(Insets.sm),
@@ -63,7 +64,7 @@ class TicketDetailPrice extends StatelessWidget {
                 verticalSpace(Insets.xs),
                 Row(
                   children: [
-                    Text('VAT', style: TextStyles.desc),
+                    Text('tax'.tr, style: TextStyles.desc),
                     horizontalSpace(Insets.sm),
                     Expanded(
                       child: Text(

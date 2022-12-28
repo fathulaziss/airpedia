@@ -17,7 +17,7 @@ class OrderDetailPrice extends GetView<OrderController> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Price Detail', style: TextStyles.text),
+          Text('priceDetail'.tr, style: TextStyles.text),
           verticalSpace(Insets.sm),
           CardApp(
             isShowShadows: true,
@@ -28,7 +28,7 @@ class OrderDetailPrice extends GetView<OrderController> {
               children: [
                 Row(
                   children: [
-                    Text('Seat', style: TextStyles.desc),
+                    Text('seat'.tr, style: TextStyles.desc),
                     horizontalSpace(Insets.xl * 3),
                     Expanded(
                       child: Text(
@@ -46,7 +46,7 @@ class OrderDetailPrice extends GetView<OrderController> {
                 Row(
                   children: [
                     Text(
-                      'Passenger x ${controller.selectedSeat.length}',
+                      '${'passenger'.tr} x ${controller.selectedSeat.length}',
                       style: TextStyles.desc,
                     ),
                     horizontalSpace(Insets.sm),
@@ -65,7 +65,7 @@ class OrderDetailPrice extends GetView<OrderController> {
                 verticalSpace(Insets.xs),
                 Row(
                   children: [
-                    Text('VAT', style: TextStyles.desc),
+                    Text('tax'.tr, style: TextStyles.desc),
                     horizontalSpace(Insets.sm),
                     Expanded(
                       child: Text(
