@@ -135,6 +135,7 @@ class LocaleKeys {
   static const whereToFlightToday = 'whereToFlightToday';
   static const dataNotFound = 'dataNotFound';
   static const chooseLanguage = 'chooseLanguage';
+  static const changeLanguage = 'changeLanguage';
   static const home = 'home';
   static const ticket = 'ticket';
   static const history = 'history';
@@ -305,6 +306,7 @@ class Locales {
     'whereToFlightToday': 'Ke mana penerbangan hari ini ?',
     'dataNotFound': 'Data Tidak Ditemukan',
     'chooseLanguage': 'Pilih Bahasa',
+    'changeLanguage': 'Ubah Bahasa',
     'home': 'Beranda',
     'ticket': 'Tiket',
     'history': 'Riwayat',
@@ -474,6 +476,7 @@ class Locales {
     'whereToFlightToday': 'Where to flight today ?',
     'dataNotFound': 'Data Not Found',
     'chooseLanguage': 'Choose Language',
+    'changeLanguage': 'Change Language',
     'home': 'Home',
     'ticket': 'Ticket',
     'history': 'History',

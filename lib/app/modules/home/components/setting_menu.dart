@@ -12,7 +12,7 @@ class SettingMenu extends StatelessWidget {
     required this.onTap,
   });
 
-  final Widget icon;
+  final IconData icon;
   final String label;
   final Function() onTap;
 
@@ -21,7 +21,7 @@ class SettingMenu extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: CardApp(
-        radius: 16.w,
+        radius: 12.w,
         margin: EdgeInsets.symmetric(horizontal: Insets.xl, vertical: 10.w),
         isShowShadows: true,
         shadows: Shadows.shadowsUp,
@@ -33,11 +33,11 @@ class SettingMenu extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: AppColor.primaryColor,
               ),
-              child: icon,
+              child: Icon(icon, color: AppColor.yellowColor3, size: 14.w),
             ),
             horizontalSpace(Insets.sm),
             Expanded(child: Text(label, style: TextStyles.text)),
-            Icon(Icons.arrow_forward_ios, size: 18.w)
+            Icon(Icons.arrow_forward_ios, size: 14.w)
           ],
         ),
       ),

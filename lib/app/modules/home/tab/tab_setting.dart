@@ -1,8 +1,9 @@
 import 'package:airpedia/app/modules/home/components/setting_header.dart';
+import 'package:airpedia/app/modules/home/components/setting_language_bottomsheet.dart';
 import 'package:airpedia/app/modules/home/components/setting_menu.dart';
 import 'package:airpedia/app/modules/home/controllers/setting_controller.dart';
 import 'package:airpedia/services/app_cycle_service.dart';
-import 'package:airpedia/styles/colors.dart';
+import 'package:airpedia/widgets/others/bottomsheet_custom.dart';
 import 'package:airpedia/widgets/others/show_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -16,25 +17,33 @@ class TabSetting extends GetView<SettingController> {
       children: [
         SettingHeader(data: controller.cUserInfo.dataUser.value),
         SettingMenu(
-          icon: const Icon(Icons.person_rounded, color: AppColor.yellowColor3),
+          icon: Icons.person_rounded,
           label: 'editProfile'.tr,
           onTap: () {},
         ),
         SettingMenu(
-          icon: const Icon(Icons.lock_open, color: AppColor.yellowColor3),
+          icon: Icons.lock_open,
           label: 'changePassword'.tr,
           onTap: () {},
         ),
         SettingMenu(
-          icon: const Icon(Icons.pin, color: AppColor.yellowColor3),
+          icon: Icons.pin,
           label: 'changePin'.tr,
           onTap: () {},
         ),
         SettingMenu(
-          icon: const Icon(
-            Icons.power_settings_new,
-            color: AppColor.yellowColor3,
-          ),
+          icon: Icons.translate,
+          label: 'changeLanguage'.tr,
+          onTap: () {
+            BottomSheetCustom(
+              context: context,
+              initialChildSize: 0.31,
+              child: const SettingLanguageBottomsheet(),
+            ).showData();
+          },
+        ),
+        SettingMenu(
+          icon: Icons.power_settings_new,
           label: 'signOut'.tr,
           onTap: () {
             showPopUpConfirmation(
