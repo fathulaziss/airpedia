@@ -64,6 +64,8 @@ class LoginController extends GetxController {
 
       isLoading(false);
 
+      await Future.delayed(const Duration(milliseconds: 220));
+
       await Get.offNamed(Routes.HOME);
     } catch (e) {
       isLoading(false);

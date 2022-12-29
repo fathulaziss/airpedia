@@ -10,23 +10,21 @@ class TabHome extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(() {
-      return Flex(
-        direction: Axis.vertical,
-        children: [
-          HomeHeader(data: controller.cUserInfo.dataUser.value),
-          Expanded(
-            child: SingleChildScrollView(
-              child: Column(
-                children: const [
-                  RecommendedDestination(),
-                  NewDestination(),
-                ],
-              ),
+    return Flex(
+      direction: Axis.vertical,
+      children: [
+        const HomeHeader(),
+        Expanded(
+          child: SingleChildScrollView(
+            child: Column(
+              children: const [
+                RecommendedDestination(),
+                NewDestination(),
+              ],
             ),
           ),
-        ],
-      );
-    });
+        ),
+      ],
+    );
   }
 }

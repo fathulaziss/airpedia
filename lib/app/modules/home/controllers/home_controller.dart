@@ -15,6 +15,8 @@ class HomeController extends GetxController {
   PageController pageController = PageController();
   RxInt selectedPage = 0.obs;
 
+  RxBool isLoadingDataUser = false.obs;
+
   RxList<DestinationModel> listRecommendedDestination =
       <DestinationModel>[].obs;
   RxBool isLoadingRecommendedDestination = false.obs;
@@ -35,7 +37,7 @@ class HomeController extends GetxController {
           break;
       }
     }
-    cUserInfo.getDataUser();
+    getDataUser();
     getRecommendedDestination();
     getNewDestination();
     super.onInit();
@@ -52,6 +54,20 @@ class HomeController extends GetxController {
       case 2:
         cHistory.getHistoryTransaction();
         break;
+    }
+  }
+
+  Future<void> getDataUser() async {
+    try {
+      isLoadingDataUser(true);
+
+      await cUserInfo.getDataUser();
+      await Future.delayed(const Duration(seconds: 2));
+
+      isLoadingDataUser(false);
+    } catch (e) {
+      isLoadingDataUser(false);
+      logSys(e.toString());
     }
   }
 
