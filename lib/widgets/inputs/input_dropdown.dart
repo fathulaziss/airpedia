@@ -43,10 +43,10 @@ class InputDropdown extends StatelessWidget {
           ),
         Container(
           width: double.infinity,
-          padding: EdgeInsets.all(10.w),
+          padding: EdgeInsets.all(6.w),
           decoration: BoxDecoration(
             color: borderColor ?? Colors.transparent,
-            borderRadius: BorderRadius.circular(Corners.lg),
+            borderRadius: BorderRadius.circular(Corners.sm),
             border:
                 Border.all(color: outlinedBorderColor ?? Colors.grey.shade300),
           ),
