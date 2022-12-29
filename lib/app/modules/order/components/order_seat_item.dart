@@ -19,7 +19,11 @@ class OrderSeatItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: onTap,
+      onTap: () {
+        if (isAvailable) {
+          onTap();
+        }
+      },
       child: CardApp(
         width: 48.w,
         constraints: BoxConstraints(minHeight: 48.w),
