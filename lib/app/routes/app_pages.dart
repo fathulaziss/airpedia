@@ -3,6 +3,8 @@ import 'package:airpedia/app/modules/api_log/views/api_log_view.dart';
 import 'package:airpedia/app/modules/blocked_view.dart';
 import 'package:airpedia/app/modules/destination/bindings/destination_binding.dart';
 import 'package:airpedia/app/modules/destination/views/destination_view.dart';
+import 'package:airpedia/app/modules/edit_profile/bindings/edit_profile_binding.dart';
+import 'package:airpedia/app/modules/edit_profile/views/edit_profile_view.dart';
 import 'package:airpedia/app/modules/home/bindings/home_binding.dart';
 import 'package:airpedia/app/modules/home/views/home_view.dart';
 import 'package:airpedia/app/modules/login/bindings/login_binding.dart';
@@ -110,6 +112,11 @@ class AppPages {
       name: _Paths.TICKET_DETAIL,
       page: () => const TicketDetailView(),
       binding: TicketDetailBinding(),
+    ),
+    GetPage(
+      name: _Paths.EDIT_PROFILE,
+      page: () => const EditProfileView(),
+      binding: EditProfileBinding(),
     ),
   ];
 }

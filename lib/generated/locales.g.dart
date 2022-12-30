@@ -130,12 +130,18 @@ class LocaleKeys {
   static const balance = 'balance';
   static const cardHolder = 'cardHolder';
   static const cardId = 'cardId';
+  static const update = 'update';
+  static const updateProfileSuccess = 'updateProfileSuccess';
   static const recommended = 'recommended';
   static const newThisYear = 'newThisYear';
   static const whereToFlightToday = 'whereToFlightToday';
   static const dataNotFound = 'dataNotFound';
   static const chooseLanguage = 'chooseLanguage';
   static const changeLanguage = 'changeLanguage';
+  static const editPhoto = 'editPhoto';
+  static const camera = 'camera';
+  static const gallery = 'gallery';
+  static const removePhoto = 'removePhoto';
   static const home = 'home';
   static const ticket = 'ticket';
   static const history = 'history';
@@ -301,12 +307,18 @@ class Locales {
     'balance': 'Saldo',
     'cardHolder': 'Pemegang Kartu',
     'cardId': 'ID Kartu',
+    'update': 'Perbarui',
+    'updateProfileSuccess': 'Profile anda telah berhasil diperbarui',
     'recommended': 'Rekomendasi',
     'newThisYear': 'Baru Tahun Ini',
     'whereToFlightToday': 'Ke mana penerbangan hari ini ?',
     'dataNotFound': 'Data Tidak Ditemukan',
     'chooseLanguage': 'Pilih Bahasa',
     'changeLanguage': 'Ubah Bahasa',
+    'editPhoto': 'Ubah Foto',
+    'camera': 'Kamera',
+    'gallery': 'Galeri',
+    'removePhoto': 'Hapus Foto',
     'home': 'Beranda',
     'ticket': 'Tiket',
     'history': 'Riwayat',
@@ -471,12 +483,18 @@ class Locales {
     'balance': 'Balance',
     'cardHolder': 'Card Holder',
     'cardId': 'Card ID',
+    'update': 'Update',
+    'updateProfileSuccess': 'Your profile has been succesfully updated',
     'recommended': 'Recommended',
     'newThisYear': 'New This Year',
     'whereToFlightToday': 'Where to flight today ?',
     'dataNotFound': 'Data Not Found',
     'chooseLanguage': 'Choose Language',
     'changeLanguage': 'Change Language',
+    'editPhoto': 'Edit Photo',
+    'camera': 'Camera',
+    'gallery': 'Gallery',
+    'removePhoto': 'Remove Photo',
     'home': 'Home',
     'ticket': 'Ticket',
     'history': 'History',

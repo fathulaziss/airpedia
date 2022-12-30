@@ -11,18 +11,23 @@ class PageDefault extends StatelessWidget {
     required this.title,
     this.bottomBarHeight = 0,
     this.bottomBar = const SizedBox(),
+    this.backgroundColor = AppColor.backgroundColor,
+    this.shadowColor,
   }) : super(key: key);
 
   final String title;
   final Widget child;
   final double bottomBarHeight;
   final Widget bottomBar;
+  final Color backgroundColor;
+  final Color? shadowColor;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.backgroundColor,
+      backgroundColor: backgroundColor,
       appBar: AppBar(
+        shadowColor: shadowColor,
         title: SizedBox(
           width: Get.width,
           child: Text(

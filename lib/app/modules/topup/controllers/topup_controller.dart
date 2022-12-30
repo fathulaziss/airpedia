@@ -88,6 +88,8 @@ class TopupController extends GetxController {
 
       isLoading(false);
 
+      await Future.delayed(const Duration(milliseconds: 220));
+
       showPopUpInfo(
         title: 'success'.tr,
         description: '${'topup'.tr} ${'success'.tr}',
