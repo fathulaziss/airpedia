@@ -1,11 +1,11 @@
 import 'package:airpedia/app/modules/edit_profile/components/edit_profile_photo.dart';
+import 'package:airpedia/app/modules/edit_profile/components/edit_profile_photo_bottomsheet.dart';
+import 'package:airpedia/app/modules/edit_profile/components/edit_profile_photo_update.dart';
 import 'package:airpedia/app/modules/edit_profile/controllers/edit_profile_controller.dart';
 import 'package:airpedia/styles/colors.dart';
 import 'package:airpedia/styles/styles.dart';
-import 'package:airpedia/utils/app_asset.dart';
 import 'package:airpedia/widgets/others/bottomsheet_custom.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class EditProfileHeader extends GetView<EditProfileController> {
@@ -31,43 +31,14 @@ class EditProfileHeader extends GetView<EditProfileController> {
                 BottomSheetCustom(
                   context: context,
                   initialChildSize: 0.25,
-                  child: const EditProfilePhoto(),
+                  child: const EditProfilePhotoBottomSheet(),
                 ).showData();
               },
-              child: SizedBox(
-                width: 80.w,
-                height: 80.w,
-                child: Stack(
-                  alignment: Alignment.bottomRight,
-                  children: [
-                    Container(
-                      width: 80.w,
-                      height: 80.w,
-                      padding: EdgeInsets.all(5.w),
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.white,
-                      ),
-                      child: controller
-                              .cUserInfo.dataUser.value.imageProfile.isEmpty
-                          ? Image.asset(AppAsset.image('img_photo_profile.png'))
-                          : const SizedBox(),
-                    ),
-                    Container(
-                      width: 24.w,
-                      height: 24.w,
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.white,
-                      ),
-                      child: Image.asset(
-                        AppAsset.icon('ic_camera.png'),
-                        color: Colors.blueGrey[200],
-                      ),
+              child: controller.isPhotoEdited.value
+                  ? EditProfilePhotoUpdate(
+                      photoPath: controller.photoProfileEdited.value,
                     )
-                  ],
-                ),
-              ),
+                  : EditProfilePhoto(data: controller.cUserInfo.dataUser.value),
             ),
             verticalSpace(Insets.lg),
           ],

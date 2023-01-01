@@ -89,12 +89,21 @@ class HomeHeader extends GetView<HomeController> {
                   Container(
                     width: 55.w,
                     height: 55.w,
-                    padding: EdgeInsets.all(Insets.xs),
+                    padding: EdgeInsets.all(3.w),
                     decoration: const BoxDecoration(
                       color: Colors.white,
                       shape: BoxShape.circle,
                     ),
-                    child: Image.asset(AppAsset.image('img_photo_profile.png')),
+                    child: controller
+                            .cUserInfo.dataUser.value.imageProfile.isNotEmpty
+                        ? ClipRRect(
+                            borderRadius: BorderRadius.circular(55.w),
+                            child: Image.network(
+                              controller.cUserInfo.dataUser.value.imageProfile,
+                              fit: BoxFit.cover,
+                            ),
+                          )
+                        : Image.asset(AppAsset.image('img_photo_profile.png')),
                   )
               ],
             ),

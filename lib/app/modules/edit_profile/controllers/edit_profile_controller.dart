@@ -1,14 +1,22 @@
+import 'dart:io';
+
 import 'package:airpedia/app/controllers/user_info_controller.dart';
 import 'package:airpedia/app/models/user_model.dart';
 import 'package:airpedia/utils/app_utils.dart';
 import 'package:airpedia/utils/format_date_time.dart';
 import 'package:airpedia/widgets/others/show_dialog.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
+import 'package:path/path.dart';
 
 class EditProfileController extends GetxController {
   final cUserInfo = Get.find<UserInfoController>();
+
+  RxString photoProfileEdited = ''.obs;
+  RxBool isPhotoEdited = false.obs;
 
   final cFullName = TextEditingController();
   RxString fullName = ''.obs;
@@ -30,6 +38,7 @@ class EditProfileController extends GetxController {
   }
 
   void initData() {
+    photoProfileEdited(cUserInfo.dataUser.value.imageProfile);
     cFullName.text = cUserInfo.dataUser.value.fullName;
     cEmail.text = cUserInfo.dataUser.value.email;
     cDateOfBirth.text = FormatDateTime.format(
@@ -68,18 +77,48 @@ class EditProfileController extends GetxController {
     }
   }
 
+  Future<void> changePhotoProfile(ImageSource source) async {
+    final picker = ImagePicker();
+    final file = await picker.pickImage(source: source);
+    photoProfileEdited(file!.path);
+    isPhotoEdited(true);
+  }
+
+  void removePhotoProfile() {
+    photoProfileEdited('');
+    isPhotoEdited(true);
+    Get.back();
+  }
+
+  Future<String> uploadPhoto() async {
+    final fileName = basename(photoProfileEdited.value);
+
+    final ref = FirebaseStorage.instance.ref().child(fileName);
+    final task = ref.putFile(File(photoProfileEdited.value));
+    final snapshot = await task;
+    final url = await snapshot.ref.getDownloadURL();
+    logSys('cek url : $url');
+    return url;
+  }
+
   Future<void> submit() async {
     try {
       AppUtils.dismissKeyboard();
 
       isLoading(true);
 
+      var url = '';
+
+      if (photoProfileEdited.isNotEmpty) {
+        url = await uploadPhoto();
+      }
+
       final dataUser = UserModel(
         balance: cUserInfo.dataUser.value.balance,
         dateOfBirth: dateOfBirth.value,
         email: cUserInfo.dataUser.value.email,
         fullName: fullName.value,
-        imageProfile: cUserInfo.dataUser.value.imageProfile,
+        imageProfile: url,
         pinTransaction: cUserInfo.dataUser.value.pinTransaction,
         userId: cUserInfo.dataUser.value.userId,
       );

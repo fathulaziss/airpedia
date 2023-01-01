@@ -1,13 +1,14 @@
-import 'package:airpedia/app/models/user_model.dart';
+import 'dart:io';
+
 import 'package:airpedia/styles/styles.dart';
 import 'package:airpedia/utils/app_asset.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class EditProfilePhoto extends StatelessWidget {
-  const EditProfilePhoto({super.key, required this.data});
+class EditProfilePhotoUpdate extends StatelessWidget {
+  const EditProfilePhotoUpdate({super.key, required this.photoPath});
 
-  final UserModel data;
+  final String photoPath;
 
   @override
   Widget build(BuildContext context) {
@@ -25,10 +26,10 @@ class EditProfilePhoto extends StatelessWidget {
               shape: BoxShape.circle,
               color: Colors.white,
             ),
-            child: data.imageProfile.isNotEmpty
+            child: photoPath.isNotEmpty
                 ? ClipRRect(
                     borderRadius: BorderRadius.circular(80.w),
-                    child: Image.network(data.imageProfile, fit: BoxFit.cover),
+                    child: Image.file(File(photoPath), fit: BoxFit.cover),
                   )
                 : Image.asset(AppAsset.image('img_photo_profile.png')),
           ),

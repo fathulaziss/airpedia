@@ -28,12 +28,20 @@ class SettingHeader extends StatelessWidget {
           Container(
             width: 80.w,
             height: 80.w,
-            padding: EdgeInsets.all(5.w),
+            padding: EdgeInsets.all(Insets.xs),
             decoration: const BoxDecoration(
               shape: BoxShape.circle,
               color: Colors.white,
             ),
-            child: Image.asset(AppAsset.image('img_photo_profile.png')),
+            child: data.imageProfile.isNotEmpty
+                ? ClipRRect(
+                    borderRadius: BorderRadius.circular(88.w),
+                    child: Image.network(
+                      data.imageProfile,
+                      fit: BoxFit.cover,
+                    ),
+                  )
+                : Image.asset(AppAsset.image('img_photo_profile.png')),
           ),
           verticalSpace(Insets.lg),
           Text(
