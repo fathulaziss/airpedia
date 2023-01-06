@@ -80,8 +80,8 @@ class ItemNavbar extends StatelessWidget {
           children: [
             AnimatedContainer(
               duration: const Duration(milliseconds: 300),
-              width: isSelected ? 24.w : 20.w,
-              height: isSelected ? 24.w : 20.w,
+              width: isSelected ? 22.w : 20.w,
+              height: isSelected ? 22.w : 20.w,
               child: assetIcon.isNotEmpty
                   ? Image.asset(
                       assetIcon,
@@ -90,7 +90,7 @@ class ItemNavbar extends StatelessWidget {
                   : Icon(
                       icon,
                       color: isSelected ? AppColor.primaryColor : Colors.grey,
-                      size: isSelected ? 24.w : 20.w,
+                      size: isSelected ? 22.w : 20.w,
                     ),
             ),
             verticalSpace(Insets.xs),
