@@ -26,12 +26,22 @@ class TabSetting extends GetView<SettingController> {
           SettingMenu(
             icon: Icons.lock_open,
             label: 'changePassword'.tr,
-            onTap: () {},
+            onTap: () {
+              showPopUpInfo(
+                title: 'information'.tr,
+                description: 'underDevelopment'.tr,
+              );
+            },
           ),
           SettingMenu(
             icon: Icons.pin,
             label: 'changePin'.tr,
-            onTap: () {},
+            onTap: () {
+              showPopUpInfo(
+                title: 'information'.tr,
+                description: 'underDevelopment'.tr,
+              );
+            },
           ),
           SettingMenu(
             icon: Icons.translate,
