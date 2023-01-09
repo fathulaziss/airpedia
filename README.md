@@ -8,7 +8,7 @@ Flavor is currently only work with Android build. For iOS, there is no need to c
 
 - development:
   ```
-  flutter run --flavor dev -t lib/main_development.dart
+  flutter run --flavor development -t lib/main_development.dart
   ```
 
 - staging:
@@ -18,14 +18,14 @@ Flavor is currently only work with Android build. For iOS, there is no need to c
 
 - production:
   ```
-  flutter run --flavor prod -t lib/main_production.dart
+  flutter run --flavor production -t lib/main_production.dart
   ```
 
 ## How To Build APK
 
 - development:
   ```
-  flutter build apk --split-per-abi --flavor dev -t lib/main_development.dart --release
+  flutter build apk --split-per-abi --flavor development -t lib/main_development.dart --release
   ```
 
 - staging:
@@ -35,5 +35,5 @@ Flavor is currently only work with Android build. For iOS, there is no need to c
 
 - production:
   ```
-  flutter build apk --split-per-abi --flavor prod -t lib/main_production.dart --release
+  flutter build apk --split-per-abi --flavor production -t lib/main_production.dart --release
   ```
