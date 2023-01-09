@@ -9,10 +9,13 @@ class BlockedView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text(
-          'jailbreakDevice'.tr,
-          style: TextStyles.title,
-          textAlign: TextAlign.center,
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: Insets.xl),
+          child: Text(
+            'jailbreakDevice'.tr,
+            style: TextStyles.title,
+            textAlign: TextAlign.center,
+          ),
         ),
       ),
     );
