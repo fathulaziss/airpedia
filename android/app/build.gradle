@@ -82,7 +82,8 @@ android {
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         multiDexEnabled true
-        ndk { abiFilters "armeabi", "x86", "armeabi-v7a","x86_64", "mips", "mips64", "arm64-v8a" }
+        ndk { abiFilters "armeabi", "x86", "armeabi-v7a","x86_64", "mips",
+         "mips64", "arm64-v8a" }
     }
 
     // Uncomment below when build App Bundle
@@ -149,5 +150,9 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.multidex:multidex:2.0.1"
     implementation platform('com.google.firebase:firebase-bom:31.1.0')
+        implementation 'com.google.firebase:firebase-core'
+        implementation('com.google.firebase:firebase-auth') {
+            exclude module: "play-services-safetynet"
+        }
     implementation 'com.google.firebase:firebase-analytics'
 }
