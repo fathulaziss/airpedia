@@ -2,8 +2,8 @@ import 'dart:ui';
 
 class AppLanguageModel {
   AppLanguageModel({
-    this.language = 'ID',
-    this.locale = const Locale('id', 'ID'),
+    this.language = 'EN',
+    this.locale = const Locale('en', 'US'),
   });
 
   factory AppLanguageModel.fromJson(Map<String, dynamic> json) =>
