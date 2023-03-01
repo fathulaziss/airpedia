@@ -5,6 +5,7 @@ import 'package:airpedia/utils/app_asset.dart';
 import 'package:airpedia/utils/format_currency.dart';
 import 'package:airpedia/widgets/buttons/button_primary.dart';
 import 'package:airpedia/widgets/cards/card_app.dart';
+import 'package:airpedia/widgets/others/show_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -38,16 +39,24 @@ class OrderDetailButton extends GetView<OrderController> {
                   'paymentMethod'.tr,
                   style: TextStyles.title.copyWith(fontSize: 12.w),
                 ),
-                CardApp(
-                  width: 18.w,
-                  constraints: BoxConstraints(minHeight: 18.w),
-                  padding: EdgeInsets.zero,
-                  color: AppColor.greyColor1,
-                  radius: 50.w,
-                  child: Icon(
-                    Icons.more_horiz,
-                    color: Colors.white,
-                    size: 18.w,
+                InkWell(
+                  onTap: () {
+                    showPopUpInfo(
+                      title: 'information'.tr,
+                      description: 'underDevelopment'.tr,
+                    );
+                  },
+                  child: CardApp(
+                    width: 18.w,
+                    constraints: BoxConstraints(minHeight: 18.w),
+                    padding: EdgeInsets.zero,
+                    color: AppColor.greyColor1,
+                    radius: 50.w,
+                    child: Icon(
+                      Icons.more_horiz,
+                      color: Colors.white,
+                      size: 18.w,
+                    ),
                   ),
                 )
               ],

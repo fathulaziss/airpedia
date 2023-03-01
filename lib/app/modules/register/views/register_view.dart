@@ -22,7 +22,7 @@ class RegisterView extends GetView<RegisterController> {
     return Obx(() {
       return PageDefault(
         title: 'signUp'.tr,
-        bottomBarHeight: 90.w,
+        bottomBarHeight: 92.w,
         bottomBar: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [

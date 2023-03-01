@@ -1,7 +1,7 @@
 name: airpedia
-version: 1.0.0+3
+version: 1.0.0+4
 publish_to: none
-description: Airpedia App.
+description: Airline Ticket Booking Application.
 environment:
   sdk: ">=2.17.6 <3.0.0"
 
@@ -34,6 +34,7 @@ dependencies:
   jwt_decoder: ^2.0.1
   package_info_plus: ^3.0.1
   path: any
+  permission_handler: ^10.2.0
   shimmer: ^2.0.0
 
 dev_dependencies:

@@ -168,6 +168,11 @@ class LocaleKeys {
   static const success = 'success';
   static const information = 'information';
   static const forgotPin = 'forgotPin';
+  static const requestPermission = 'requestPermission';
+  static const requestPermissionCamera = 'requestPermissionCamera';
+  static const requestPermissionCameraDeny = 'requestPermissionCameraDeny';
+  static const requestPermissionCameraDenyPermanent =
+      'requestPermissionCameraDenyPermanent';
   static const underDevelopment = 'underDevelopment';
   static const jailbreakDevice = 'jailbreakDevice';
 }
@@ -345,6 +350,12 @@ class Locales {
     'success': 'Berhasil',
     'information': 'Informasi',
     'forgotPin': 'Lupa PIN',
+    'requestPermission': 'Permintaan Perizinan',
+    'requestPermissionCamera':
+        'Aplikasi meminta izin untuk mengakses Kamera, Airpedia menjamin penggunaan data hanya untuk keperluan aplikasi',
+    'requestPermissionCameraDeny': 'Akses Kamera Tidak Diberikan',
+    'requestPermissionCameraDenyPermanent':
+        'Izin Kamera tidak diberikan, buka pengaturan',
     'underDevelopment': 'Fitur ini Sedang Dalam Pengembangan',
     'jailbreakDevice':
         'Aplikasi Ini Diblokir Untuk Anda Karena Perangkat Anda Telah Di-Root',
@@ -521,6 +532,12 @@ class Locales {
     'success': 'Success',
     'information': 'Information',
     'forgotPin': 'Forgot PIN',
+    'requestPermission': 'Request Permission',
+    'requestPermissionCamera':
+        'The application requests permission to access the Camera, Airpedia guarantees data usage for application purposes only',
+    'requestPermissionCameraDeny': 'Camera Permission Not Granted',
+    'requestPermissionCameraDenyPermanent':
+        'Camera permission not granted, go to settings',
     'underDevelopment': 'This Feature is Under Development',
     'jailbreakDevice':
         'This App Blocked For You Because Your Device has been Rooted',
