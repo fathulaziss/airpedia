@@ -79,7 +79,9 @@ class OrderDetailFlight extends GetView<OrderController> {
                           verticalSpace(Insets.xs),
                           Text(
                             FormatDateTime.format(
-                              value: controller.cDestination.dateDaparture,
+                              value: DateTime.fromMillisecondsSinceEpoch(
+                                controller.departureSchedule.value,
+                              ),
                               format: DateFormat(
                                 'dd MMM yyyy',
                                 '${Get.locale!.languageCode}_${Get.locale!.countryCode}',
@@ -102,12 +104,16 @@ class OrderDetailFlight extends GetView<OrderController> {
                           FormatDateTime.getDuration(
                             FormatDateTime.getArrivalDate(
                               departureDate:
-                                  controller.cDestination.dateDaparture,
+                                  DateTime.fromMillisecondsSinceEpoch(
+                                controller.departureSchedule.value,
+                              ),
                               arrivalSchedule: controller.cDestination
                                   .destinationTicket.value.arrivalSchedule,
                             )
                                 .difference(
-                                  controller.cDestination.dateDaparture,
+                                  DateTime.fromMillisecondsSinceEpoch(
+                                    controller.departureSchedule.value,
+                                  ),
                                 )
                                 .inMinutes,
                           ),
@@ -130,7 +136,9 @@ class OrderDetailFlight extends GetView<OrderController> {
                             FormatDateTime.format(
                               value: FormatDateTime.getArrivalDate(
                                 departureDate:
-                                    controller.cDestination.dateDaparture,
+                                    DateTime.fromMillisecondsSinceEpoch(
+                                  controller.departureSchedule.value,
+                                ),
                                 arrivalSchedule: controller.cDestination
                                     .destinationTicket.value.arrivalSchedule,
                               ),

@@ -20,6 +20,7 @@ class OrderController extends GetxController {
   RxList<SeatModel> listSeatTypeC = <SeatModel>[].obs;
   RxList<SeatModel> listSeatTypeD = <SeatModel>[].obs;
   RxList<SeatModel> selectedSeat = <SeatModel>[].obs;
+  RxInt departureSchedule = 0.obs;
 
   RxInt totalSeatPrice = 0.obs;
   RxDouble totalVatPrice = 0.0.obs;
@@ -29,6 +30,11 @@ class OrderController extends GetxController {
 
   @override
   void onInit() {
+    departureSchedule.value = DateFormat('yyyy-MM-dd hh:mm')
+        .parse(
+          '${cDestination.dateDaparture.year}-${cDestination.dateDaparture.month}-${cDestination.dateDaparture.day} ${cDestination.destinationTicket.value.departureSchedule}',
+        )
+        .millisecondsSinceEpoch;
     getSeat();
     super.onInit();
   }
@@ -99,11 +105,7 @@ class OrderController extends GetxController {
       await collectionTicketTransaction.add({
         'destination': cDestination.data.value.toJson(),
         'ticket': cDestination.destinationTicket.value.toJson(),
-        'departure_schedule': DateFormat('yyyy-MM-dd hh:mm')
-            .parse(
-              '${cDestination.dateDaparture.year}-${cDestination.dateDaparture.month}-${cDestination.dateDaparture.day} ${cDestination.destinationTicket.value.departureSchedule}',
-            )
-            .millisecondsSinceEpoch,
+        'departure_schedule': departureSchedule.value,
         'transaction_date': DateTime.now().millisecondsSinceEpoch,
         'total_passenger': selectedSeat.length,
         'selected_seat':

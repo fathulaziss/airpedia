@@ -21,19 +21,13 @@ class FormatDateTime {
     required DateTime departureDate,
     required String arrivalSchedule,
   }) {
-    final departureSchedule = DateFormat('Hm').format(departureDate);
-    final dataDeparture = departureSchedule.split(':');
     final dataArrival = arrivalSchedule.split(':');
-    var hour = 0;
-    var day = 0;
-    if (int.parse(dataDeparture[1]) + int.parse(dataArrival[1]) >= 60) {
-      hour = 1;
-    }
-    if (int.parse(dataDeparture[0]) + int.parse(dataArrival[0]) + hour >= 24) {
-      day = 1;
-    }
+
+    final diffHour = int.parse(dataArrival[0]) - departureDate.hour;
+    final diffMinute = int.parse(dataArrival[1]) - departureDate.minute;
+
     final arrivalDate = DateFormat('yyyy-MM-dd HH:mm').parse(
-      '${departureDate.year}-${departureDate.month}-${departureDate.day + day} $arrivalSchedule',
+      '${departureDate.year}-${departureDate.month}-${departureDate.day} ${departureDate.hour + diffHour}:${departureDate.minute + diffMinute}',
     );
     return arrivalDate;
   }
