@@ -21,7 +21,7 @@ class DestinationDetail extends StatelessWidget {
         children: [
           Text('about'.tr, style: TextStyles.title),
           verticalSpace(Insets.xs),
-          Text(data.about, style: TextStyles.text),
+          Text(data.about.tr, style: TextStyles.text),
           verticalSpace(Insets.lg),
           Text('photos'.tr, style: TextStyles.title),
           Row(
@@ -63,7 +63,10 @@ class DestinationDetail extends StatelessWidget {
                 children: [
                   Image.asset(AppAsset.icon('ic_check.png'), width: 16.w),
                   horizontalSpace(Insets.xs),
-                  Text(data.interests[index], style: TextStyles.desc),
+                  Text(
+                    data.interests[index].toString().tr,
+                    style: TextStyles.desc,
+                  ),
                 ],
               );
             },

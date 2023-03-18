@@ -1,8 +1,6 @@
-import 'package:get/get.dart';
-
 List recommendedDestination = [
   {
-    'about': 'aboutLombok'.tr,
+    'about': 'aboutLombok',
     'airport_destination_code': 'lop',
     'airport_destination_location': 'Lombok',
     'airport_destination_name': 'Zainuddin Abdul Madjid',
@@ -10,10 +8,10 @@ List recommendedDestination = [
     'destination_name': 'Lombok',
     'image': 'img_destination_lombok.jpeg',
     'interests': [
-      'attractionLombok1'.tr,
-      'attractionLombok2'.tr,
-      'attractionLombok3'.tr,
-      'attractionLombok4'.tr
+      'attractionLombok1',
+      'attractionLombok2',
+      'attractionLombok3',
+      'attractionLombok4'
     ],
     'photos': [
       'img_destination_lombok1.jpeg',
@@ -23,7 +21,7 @@ List recommendedDestination = [
     'rating': 5.0,
   },
   {
-    'about': 'aboutBandung'.tr,
+    'about': 'aboutBandung',
     'airport_destination_code': 'bdo',
     'airport_destination_location': 'Bandung',
     'airport_destination_name': 'Husein Sastranegara',
@@ -31,10 +29,10 @@ List recommendedDestination = [
     'destination_name': 'Bandung',
     'image': 'img_destination_bandung.jpeg',
     'interests': [
-      'attractionLombok1'.tr,
-      'attractionLombok2'.tr,
-      'attractionLombok3'.tr,
-      'attractionLombok4'.tr
+      'attractionBandung1',
+      'attractionBandung2',
+      'attractionBandung3',
+      'attractionBandung4'
     ],
     'photos': [
       'img_destination_bandung1.jpeg',
@@ -44,7 +42,7 @@ List recommendedDestination = [
     'rating': 4.8,
   },
   {
-    'about': 'aboutYogyakarta'.tr,
+    'about': 'aboutYogyakarta',
     'airport_destination_code': 'jog',
     'airport_destination_location': 'Yogyakarta',
     'airport_destination_name': 'Adi Sucipto',
@@ -52,10 +50,10 @@ List recommendedDestination = [
     'destination_name': 'Yogyakarta',
     'image': 'img_destination_yogyakarta.jpeg',
     'interests': [
-      'attractionYogyakarta1'.tr,
-      'attractionYogyakarta2'.tr,
-      'attractionYogyakarta3'.tr,
-      'attractionYogyakarta4'.tr
+      'attractionYogyakarta1',
+      'attractionYogyakarta2',
+      'attractionYogyakarta3',
+      'attractionYogyakarta4'
     ],
     'photos': [
       'img_destination_yogyakarta1.jpeg',
@@ -65,7 +63,7 @@ List recommendedDestination = [
     'rating': 4.7,
   },
   {
-    'about': 'aboutSurabaya'.tr,
+    'about': 'aboutSurabaya',
     'airport_destination_code': 'sub',
     'airport_destination_location': 'Surabaya',
     'airport_destination_name': 'Juanda',
@@ -73,10 +71,10 @@ List recommendedDestination = [
     'destination_name': 'Surabaya',
     'image': 'img_destination_surabaya.jpeg',
     'interests': [
-      'attractionSurabaya1'.tr,
-      'attractionSurabaya2'.tr,
-      'attractionSurabaya3'.tr,
-      'attractionSurabaya4'.tr
+      'attractionSurabaya1',
+      'attractionSurabaya2',
+      'attractionSurabaya3',
+      'attractionSurabaya4'
     ],
     'photos': [
       'img_destination_surabaya1.jpeg',
@@ -86,7 +84,7 @@ List recommendedDestination = [
     'rating': 4.7,
   },
   {
-    'about': 'aboutJakarta'.tr,
+    'about': 'aboutJakarta',
     'airport_destination_code': 'cgk',
     'airport_destination_location': 'Jakarta',
     'airport_destination_name': 'Soekarno Hatta',
@@ -94,10 +92,10 @@ List recommendedDestination = [
     'destination_name': 'Jakarta',
     'image': 'img_destination_jakarta.jpeg',
     'interests': [
-      'attractionJakarta1'.tr,
-      'attractionJakarta2'.tr,
-      'attractionJakarta3'.tr,
-      'attractionJakarta4'.tr
+      'attractionJakarta1',
+      'attractionJakarta2',
+      'attractionJakarta3',
+      'attractionJakarta4'
     ],
     'photos': [
       'img_destination_jakarta1.jpeg',
@@ -110,7 +108,7 @@ List recommendedDestination = [
 
 List newDestination = [
   {
-    'about': 'aboutAmbon'.tr,
+    'about': 'aboutAmbon',
     'airport_destination_code': 'amq',
     'airport_destination_location': 'Ambon',
     'airport_destination_name': 'Pattimura',
@@ -118,10 +116,10 @@ List newDestination = [
     'destination_name': 'Ambon',
     'image': 'img_destination_ambon.jpeg',
     'interests': [
-      'attractionAmbon1'.tr,
-      'attractionAmbon2'.tr,
-      'attractionAmbon3'.tr,
-      'attractionAmbon4'.tr
+      'attractionAmbon1',
+      'attractionAmbon2',
+      'attractionAmbon3',
+      'attractionAmbon4'
     ],
     'photos': [
       'img_destination_ambon1.jpeg',
@@ -131,7 +129,7 @@ List newDestination = [
     'rating': 4.5,
   },
   {
-    'about': 'aboutPapua'.tr,
+    'about': 'aboutPapua',
     'airport_destination_code': 'djj',
     'airport_destination_location': 'Jayapura',
     'airport_destination_name': 'Sentani',
@@ -139,10 +137,10 @@ List newDestination = [
     'destination_name': 'Papua',
     'image': 'img_destination_jayapura.jpeg',
     'interests': [
-      'attractionPapua1'.tr,
-      'attractionPapua2'.tr,
-      'attractionPapua3'.tr,
-      'attractionPapua4'.tr
+      'attractionPapua1',
+      'attractionPapua2',
+      'attractionPapua3',
+      'attractionPapua4'
     ],
     'photos': [
       'img_destination_jayapura1.jpeg',
@@ -152,7 +150,7 @@ List newDestination = [
     'rating': 4.8,
   },
   {
-    'about': 'aboutBali'.tr,
+    'about': 'aboutBali',
     'airport_destination_code': 'dps',
     'airport_destination_location': 'Denpasar',
     'airport_destination_name': 'Ngurah Rai',
@@ -160,10 +158,10 @@ List newDestination = [
     'destination_name': 'Bali',
     'image': 'img_destination_bali.jpeg',
     'interests': [
-      'attractionBali1'.tr,
-      'attractionBali2'.tr,
-      'attractionBali3'.tr,
-      'attractionBali4'.tr
+      'attractionBali1',
+      'attractionBali2',
+      'attractionBali3',
+      'attractionBali4'
     ],
     'photos': [
       'img_destination_bali1.jpeg',
@@ -173,7 +171,7 @@ List newDestination = [
     'rating': 4.7,
   },
   {
-    'about': 'aboutPadang'.tr,
+    'about': 'aboutPadang',
     'airport_destination_code': 'pdg',
     'airport_destination_location': 'Padang',
     'airport_destination_name': 'Minangkabau',
@@ -181,10 +179,10 @@ List newDestination = [
     'destination_name': 'Padang',
     'image': 'img_destination_padang.jpeg',
     'interests': [
-      'attractionPadang1'.tr,
-      'attractionPadang2'.tr,
-      'attractionPadang3'.tr,
-      'attractionPadang4'.tr
+      'attractionPadang1',
+      'attractionPadang2',
+      'attractionPadang3',
+      'attractionPadang4'
     ],
     'photos': [
       'img_destination_padang1.jpeg',
@@ -194,7 +192,7 @@ List newDestination = [
     'rating': 4.7,
   },
   {
-    'about': 'aboutMakassar'.tr,
+    'about': 'aboutMakassar',
     'airport_destination_code': 'upg',
     'airport_destination_location': 'Makassar',
     'airport_destination_name': 'Sultan Hasanuddin',
@@ -202,10 +200,10 @@ List newDestination = [
     'destination_name': 'Makassar',
     'image': 'img_destination_makassar.jpeg',
     'interests': [
-      'attractionMakassar1'.tr,
-      'attractionMakassar2'.tr,
-      'attractionMakassar3'.tr,
-      'attractionMakassar4'.tr
+      'attractionMakassar1',
+      'attractionMakassar2',
+      'attractionMakassar3',
+      'attractionMakassar4'
     ],
     'photos': [
       'img_destination_makassar1.jpeg',
