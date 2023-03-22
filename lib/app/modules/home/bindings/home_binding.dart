@@ -10,9 +10,9 @@ class HomeBinding extends Bindings {
   @override
   void dependencies() {
     Get
-      ..lazyPut<HomeController>(() => HomeController())
-      ..lazyPut<TicketController>(() => TicketController())
-      ..lazyPut<HistoryController>(() => HistoryController())
-      ..lazyPut<SettingController>(() => SettingController());
+      ..lazyPut<HomeController>(HomeController.new)
+      ..lazyPut<TicketController>(TicketController.new)
+      ..lazyPut<HistoryController>(HistoryController.new)
+      ..lazyPut<SettingController>(SettingController.new);
   }
 }

@@ -31,7 +31,7 @@ class PinController extends GetxController {
         showPopUpInfo(
           title: 'Error',
           description: 'Pin Incorrect',
-          onPress: () => resetPin(),
+          onPress: resetPin,
         );
       }
     }

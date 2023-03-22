@@ -4,6 +4,6 @@ import 'package:get/get.dart';
 class DestinationBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<DestinationController>(() => DestinationController());
+    Get.lazyPut<DestinationController>(DestinationController.new);
   }
 }

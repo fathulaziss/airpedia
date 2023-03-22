@@ -24,7 +24,7 @@ class UtilityController extends GetxController {
   }
 
   Future<void> initData() async {
-    final b = await AppStorage.isContain(key: 'log-button');
+    final b = await AppStorage.isContain(key: LOG_BUTTON);
     isShowLog(b);
   }
 
@@ -44,7 +44,7 @@ class UtilityController extends GetxController {
 
   Future<void> getAppLanguageOptions() async {
     appLanguageOptions(
-      RxList.from(appLanguageData.map((e) => AppLanguageModel.fromJson(e))),
+      RxList.from(appLanguageData.map(AppLanguageModel.fromJson)),
     );
   }
 

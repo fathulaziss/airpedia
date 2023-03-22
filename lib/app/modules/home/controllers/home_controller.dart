@@ -79,7 +79,7 @@ class HomeController extends GetxController {
 
       listRecommendedDestination(
         RxList.from(
-          recommendedDestination.map((e) => DestinationModel.fromJson(e)),
+          recommendedDestination.map(DestinationModel.fromJson),
         ),
       );
 
@@ -99,7 +99,7 @@ class HomeController extends GetxController {
       await Future.delayed(const Duration(seconds: 2));
 
       listNewDestination(
-        RxList.from(newDestination.map((e) => DestinationModel.fromJson(e))),
+        RxList.from(newDestination.map(DestinationModel.fromJson)),
       );
 
       listNewDestination.sort((a, b) => b.rating.compareTo(a.rating));

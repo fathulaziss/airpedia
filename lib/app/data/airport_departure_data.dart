@@ -1,4 +1,4 @@
-const List airportDepartureData = [
+const List<Map<String, dynamic>> airportDepartureData = [
   {
     'code': 'cgk',
     'name': 'Soekarno Hatta',

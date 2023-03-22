@@ -81,7 +81,7 @@ class DestinationController extends GetxController {
   Future<void> getAirportDeparture() async {
     try {
       listAirportDeparture(
-        RxList.from(airportDepartureData.map((e) => AirportModel.fromJson(e))),
+        RxList.from(airportDepartureData.map(AirportModel.fromJson)),
       );
     } catch (e) {
       logSys(e.toString());
@@ -119,15 +119,16 @@ class DestinationController extends GetxController {
       destinationTicket.value = const DestinationTicketModel();
 
       // Get List Ticket
-      final List temp = destinationTicketData[data.value.airportDestinationCode]
-              [aiportDeparture.value.code] ??
-          [];
+      final List<Map<String, dynamic>> temp =
+          destinationTicketData[data.value.airportDestinationCode]
+                  [aiportDeparture.value.code] ??
+              [];
 
       // Parsing data List Ticket with Filter by Date Departure
       listDestinationTicket(
         RxList.from(
           temp
-              .map((e) => DestinationTicketModel.fromJson(e))
+              .map(DestinationTicketModel.fromJson)
               .where(
                 (element) =>
                     checkTicketSchedule(

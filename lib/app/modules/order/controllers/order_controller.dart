@@ -44,18 +44,18 @@ class OrderController extends GetxController {
       final data = seatData;
       final List seatTypes = data['list_seat_type'];
       final List seatNumbers = data['list_seat_number'];
-      final List seatTypesA = data['seat_type_a'];
-      final List seatTypesB = data['seat_type_b'];
-      final List seatTypesC = data['seat_type_c'];
-      final List seatTypesD = data['seat_type_d'];
+      final List<Map<String, dynamic>> seatTypesA = data['seat_type_a'];
+      final List<Map<String, dynamic>> seatTypesB = data['seat_type_b'];
+      final List<Map<String, dynamic>> seatTypesC = data['seat_type_c'];
+      final List<Map<String, dynamic>> seatTypesD = data['seat_type_d'];
 
       listSeatType(RxList.from(seatTypes.map((e) => e as String)));
       listSeatType.insert(2, '');
       listSeatNumber(RxList.from(seatNumbers.map((e) => e as String)));
-      listSeatTypeA(RxList.from(seatTypesA.map((e) => SeatModel.fromJson(e))));
-      listSeatTypeB(RxList.from(seatTypesB.map((e) => SeatModel.fromJson(e))));
-      listSeatTypeC(RxList.from(seatTypesC.map((e) => SeatModel.fromJson(e))));
-      listSeatTypeD(RxList.from(seatTypesD.map((e) => SeatModel.fromJson(e))));
+      listSeatTypeA(RxList.from(seatTypesA.map(SeatModel.fromJson)));
+      listSeatTypeB(RxList.from(seatTypesB.map(SeatModel.fromJson)));
+      listSeatTypeC(RxList.from(seatTypesC.map(SeatModel.fromJson)));
+      listSeatTypeD(RxList.from(seatTypesD.map(SeatModel.fromJson)));
     } catch (e) {
       logSys(e.toString());
     }

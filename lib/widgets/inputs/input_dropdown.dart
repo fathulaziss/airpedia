@@ -70,9 +70,6 @@ class InputDropdown extends StatelessWidget {
                 const Icon(Icons.arrow_drop_down, color: AppColor.primaryColor)
               ],
             ),
-            scrollbarAlwaysShow: false,
-            itemHeight: 45.w,
-            dropdownMaxHeight: 45.w * items.length,
             items: items,
             onChanged: onChanged,
           ),

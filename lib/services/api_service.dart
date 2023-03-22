@@ -20,7 +20,7 @@ class ApiService {
     logSys('Api Service Initialized');
     _dio = Dio(
       BaseOptions(
-        baseUrl: AppConfig.baseUrl,
+        // baseUrl: AppConfig.baseUrl,
         headers: {'Content-Type': 'application/json'},
       ),
     );
@@ -114,7 +114,7 @@ class ApiService {
       logSys(e.toString());
       throw Exception('Bad response format');
     } on DioError catch (e) {
-      if (e.type == DioErrorType.response) {
+      if (e.type == DioErrorType.badResponse) {
         final response = e.response;
         try {
           if (response != null && response.data != null) {
@@ -125,7 +125,7 @@ class ApiService {
         } catch (e) {
           throw Exception('Internal Error');
         }
-      } else if (e.type == DioErrorType.connectTimeout ||
+      } else if (e.type == DioErrorType.connectionTimeout ||
           e.type == DioErrorType.receiveTimeout ||
           e.type == DioErrorType.sendTimeout) {
         throw Exception('Request timeout');

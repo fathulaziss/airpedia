@@ -1,4 +1,4 @@
-List recommendedDestination = [
+List<Map<String, dynamic>> recommendedDestination = [
   {
     'about': 'aboutLombok',
     'airport_destination_code': 'lop',
@@ -106,7 +106,7 @@ List recommendedDestination = [
   },
 ];
 
-List newDestination = [
+List<Map<String, dynamic>> newDestination = [
   {
     'about': 'aboutAmbon',
     'airport_destination_code': 'amq',
