@@ -36,7 +36,7 @@ class SettingLanguageItem extends StatelessWidget {
                     Icons.check_circle_outline_rounded,
                     color: AppColor.primaryColor,
                     size: 18.w,
-                  )
+                  ),
               ],
             ),
             verticalSpace(Insets.xs),

@@ -53,7 +53,7 @@ class NewDestinationItem extends StatelessWidget {
                   Text(
                     data.country,
                     style: TextStyles.text.copyWith(color: AppColor.greyColor1),
-                  )
+                  ),
                 ],
               ),
             ),
@@ -62,7 +62,7 @@ class NewDestinationItem extends StatelessWidget {
               children: [
                 Icon(Icons.star, size: 20.w, color: AppColor.yellowColor1),
                 horizontalSpace(2.w),
-                Text('${data.rating}', style: TextStyles.text)
+                Text('${data.rating}', style: TextStyles.text),
               ],
             ),
             horizontalSpace(Insets.xs),

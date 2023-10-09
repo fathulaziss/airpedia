@@ -84,7 +84,7 @@ class TopupView extends GetView<TopupController> {
                   onTap: controller.submit,
                   enabled: controller.isValidNominal.value,
                   isLoading: controller.isLoading.value,
-                )
+                ),
               ],
             ),
           ),

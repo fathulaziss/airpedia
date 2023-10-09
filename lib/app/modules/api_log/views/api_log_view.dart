@@ -50,7 +50,7 @@ class ApiLogView extends GetView<ApiLogController> {
                       expansionCallback: (i, isOpen) {
                         controller.isOpen[i] = !isOpen;
                       },
-                    )
+                    ),
                   ],
                 ),
               );

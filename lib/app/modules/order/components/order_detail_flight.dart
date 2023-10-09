@@ -58,7 +58,7 @@ class OrderDetailFlight extends GetView<OrderController> {
                           controller
                               .cDestination.destinationTicket.value.airlineCode,
                           style: TextStyles.desc,
-                        )
+                        ),
                       ],
                     ),
                   ],
@@ -152,12 +152,12 @@ class OrderDetailFlight extends GetView<OrderController> {
                           ),
                         ],
                       ),
-                    )
+                    ),
                   ],
                 ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

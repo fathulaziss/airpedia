@@ -53,14 +53,14 @@ class TicketDetailFlight extends StatelessWidget {
                             data.ticket.airlineName,
                             style: TextStyles.title.copyWith(fontSize: 12.w),
                           ),
-                          Text(data.ticket.airlineCode, style: TextStyles.desc)
+                          Text(data.ticket.airlineCode, style: TextStyles.desc),
                         ],
                       ),
                     ),
                     Text(
                       '#${data.refNumber}',
                       style: TextStyles.title.copyWith(fontSize: 12.w),
-                    )
+                    ),
                   ],
                 ),
                 verticalSpace(Insets.xs),
@@ -148,12 +148,12 @@ class TicketDetailFlight extends StatelessWidget {
                           ),
                         ],
                       ),
-                    )
+                    ),
                   ],
                 ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

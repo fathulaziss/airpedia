@@ -13,7 +13,7 @@ class TicketDetailController extends GetxController {
     super.onInit();
   }
 
-  String checkBenefit(String value) {
+  String checkBenefit(dynamic value) {
     if (value == 'Baggage 20 Kg' || value == 'Bagasi 20 Kg') {
       return 'benefit1'.tr;
     }

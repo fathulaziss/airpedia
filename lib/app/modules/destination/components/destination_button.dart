@@ -23,7 +23,7 @@ class DestinationButton extends StatelessWidget {
           spreadRadius: 5,
           blurRadius: 5,
           offset: const Offset(0, 5),
-        )
+        ),
       ],
       child: ButtonPrimary(onTap: onTap, label: 'bookNow'.tr),
     );

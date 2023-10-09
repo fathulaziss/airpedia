@@ -63,7 +63,7 @@ class _TicketTabBarState extends State<TicketTabBar>
                   ),
                   boxShadow: Shadows.shadowsDown,
                 ),
-                onTap: (index) => widget.onTapTabBarMenu(index),
+                onTap: widget.onTapTabBarMenu,
                 tabs: widget.listTabBarMenu,
               ),
             ],

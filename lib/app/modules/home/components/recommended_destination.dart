@@ -48,7 +48,7 @@ class RecommendedDestination extends GetView<HomeController> {
                             Routes.DESTINATION,
                             arguments: {
                               'data':
-                                  controller.listRecommendedDestination[index]
+                                  controller.listRecommendedDestination[index],
                             },
                           ),
                           data: controller.listRecommendedDestination[index],

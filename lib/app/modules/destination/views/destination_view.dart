@@ -65,7 +65,7 @@ class DestinationView extends GetView<DestinationController> {
           ),
           SliverToBoxAdapter(
             child: DestinationDetail(data: controller.data.value),
-          )
+          ),
         ],
       ),
     );

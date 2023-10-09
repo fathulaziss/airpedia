@@ -56,7 +56,7 @@ class OrderDetailHeader extends GetView<OrderController> {
                   style: TextStyles.desc.copyWith(color: AppColor.greyColor1),
                 ),
               ],
-            )
+            ),
           ],
         ),
         verticalSpace(Insets.lg),

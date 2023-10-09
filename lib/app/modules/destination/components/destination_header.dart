@@ -37,7 +37,7 @@ class DestinationHeader extends StatelessWidget {
                 ),
                 color: Colors.white,
                 boxShadow: const [
-                  BoxShadow(color: Colors.white, offset: Offset(0, 1))
+                  BoxShadow(color: Colors.white, offset: Offset(0, 1)),
                 ],
               ),
               child: Stack(

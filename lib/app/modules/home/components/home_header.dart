@@ -104,7 +104,7 @@ class HomeHeader extends GetView<HomeController> {
                             ),
                           )
                         : Image.asset(AppAsset.image('img_photo_profile.png')),
-                  )
+                  ),
               ],
             ),
             if (controller.isLoadingDataUser.value)

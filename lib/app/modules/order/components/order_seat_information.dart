@@ -35,7 +35,7 @@ class OrderSeatInformation extends GetView<OrderController> {
                     style: TextStyles.title.copyWith(fontSize: 12.w),
                     textAlign: TextAlign.end,
                   ),
-                )
+                ),
               ],
             ),
             verticalSpace(Insets.sm),
@@ -53,9 +53,9 @@ class OrderSeatInformation extends GetView<OrderController> {
                         .copyWith(fontSize: 12.w, color: AppColor.primaryColor),
                     textAlign: TextAlign.end,
                   ),
-                )
+                ),
               ],
-            )
+            ),
           ],
         ),
       );

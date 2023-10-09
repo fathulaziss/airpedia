@@ -50,7 +50,7 @@ class TicketItem extends StatelessWidget {
                         '#${data.refNumber}',
                         style: TextStyles.title.copyWith(fontSize: 12.w),
                       ),
-                      Text(data.ticket.airlineCode, style: TextStyles.desc)
+                      Text(data.ticket.airlineCode, style: TextStyles.desc),
                     ],
                   ),
                 ),
@@ -92,7 +92,7 @@ class TicketItem extends StatelessWidget {
                               .copyWith(fontSize: 12.w, color: Colors.white),
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
               ],
@@ -147,7 +147,7 @@ class TicketItem extends StatelessWidget {
                             size: 14.w,
                             color: AppColor.primaryColor3,
                           ),
-                        )
+                        ),
                       ],
                     ),
                     Text(
@@ -200,7 +200,7 @@ class TicketItem extends StatelessWidget {
                       ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ],

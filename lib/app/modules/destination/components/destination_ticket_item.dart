@@ -72,7 +72,7 @@ class DestinationTicketItem extends StatelessWidget {
                                 data.airportDepartureCode.toUpperCase(),
                                 style: TextStyles.desc
                                     .copyWith(color: AppColor.greyColor1),
-                              )
+                              ),
                             ],
                           ),
                           horizontalSpace(Insets.xs),
@@ -92,7 +92,7 @@ class DestinationTicketItem extends StatelessWidget {
                                   size: 16.w,
                                   color: AppColor.primaryColor3,
                                 ),
-                              )
+                              ),
                             ],
                           ),
                           horizontalSpace(Insets.xs),
@@ -107,7 +107,7 @@ class DestinationTicketItem extends StatelessWidget {
                                 data.airportArrivalCode.toUpperCase(),
                                 style: TextStyles.desc
                                     .copyWith(color: AppColor.greyColor1),
-                              )
+                              ),
                             ],
                           ),
                         ],
@@ -146,9 +146,9 @@ class DestinationTicketItem extends StatelessWidget {
                       ),
                     ),
                   );
-                })
+                }),
               ],
-            )
+            ),
           ],
         ),
       ),

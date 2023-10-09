@@ -20,7 +20,7 @@ class PinNumpad extends GetView<PinController> {
             spreadRadius: 5,
             blurRadius: 5,
             offset: const Offset(0, 5),
-          )
+          ),
         ],
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -50,7 +50,7 @@ class PinNumpad extends GetView<PinController> {
                       controller.setPin('3');
                     },
                   ),
-                )
+                ),
               ],
             ),
             Row(
@@ -78,7 +78,7 @@ class PinNumpad extends GetView<PinController> {
                       controller.setPin('6');
                     },
                   ),
-                )
+                ),
               ],
             ),
             Row(
@@ -106,7 +106,7 @@ class PinNumpad extends GetView<PinController> {
                       controller.setPin('9');
                     },
                   ),
-                )
+                ),
               ],
             ),
             Row(
@@ -125,11 +125,9 @@ class PinNumpad extends GetView<PinController> {
                 Expanded(
                   child: PinNumpadButton(
                     text: '',
-                    onPressed: () {
-                      controller.deletePin();
-                    },
+                    onPressed: controller.deletePin,
                   ),
-                )
+                ),
               ],
             ),
           ],

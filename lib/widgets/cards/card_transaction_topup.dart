@@ -36,7 +36,7 @@ class CardTransactionTopup extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: Color(0xFFFBD460),
               ),
-            )
+            ),
           ],
         ),
       ),

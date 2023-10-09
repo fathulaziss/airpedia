@@ -72,9 +72,7 @@ class EditProfilePhotoBottomSheet extends GetView<EditProfileController> {
               child: Column(
                 children: [
                   IconButton(
-                    onPressed: () {
-                      controller.removePhotoProfile();
-                    },
+                    onPressed: controller.removePhotoProfile,
                     padding: EdgeInsets.zero,
                     icon: SizedBox.square(
                       dimension: 55.w,
@@ -90,7 +88,7 @@ class EditProfilePhotoBottomSheet extends GetView<EditProfileController> {
               ),
             ),
           ],
-        )
+        ),
       ],
     );
   }

@@ -100,7 +100,7 @@ class ItemNavbar extends StatelessWidget {
                 fontSize: 10.w,
                 color: isSelected ? AppColor.primaryColor : Colors.grey,
               ),
-            )
+            ),
           ],
         ),
       ),

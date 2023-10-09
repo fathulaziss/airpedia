@@ -48,7 +48,7 @@ class OrderSuccessView extends StatelessWidget {
                   onTap: () =>
                       Get.offAllNamed(Routes.HOME, arguments: {'index': 1}),
                 ),
-              )
+              ),
             ],
           ),
         ),

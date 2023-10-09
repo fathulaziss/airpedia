@@ -22,8 +22,8 @@ class NewDestination extends GetView<HomeController> {
           ),
           verticalSpace(Insets.lg),
           if (controller.isLoadingNewDestination.value)
-            Column(
-              children: const [
+            const Column(
+              children: [
                 NewDestinationShimmerItem(),
                 NewDestinationShimmerItem(),
                 NewDestinationShimmerItem(),

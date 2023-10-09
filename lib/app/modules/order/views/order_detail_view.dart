@@ -20,9 +20,9 @@ class OrderDetailView extends StatelessWidget {
       bottomBar: const OrderDetailButton(),
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: Insets.xl),
-        child: SingleChildScrollView(
+        child: const SingleChildScrollView(
           child: Column(
-            children: const [
+            children: [
               OrderDetailHeader(),
               OrderDetailFlight(),
               OrderDetailFacilities(),

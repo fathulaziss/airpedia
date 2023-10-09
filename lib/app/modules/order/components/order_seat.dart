@@ -47,7 +47,7 @@ class OrderSeat extends GetView<OrderController> {
                               isSelect: controller.selectedSeat.contains(item),
                               onTap: () => controller.chooseSeat(item),
                             );
-                          })
+                          }),
                         ],
                       ),
                     ),
@@ -60,7 +60,7 @@ class OrderSeat extends GetView<OrderController> {
                               isSelect: controller.selectedSeat.contains(item),
                               onTap: () => controller.chooseSeat(item),
                             );
-                          })
+                          }),
                         ],
                       ),
                     ),
@@ -82,7 +82,7 @@ class OrderSeat extends GetView<OrderController> {
                                 ),
                               ),
                             );
-                          })
+                          }),
                         ],
                       ),
                     ),
@@ -95,7 +95,7 @@ class OrderSeat extends GetView<OrderController> {
                               isSelect: controller.selectedSeat.contains(item),
                               onTap: () => controller.chooseSeat(item),
                             );
-                          })
+                          }),
                         ],
                       ),
                     ),
@@ -108,12 +108,12 @@ class OrderSeat extends GetView<OrderController> {
                               isSelect: controller.selectedSeat.contains(item),
                               onTap: () => controller.chooseSeat(item),
                             );
-                          })
+                          }),
                         ],
                       ),
                     ),
                   ],
-                )
+                ),
               ],
             ),
           ),

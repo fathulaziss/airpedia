@@ -11,7 +11,7 @@ List<Map<String, dynamic>> recommendedDestination = [
       'attractionLombok1',
       'attractionLombok2',
       'attractionLombok3',
-      'attractionLombok4'
+      'attractionLombok4',
     ],
     'photos': [
       'img_destination_lombok1.jpeg',
@@ -32,7 +32,7 @@ List<Map<String, dynamic>> recommendedDestination = [
       'attractionBandung1',
       'attractionBandung2',
       'attractionBandung3',
-      'attractionBandung4'
+      'attractionBandung4',
     ],
     'photos': [
       'img_destination_bandung1.jpeg',
@@ -53,7 +53,7 @@ List<Map<String, dynamic>> recommendedDestination = [
       'attractionYogyakarta1',
       'attractionYogyakarta2',
       'attractionYogyakarta3',
-      'attractionYogyakarta4'
+      'attractionYogyakarta4',
     ],
     'photos': [
       'img_destination_yogyakarta1.jpeg',
@@ -74,7 +74,7 @@ List<Map<String, dynamic>> recommendedDestination = [
       'attractionSurabaya1',
       'attractionSurabaya2',
       'attractionSurabaya3',
-      'attractionSurabaya4'
+      'attractionSurabaya4',
     ],
     'photos': [
       'img_destination_surabaya1.jpeg',
@@ -95,7 +95,7 @@ List<Map<String, dynamic>> recommendedDestination = [
       'attractionJakarta1',
       'attractionJakarta2',
       'attractionJakarta3',
-      'attractionJakarta4'
+      'attractionJakarta4',
     ],
     'photos': [
       'img_destination_jakarta1.jpeg',
@@ -119,7 +119,7 @@ List<Map<String, dynamic>> newDestination = [
       'attractionAmbon1',
       'attractionAmbon2',
       'attractionAmbon3',
-      'attractionAmbon4'
+      'attractionAmbon4',
     ],
     'photos': [
       'img_destination_ambon1.jpeg',
@@ -140,7 +140,7 @@ List<Map<String, dynamic>> newDestination = [
       'attractionPapua1',
       'attractionPapua2',
       'attractionPapua3',
-      'attractionPapua4'
+      'attractionPapua4',
     ],
     'photos': [
       'img_destination_jayapura1.jpeg',
@@ -161,7 +161,7 @@ List<Map<String, dynamic>> newDestination = [
       'attractionBali1',
       'attractionBali2',
       'attractionBali3',
-      'attractionBali4'
+      'attractionBali4',
     ],
     'photos': [
       'img_destination_bali1.jpeg',
@@ -182,7 +182,7 @@ List<Map<String, dynamic>> newDestination = [
       'attractionPadang1',
       'attractionPadang2',
       'attractionPadang3',
-      'attractionPadang4'
+      'attractionPadang4',
     ],
     'photos': [
       'img_destination_padang1.jpeg',
@@ -203,7 +203,7 @@ List<Map<String, dynamic>> newDestination = [
       'attractionMakassar1',
       'attractionMakassar2',
       'attractionMakassar3',
-      'attractionMakassar4'
+      'attractionMakassar4',
     ],
     'photos': [
       'img_destination_makassar1.jpeg',

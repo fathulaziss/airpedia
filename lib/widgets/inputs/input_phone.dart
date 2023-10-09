@@ -101,7 +101,7 @@ class InputPhoneState extends State<InputPhone> {
       hint: widget.hint,
       inputFormatters: [
         FilteringTextInputFormatter.digitsOnly,
-        TextInputMask(mask: '9999 9999 9999 9999 9999')
+        TextInputMask(mask: '9999 9999 9999 9999 9999'),
       ],
       keyboardType: TextInputType.number,
       label: widget.label,
@@ -124,7 +124,7 @@ class InputPhoneState extends State<InputPhone> {
                     const Icon(
                       Icons.keyboard_arrow_down,
                       size: 20,
-                    )
+                    ),
                   ],
                 ),
               ),

@@ -29,7 +29,7 @@ class OrderSeatStatusItem extends StatelessWidget {
           color: color,
         ),
         horizontalSpace(Insets.xs),
-        Text(label, style: TextStyles.text)
+        Text(label, style: TextStyles.text),
       ],
     );
   }

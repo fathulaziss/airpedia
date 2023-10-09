@@ -26,9 +26,9 @@ class EditProfileView extends GetView<EditProfileController> {
             onTap: controller.submit,
           ),
         ),
-        child: Flex(
+        child: const Flex(
           direction: Axis.vertical,
-          children: const [
+          children: [
             EditProfileHeader(),
             EditProfileForm(),
           ],

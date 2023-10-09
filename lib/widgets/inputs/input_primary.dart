@@ -280,7 +280,7 @@ class _InputPrimaryState extends State<InputPrimary> {
                 textAlign: TextAlign.end,
               ),
             ),
-          )
+          ),
       ],
     );
   }

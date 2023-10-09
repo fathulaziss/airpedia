@@ -80,7 +80,7 @@ class DestinationTicketForm extends GetView<DestinationController> {
             final data = value as AirportModel;
             controller.setAirportDeparture(data);
           },
-        )
+        ),
       ],
     );
   }

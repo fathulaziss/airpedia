@@ -47,6 +47,6 @@ class UserModel extends Equatable {
         pinTransaction,
         imageProfile,
         dateOfBirth,
-        balance
+        balance,
       ];
 }

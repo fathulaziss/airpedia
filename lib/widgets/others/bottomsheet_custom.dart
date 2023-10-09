@@ -86,7 +86,7 @@ class BottomSheetCustom {
                                 spreadRadius: 5,
                                 blurRadius: 5,
                                 offset: const Offset(0, 5),
-                              )
+                              ),
                             ],
                             child: buttonBottom,
                           )

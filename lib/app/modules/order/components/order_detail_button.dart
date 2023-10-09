@@ -27,7 +27,7 @@ class OrderDetailButton extends GetView<OrderController> {
             spreadRadius: 5,
             blurRadius: 5,
             offset: const Offset(0, 5),
-          )
+          ),
         ],
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -58,7 +58,7 @@ class OrderDetailButton extends GetView<OrderController> {
                       size: 18.w,
                     ),
                   ),
-                )
+                ),
               ],
             ),
             verticalSpace(Insets.xs),
@@ -106,10 +106,10 @@ class OrderDetailButton extends GetView<OrderController> {
                         ),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
-                      )
+                      ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
             verticalSpace(Insets.sm),

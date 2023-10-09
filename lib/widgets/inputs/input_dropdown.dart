@@ -67,7 +67,7 @@ class InputDropdown extends StatelessWidget {
                     ),
                   ),
                 ),
-                const Icon(Icons.arrow_drop_down, color: AppColor.primaryColor)
+                const Icon(Icons.arrow_drop_down, color: AppColor.primaryColor),
               ],
             ),
             items: items,

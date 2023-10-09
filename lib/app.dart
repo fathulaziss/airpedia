@@ -54,21 +54,16 @@ class _AppState extends State<App> {
           title: 'Airpedia',
           theme: AppStyle.appTheme(0xFF5C40CC, Colors.white),
           builder: (context, child) {
-            return MediaQuery(
-              data: MediaQuery.of(context)
-                  .copyWith(textScaleFactor: Get.width <= 360 ? .85 : 1),
-              child: GestureDetector(
-                behavior: HitTestBehavior.translucent,
-                onTap: AppUtils.dismissKeyboard,
-                child: Obx(
-                  () => Stack(
-                    children: [
-                      child!,
-                      if (cUtility.isShowLog.value) const ApiLogOverlayButton(),
-                      if (cUtility.isShowLog.value)
-                        PageInfo(pageName: pageName),
-                    ],
-                  ),
+            return GestureDetector(
+              behavior: HitTestBehavior.translucent,
+              onTap: AppUtils.dismissKeyboard,
+              child: Obx(
+                () => Stack(
+                  children: [
+                    child!,
+                    if (cUtility.isShowLog.value) const ApiLogOverlayButton(),
+                    if (cUtility.isShowLog.value) PageInfo(pageName: pageName),
+                  ],
                 ),
               ),
             );

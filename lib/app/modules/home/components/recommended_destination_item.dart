@@ -50,7 +50,7 @@ class RecommendedDestinationItem extends StatelessWidget {
                 Text(
                   data.country,
                   style: TextStyles.text.copyWith(color: AppColor.greyColor1),
-                )
+                ),
               ],
             ),
             Align(
@@ -69,11 +69,11 @@ class RecommendedDestinationItem extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Icon(Icons.star, size: 20.w, color: AppColor.yellowColor1),
-                    Text('${data.rating}', style: TextStyles.text)
+                    Text('${data.rating}', style: TextStyles.text),
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

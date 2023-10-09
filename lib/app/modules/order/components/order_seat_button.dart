@@ -24,7 +24,7 @@ class OrderSeatButton extends GetView<OrderController> {
             spreadRadius: 5,
             blurRadius: 5,
             offset: const Offset(0, 5),
-          )
+          ),
         ],
         child: ButtonPrimary(
           onTap: () => Get.toNamed(Routes.ORDER_DETAIL),

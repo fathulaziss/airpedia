@@ -10,14 +10,14 @@ class TabHome extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    return Flex(
+    return const Flex(
       direction: Axis.vertical,
       children: [
-        const HomeHeader(),
+        HomeHeader(),
         Expanded(
           child: SingleChildScrollView(
             child: Column(
-              children: const [
+              children: [
                 RecommendedDestination(),
                 NewDestination(),
               ],

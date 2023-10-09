@@ -35,7 +35,7 @@ class OverlayLogButtonState extends State<ApiLogOverlayButton> {
               ),
             ),
           ),
-        )
+        ),
       ],
     );
   }

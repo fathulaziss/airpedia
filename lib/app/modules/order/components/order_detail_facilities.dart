@@ -44,7 +44,7 @@ class OrderDetailFacilities extends GetView<OrderController> {
                         ),
                         textAlign: TextAlign.end,
                       ),
-                    )
+                    ),
                   ],
                 ),
                 verticalSpace(Insets.xs),
@@ -67,7 +67,7 @@ class OrderDetailFacilities extends GetView<OrderController> {
                         ),
                         textAlign: TextAlign.end,
                       ),
-                    )
+                    ),
                   ],
                 ),
                 verticalSpace(Insets.xs),
@@ -82,12 +82,12 @@ class OrderDetailFacilities extends GetView<OrderController> {
                         style: TextStyles.title.copyWith(fontSize: 10.w),
                         textAlign: TextAlign.end,
                       ),
-                    )
+                    ),
                   ],
-                )
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

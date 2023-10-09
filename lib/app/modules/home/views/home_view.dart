@@ -35,9 +35,7 @@ class HomeView extends GetView<HomeController> {
           notchMargin: 10,
           child: CustomBottomNavBar(
             selectedIndex: controller.selectedPage.value,
-            onTap: (index) {
-              controller.navigation(index);
-            },
+            onTap: controller.navigation,
           ),
         ),
         body: PageView(

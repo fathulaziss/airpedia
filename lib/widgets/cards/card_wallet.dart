@@ -81,7 +81,7 @@ class CardWallet extends GetView<UserInfoController> {
                           shape: BoxShape.circle,
                           color: AppColor.yellowColor3,
                         ),
-                      )
+                      ),
                     ],
                   ),
                   verticalSpace(Insets.lg),
@@ -110,7 +110,7 @@ class CardWallet extends GetView<UserInfoController> {
                           textAlign: TextAlign.left,
                           style: TextStyles.desc.copyWith(color: Colors.white),
                         ),
-                      )
+                      ),
                     ],
                   ),
                   verticalSpace(Insets.xs),
@@ -207,10 +207,10 @@ class CardWallet extends GetView<UserInfoController> {
                                 color: Colors.white,
                                 size: 12.w,
                               ),
-                            )
+                            ),
                           ],
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ],

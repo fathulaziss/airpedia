@@ -108,7 +108,7 @@ showPopUpConfirmation({
                     onTap: onPressPositive ?? Get.back,
                     label: labelButtonPostive ?? 'YES',
                   ),
-                )
+                ),
               ],
             ),
             SizedBox(height: 20.w),

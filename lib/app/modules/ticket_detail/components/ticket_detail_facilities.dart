@@ -45,7 +45,7 @@ class TicketDetailFacilities extends GetView<TicketDetailController> {
                         ),
                         textAlign: TextAlign.end,
                       ),
-                    )
+                    ),
                   ],
                 ),
                 verticalSpace(Insets.xs),
@@ -66,7 +66,7 @@ class TicketDetailFacilities extends GetView<TicketDetailController> {
                         ),
                         textAlign: TextAlign.end,
                       ),
-                    )
+                    ),
                   ],
                 ),
                 verticalSpace(Insets.xs),
@@ -77,17 +77,17 @@ class TicketDetailFacilities extends GetView<TicketDetailController> {
                     Expanded(
                       child: Text(
                         data.ticket.benefit
-                            .map((e) => controller.checkBenefit(e))
+                            .map(controller.checkBenefit)
                             .join(', '),
                         style: TextStyles.title.copyWith(fontSize: 10.w),
                         textAlign: TextAlign.end,
                       ),
-                    )
+                    ),
                   ],
-                )
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

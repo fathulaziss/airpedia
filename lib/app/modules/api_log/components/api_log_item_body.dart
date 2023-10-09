@@ -78,7 +78,7 @@ class ApiLogItemBody extends StatelessWidget {
                     fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
                     fontSize: 13.w,
                   ),
-                )
+                ),
               ],
             ),
           )
@@ -109,7 +109,7 @@ class ApiLogItemBody extends StatelessWidget {
                     fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
                     fontSize: 13.w,
                   ),
-                )
+                ),
               ],
             ),
           )

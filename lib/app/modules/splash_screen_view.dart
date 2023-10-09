@@ -63,7 +63,7 @@ class _SplashScreenViewState extends State<SplashScreenView> {
                 letterSpacing: 8.w,
                 fontSize: fontSize,
               ),
-            )
+            ),
           ],
         ),
       ),

@@ -36,7 +36,6 @@ class HistoryController extends GetxController {
           (a, b) => b.transactionDate.compareTo(a.transactionDate),
         );
       }
-
       isLoading(false);
     } catch (e) {
       isLoading(false);

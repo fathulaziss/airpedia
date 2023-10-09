@@ -100,7 +100,7 @@ class LoginView extends GetView<LoginController> {
                             value: item,
                             child: InputDropdownItem(value: item.language),
                           );
-                        })
+                        }),
                       ],
                       selectedItem:
                           controller.cUtility.appLanguage.value.language,
@@ -114,7 +114,7 @@ class LoginView extends GetView<LoginController> {
                   ),
                 ],
               ),
-            )
+            ),
           ],
         );
       }),

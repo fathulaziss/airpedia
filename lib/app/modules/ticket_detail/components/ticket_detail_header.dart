@@ -52,7 +52,7 @@ class TicketDetailHeader extends StatelessWidget {
                   style: TextStyles.desc.copyWith(color: AppColor.greyColor1),
                 ),
               ],
-            )
+            ),
           ],
         ),
         verticalSpace(Insets.lg),
