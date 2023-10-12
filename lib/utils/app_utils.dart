@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -117,10 +118,7 @@ class ThousandsSeparatorInputFormatter extends TextInputFormatter {
 }
 
 logSys(String s) {
-  final pattern = RegExp('.{1,800}');
-  pattern.allMatches(s).forEach((match) {
-    if (kDebugMode) {
-      print(match.group(0));
-    }
-  });
+  if (kProfileMode) {
+    log(s);
+  }
 }
