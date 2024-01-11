@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 
 class InputPhone extends StatefulWidget {
   const InputPhone({
-    Key? key,
+    super.key,
     required this.controller,
     this.label,
     this.prefixIcon,
@@ -31,7 +31,7 @@ class InputPhone extends StatefulWidget {
     this.outlineColor,
     this.borderRadius,
     this.hintColor,
-  }) : super(key: key);
+  });
   final TextEditingController controller;
   final String? label;
   final Widget? prefixIcon;

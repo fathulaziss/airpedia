@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class TabSetting extends GetView<SettingController> {
-  const TabSetting({Key? key}) : super(key: key);
+  const TabSetting({super.key});
 
   @override
   Widget build(BuildContext context) {

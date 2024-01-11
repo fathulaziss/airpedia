@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 
 class InputNumber extends StatefulWidget {
   const InputNumber({
-    Key? key,
+    super.key,
     this.label,
     this.controller,
     this.prefixIcon,
@@ -30,7 +30,7 @@ class InputNumber extends StatefulWidget {
     this.outlineColor,
     this.borderRadius,
     this.hintColor,
-  }) : super(key: key);
+  });
 
   final String? label;
   final bool? Function(String value)? validation;

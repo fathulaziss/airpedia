@@ -8,7 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class SplashScreenView extends StatefulWidget {
-  const SplashScreenView({Key? key}) : super(key: key);
+  const SplashScreenView({super.key});
 
   @override
   State<SplashScreenView> createState() => _SplashScreenViewState();

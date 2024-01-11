@@ -33,7 +33,7 @@ class SettingLanguageBottomsheet extends GetView<SettingController> {
                 Get.back();
               },
             );
-          }).toList(),
+          }),
         ],
       );
     });

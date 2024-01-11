@@ -8,40 +8,40 @@ import 'package:flutter_typeahead/flutter_typeahead.dart';
 class InputSearchDropdown extends StatefulWidget {
   const InputSearchDropdown({
     super.key,
-    required this.suggestionsCallback,
     required this.controller,
     required this.itemBuilder,
-    required this.onSuggestionSelected,
-    this.hint = 'Search',
+    required this.onSelected,
+    required this.suggestionsCallback,
+    this.inputStyle = InputStyle.box,
+    this.outlineColor,
+    this.color,
+    this.borderRadius,
     this.label,
     this.textStyle,
-    this.hintStyle,
     this.textColor = Colors.black,
+    this.hint = 'Search',
     this.hintColor = const Color(0xFFC1BABA),
+    this.hintStyle,
     this.prefixIcon,
     this.suffixIcon,
-    this.inputStyle = InputStyle.box,
-    this.color,
-    this.outlineColor,
-    this.borderRadius,
   });
 
-  final FutureOr<Iterable<dynamic>> Function(String) suggestionsCallback;
   final TextEditingController controller;
   final Widget Function(BuildContext, dynamic) itemBuilder;
-  final void Function(dynamic) onSuggestionSelected;
-  final String? label;
-  final String hint;
-  final TextStyle? textStyle;
-  final TextStyle? hintStyle;
-  final Color textColor;
-  final Color hintColor;
-  final Widget? prefixIcon;
-  final Widget? suffixIcon;
+  final void Function(dynamic)? onSelected;
+  final FutureOr<List<dynamic>> Function(String) suggestionsCallback;
   final InputStyle inputStyle;
   final Color? outlineColor;
   final Color? color;
   final double? borderRadius;
+  final String? label;
+  final TextStyle? textStyle;
+  final Color textColor;
+  final String hint;
+  final Color hintColor;
+  final TextStyle? hintStyle;
+  final Widget? prefixIcon;
+  final Widget? suffixIcon;
 
   @override
   State<InputSearchDropdown> createState() => _InputSearchDropdownState();
@@ -146,36 +146,51 @@ class _InputSearchDropdownState extends State<InputSearchDropdown> {
           child: Focus(
             onFocusChange: _onFocusChange,
             child: TypeAheadField(
-              suggestionsCallback: widget.suggestionsCallback,
-              textFieldConfiguration: TextFieldConfiguration(
-                controller: widget.controller,
-                style: widget.textStyle ??
-                    TextStyles.text.copyWith(color: widget.textColor),
-                decoration: inputDecoration(
-                  prefixIcon: widget.prefixIcon,
-                  hintText: widget.hint,
-                  suffixIcon: widget.suffixIcon,
-                  hintStyle: widget.hintStyle,
-                  hintColor: widget.hintColor,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: Insets.med,
-                    vertical: Insets.med,
+              builder: (context, controller, focusNode) {
+                return TextField(
+                  controller: controller,
+                  focusNode: focusNode,
+                  style: widget.textStyle ??
+                      TextStyles.text.copyWith(color: widget.textColor),
+                  decoration: inputDecoration(
+                    prefixIcon: widget.prefixIcon,
+                    hintText: widget.hint,
+                    suffixIcon: widget.suffixIcon,
+                    hintStyle: widget.hintStyle,
+                    hintColor: widget.hintColor,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: Insets.med,
+                      vertical: Insets.med,
+                    ),
                   ),
-                ),
-              ),
+                );
+              },
+              controller: widget.controller,
               itemBuilder: widget.itemBuilder,
-              noItemsFoundBuilder: (context) {
+              onSelected: widget.onSelected,
+              suggestionsCallback: (search) {
+                return widget.suggestionsCallback(search);
+              },
+              emptyBuilder: (context) {
                 return const SizedBox();
               },
-              suggestionsBoxDecoration: SuggestionsBoxDecoration(
-                shadowColor: Colors.transparent,
-                color: AppColor.primaryColor,
-                constraints: BoxConstraints(
-                  minWidth: MediaQuery.of(context).size.width / 2,
-                  maxHeight: MediaQuery.of(context).size.width / 2,
-                ),
-              ),
-              onSuggestionSelected: widget.onSuggestionSelected,
+              decorationBuilder: (context, child) {
+                return ConstrainedBox(
+                  constraints: BoxConstraints(
+                    minWidth: MediaQuery.of(context).size.width / 2,
+                    maxHeight: MediaQuery.of(context).size.width / 2,
+                  ),
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      color: AppColor.primaryColor,
+                      boxShadow: [
+                        BoxShadow(color: Colors.transparent),
+                      ],
+                    ),
+                    child: child,
+                  ),
+                );
+              },
             ),
           ),
         ),

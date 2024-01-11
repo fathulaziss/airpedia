@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class BlockedView extends StatelessWidget {
-  const BlockedView({Key? key}) : super(key: key);
+  const BlockedView({super.key});
 
   @override
   Widget build(BuildContext context) {

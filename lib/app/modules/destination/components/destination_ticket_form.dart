@@ -76,7 +76,7 @@ class DestinationTicketForm extends GetView<DestinationController> {
               ),
             );
           },
-          onSuggestionSelected: (value) {
+          onSelected: (value) {
             final data = value as AirportModel;
             controller.setAirportDeparture(data);
           },

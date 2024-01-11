@@ -88,7 +88,9 @@ class DestinationController extends GetxController {
     }
   }
 
-  List<AirportModel> searchAirportDeparture({required String keyword}) {
+  Future<List<AirportModel>> searchAirportDeparture({
+    required String keyword,
+  }) async {
     final searchList = <AirportModel>[];
     for (var i = 0; i < listAirportDeparture.length; i++) {
       final name = listAirportDeparture[i].name;
@@ -108,6 +110,8 @@ class DestinationController extends GetxController {
       aiportDeparture.value = const AirportModel();
       validateTicketForm();
     }
+
+    await Future.delayed(const Duration(milliseconds: 300));
 
     return searchList;
   }

@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ApiLogCardStatus extends StatelessWidget {
-  const ApiLogCardStatus({Key? key, required this.status}) : super(key: key);
+  const ApiLogCardStatus({super.key, required this.status});
 
   final String status;
 

@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 
 class InputPrimary extends StatefulWidget {
   const InputPrimary({
-    Key? key,
+    super.key,
     this.label,
     this.hint = 'Type Here...',
     this.prefixIcon,
@@ -41,7 +41,7 @@ class InputPrimary extends StatefulWidget {
     this.onSubmitted,
     this.maxLines,
     this.minLines,
-  }) : super(key: key);
+  });
 
   final String? label;
   final Widget? prefixIcon;

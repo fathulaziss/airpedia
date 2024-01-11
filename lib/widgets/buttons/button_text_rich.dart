@@ -8,8 +8,8 @@ class ButtonTextRich extends StatelessWidget {
     required this.label1,
     required this.label2,
     required this.onPressed,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final String label1;
   final String label2;

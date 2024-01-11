@@ -6,14 +6,14 @@ import 'package:get/get.dart';
 
 class PageDefault extends StatelessWidget {
   const PageDefault({
-    Key? key,
+    super.key,
     required this.child,
     required this.title,
     this.bottomBarHeight = 0,
     this.bottomBar = const SizedBox(),
     this.backgroundColor = AppColor.backgroundColor,
     this.shadowColor,
-  }) : super(key: key);
+  });
 
   final String title;
   final Widget child;
@@ -28,6 +28,7 @@ class PageDefault extends StatelessWidget {
       backgroundColor: backgroundColor,
       appBar: AppBar(
         shadowColor: shadowColor,
+        backgroundColor: AppColor.primaryColor,
         title: SizedBox(
           width: Get.width,
           child: Text(
@@ -39,7 +40,7 @@ class PageDefault extends StatelessWidget {
           onPressed: Get.back,
           iconSize: 20.w,
           constraints: BoxConstraints(minWidth: 20.w),
-          icon: const Icon(Icons.arrow_back_ios),
+          icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
         ),
       ),
       bottomNavigationBar:

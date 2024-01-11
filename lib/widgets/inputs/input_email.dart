@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 
 class InputEmail extends StatefulWidget {
   const InputEmail({
-    Key? key,
+    super.key,
     this.label,
     this.controller,
     this.prefixIcon,
@@ -32,7 +32,7 @@ class InputEmail extends StatefulWidget {
     this.outlineColor,
     this.borderRadius,
     this.hintColor,
-  }) : super(key: key);
+  });
 
   final String? label;
   final TextEditingController? controller;

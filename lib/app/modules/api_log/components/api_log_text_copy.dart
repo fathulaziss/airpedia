@@ -8,11 +8,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 class ApiLogTextCopy extends StatelessWidget {
-  const ApiLogTextCopy({
-    Key? key,
-    required this.text,
-    this.style,
-  }) : super(key: key);
+  const ApiLogTextCopy({super.key, required this.text, this.style});
 
   final String text;
   final TextStyle? style;

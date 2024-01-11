@@ -7,7 +7,7 @@ import 'package:flutter/services.dart';
 
 class InputPassword extends StatefulWidget {
   const InputPassword({
-    Key? key,
+    super.key,
     this.label,
     this.controller,
     this.prefixIcon,
@@ -35,7 +35,7 @@ class InputPassword extends StatefulWidget {
     this.outlineColor,
     this.borderRadius,
     this.hintColor,
-  }) : super(key: key);
+  });
 
   final String? label;
   final TextEditingController? controller;

@@ -4,11 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class LoadingIndicator extends StatelessWidget {
-  const LoadingIndicator({
-    Key? key,
-    this.color,
-    this.size,
-  }) : super(key: key);
+  const LoadingIndicator({super.key, this.color, this.size});
 
   final Color? color;
   final double? size;
@@ -26,11 +22,7 @@ class LoadingIndicator extends StatelessWidget {
 }
 
 class LoadingIndicatorBounce extends StatelessWidget {
-  const LoadingIndicatorBounce({
-    Key? key,
-    this.color,
-    this.size,
-  }) : super(key: key);
+  const LoadingIndicatorBounce({super.key, this.color, this.size});
   final Color? color;
   final double? size;
 
