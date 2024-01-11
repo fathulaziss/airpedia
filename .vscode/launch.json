@@ -8,11 +8,11 @@
             "name": "PRODUCTION",
             "type": "dart",
             "request": "launch",
+            "flutterMode": "profile",
             "program": "lib/main_production.dart",
             "args":[		
                 "--flavor",
                 "production",
-                "--debug",
                 "--verbose",
                 "--warning-mode all"
 			]
@@ -21,11 +21,11 @@
             "name": "DEVELOPMENT",
             "type": "dart",
             "request": "launch",
+            "flutterMode": "profile",
             "program": "lib/main_development.dart",
             "args":[
                 "--flavor",
                 "development",
-                "--debug",
                 "--verbose",
                 "--warning-mode all"
 			]
@@ -34,11 +34,11 @@
             "name": "STAGING",
             "type": "dart",
             "request": "launch",
+            "flutterMode": "profile",
             "program": "lib/main_staging.dart",
             "args":[
                 "--flavor",
                 "staging",
-                "--debug",
                 "--verbose",
                 "--warning-mode all"
 			]
@@ -47,6 +47,7 @@
             "name": "PRODUCTION IOS",
             "type": "dart",
             "request": "launch",
+            "flutterMode": "profile",
             "program": "lib/main_production.dart",
             "args":[
                 "--target",
@@ -57,6 +58,7 @@
             "name": "DEVELOPMENT IOS",
             "type": "dart",
             "request": "launch",
+            "flutterMode": "profile",
             "program": "lib/main_development.dart",
             "args":[
                 "--target",
@@ -67,6 +69,7 @@
             "name": "STAGING IOS",
             "type": "dart",
             "request": "launch",
+            "flutterMode": "profile",
             "program": "lib/main_staging.dart",
             "args":[
                 "--target",
