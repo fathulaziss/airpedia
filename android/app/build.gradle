@@ -60,7 +60,7 @@ android {
     }
 
     namespace "com.fathdotdev.airpedia"
-    compileSdkVersion 33
+    compileSdkVersion 34
     ndkVersion flutter.ndkVersion
 
     compileOptions {
@@ -79,7 +79,7 @@ android {
     defaultConfig {
         applicationId "com.fathdotdev.airpedia"
         minSdkVersion 25
-        targetSdkVersion 33
+        targetSdkVersion 34
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         multiDexEnabled true
