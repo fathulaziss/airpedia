@@ -81,7 +81,7 @@ class _InputCurrencyState extends State<InputCurrency> {
     }
   }
 
-  _onChanged(String value) {
+  void _onChanged(String value) {
     widget.value?.call(int.tryParse(value.replaceAll('.', '')) ?? 0);
   }
 

@@ -23,7 +23,7 @@ class CardWallet extends GetView<UserInfoController> {
         isShowShadows: true,
         shadows: [
           BoxShadow(
-            color: AppColor.primaryColor.withOpacity(.5),
+            color: AppColor.primaryColor.withValues(alpha: .5),
             blurRadius: 5,
             offset: const Offset(0, 5),
           ),
@@ -39,7 +39,7 @@ class CardWallet extends GetView<UserInfoController> {
                 angle: 180 * math.pi / 360,
                 child: Image.asset(
                   AppAsset.icon('ic_plane_white.png'),
-                  color: AppColor.primaryColor2.withOpacity(0.03),
+                  color: AppColor.primaryColor2.withValues(alpha: 0.03),
                 ),
               ),
             ),
@@ -52,7 +52,7 @@ class CardWallet extends GetView<UserInfoController> {
                 margin: EdgeInsets.only(right: 4.w),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.white.withOpacity(0.08),
+                  color: Colors.white.withValues(alpha: 0.08),
                 ),
               ),
             ),

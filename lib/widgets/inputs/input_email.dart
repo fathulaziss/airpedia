@@ -84,7 +84,7 @@ class _InputEmailState extends State<InputEmail> {
     }
   }
 
-  _onChanged(String value) {
+  void _onChanged(String value) {
     widget.value?.call(value);
   }
 

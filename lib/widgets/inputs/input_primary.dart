@@ -98,7 +98,7 @@ class _InputPrimaryState extends State<InputPrimary> {
     }
   }
 
-  _decor() {
+  dynamic _decor() {
     if (widget.inputStyle == InputStyle.box) {
       switch (tState) {
         case TextFieldState.focus:
@@ -141,7 +141,7 @@ class _InputPrimaryState extends State<InputPrimary> {
     }
   }
 
-  _box({required Color borderColor}) {
+  BoxDecoration _box({required Color borderColor}) {
     return BoxDecoration(
       color: widget.color ?? Colors.white,
       borderRadius: BorderRadius.circular(widget.borderRadius ?? Corners.lg),
@@ -149,7 +149,7 @@ class _InputPrimaryState extends State<InputPrimary> {
     );
   }
 
-  _outline({required Color borderColor}) {
+  BoxDecoration _outline({required Color borderColor}) {
     return BoxDecoration(
       color: widget.color ?? const Color(0xFFF6F8FB),
       borderRadius: BorderRadius.circular(widget.borderRadius ?? Corners.lg),
@@ -157,14 +157,14 @@ class _InputPrimaryState extends State<InputPrimary> {
     );
   }
 
-  _line({required Color borderColor, double width = 1}) {
+  BoxDecoration _line({required Color borderColor, double width = 1}) {
     return BoxDecoration(
       color: widget.color ?? Colors.transparent,
       border: Border(bottom: BorderSide(color: borderColor, width: width)),
     );
   }
 
-  _onFocusChange(bool value) {
+  void _onFocusChange(bool value) {
     setState(() {
       isFocus = value;
       if (!isValid) {
@@ -177,7 +177,7 @@ class _InputPrimaryState extends State<InputPrimary> {
     });
   }
 
-  _onChanged(String value) async {
+  Future<void> _onChanged(String value) async {
     if (widget.validation != null) {
       setState(
         () {
@@ -197,7 +197,7 @@ class _InputPrimaryState extends State<InputPrimary> {
     widget.onChanged?.call(value);
   }
 
-  _contentPadding() {
+  EdgeInsets? _contentPadding() {
     if (widget.contentPadding == null) {
       switch (widget.inputStyle) {
         case InputStyle.box:

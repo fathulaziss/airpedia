@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 
-showPopUpInfo({
+void showPopUpInfo({
   String? title,
   String? description,
   String? labelButton,
@@ -52,7 +52,7 @@ showPopUpInfo({
   );
 }
 
-showPopUpConfirmation({
+void showPopUpConfirmation({
   String? title,
   String? description,
   String? labelButtonPostive,
@@ -120,7 +120,7 @@ showPopUpConfirmation({
   );
 }
 
-showToast({
+void showToast({
   required String message,
   Color? color,
   Color? textColor,

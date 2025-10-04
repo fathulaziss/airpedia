@@ -9,7 +9,7 @@ import 'package:jwt_decoder/jwt_decoder.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 class AppUtils {
-  static dismissKeyboard() {
+  static void dismissKeyboard() {
     FocusManager.instance.primaryFocus?.unfocus();
   }
 
@@ -117,7 +117,7 @@ class ThousandsSeparatorInputFormatter extends TextInputFormatter {
   }
 }
 
-logSys(String s) {
+void logSys(String s) {
   if (kProfileMode) {
     log(s);
   }

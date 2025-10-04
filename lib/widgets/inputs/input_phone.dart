@@ -81,7 +81,7 @@ class InputPhoneState extends State<InputPhone> {
     }
   }
 
-  _onChanged(String value) {
+  void _onChanged(String value) {
     if (value.isNotEmpty) {
       final val = value.removeAllWhitespace;
       if (widget.value != null) {

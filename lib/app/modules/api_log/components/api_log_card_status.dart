@@ -9,11 +9,11 @@ class ApiLogCardStatus extends StatelessWidget {
 
   Color getMethodColor(String method) {
     if (method.toLowerCase().contains('get')) {
-      return Colors.green.withOpacity(.3);
+      return Colors.green.withValues(alpha: .3);
     } else if (method.toLowerCase().contains('post')) {
-      return Colors.amber.withOpacity(.3);
+      return Colors.amber.withValues(alpha: .3);
     } else {
-      return Colors.grey.withOpacity(.3);
+      return Colors.grey.withValues(alpha: .3);
     }
   }
 

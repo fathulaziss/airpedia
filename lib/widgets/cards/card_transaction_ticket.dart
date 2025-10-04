@@ -19,7 +19,7 @@ class CardTransactionTicket extends StatelessWidget {
       child: Center(
         child: Image.asset(
           AppAsset.icon('ic_plane_white.png'),
-          color: AppColor.primaryColor2.withOpacity(0.2),
+          color: AppColor.primaryColor2.withValues(alpha: 0.2),
         ),
       ),
     );

@@ -75,7 +75,7 @@ class _InputNumberState extends State<InputNumber> {
     }
   }
 
-  _onChanged(String value) {
+  void _onChanged(String value) {
     if (widget.value != null) {
       widget.value?.call(int.tryParse(value) ?? 0);
       // widget.value!(int.tryParse(value) ?? 0);

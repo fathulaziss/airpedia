@@ -92,14 +92,14 @@ class _InputPasswordState extends State<InputPassword> {
     }
   }
 
-  _onChanged(String value) {
+  void _onChanged(String value) {
     if (widget.value != null) {
       widget.value?.call(value);
       // widget.value!(value);
     }
   }
 
-  _toggleVisible() {
+  void _toggleVisible() {
     setState(() {
       obsecureText = !obsecureText;
     });

@@ -52,7 +52,7 @@ class _InputSearchDropdownState extends State<InputSearchDropdown> {
   bool isFocus = false;
   bool isValid = true;
 
-  _decor() {
+  dynamic _decor() {
     if (widget.inputStyle == InputStyle.box) {
       switch (tState) {
         case TextFieldState.focus:
@@ -95,7 +95,7 @@ class _InputSearchDropdownState extends State<InputSearchDropdown> {
     }
   }
 
-  _box({required Color borderColor}) {
+  BoxDecoration _box({required Color borderColor}) {
     return BoxDecoration(
       color: widget.color ?? Colors.white,
       borderRadius: BorderRadius.circular(widget.borderRadius ?? Corners.lg),
@@ -103,7 +103,7 @@ class _InputSearchDropdownState extends State<InputSearchDropdown> {
     );
   }
 
-  _outline({required Color borderColor}) {
+  BoxDecoration _outline({required Color borderColor}) {
     return BoxDecoration(
       color: widget.color ?? const Color(0xFFF6F8FB),
       borderRadius: BorderRadius.circular(widget.borderRadius ?? Corners.lg),
@@ -111,14 +111,14 @@ class _InputSearchDropdownState extends State<InputSearchDropdown> {
     );
   }
 
-  _line({required Color borderColor, double width = 1}) {
+  BoxDecoration _line({required Color borderColor, double width = 1}) {
     return BoxDecoration(
       color: widget.color ?? Colors.transparent,
       border: Border(bottom: BorderSide(color: borderColor, width: width)),
     );
   }
 
-  _onFocusChange(bool value) {
+  void _onFocusChange(bool value) {
     setState(() {
       isFocus = value;
       if (!isValid) {

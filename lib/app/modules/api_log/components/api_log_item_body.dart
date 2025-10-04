@@ -26,7 +26,7 @@ class ApiLogItemBody extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.w),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12.w),
-                    color: Colors.indigo.withOpacity(.3),
+                    color: Colors.indigo.withValues(alpha: .3),
                   ),
                   child: Text(
                     'PAYLOAD',
@@ -64,7 +64,7 @@ class ApiLogItemBody extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.w),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(4.w),
-                    color: Colors.green.withOpacity(.3),
+                    color: Colors.green.withValues(alpha: .3),
                   ),
                   child: Text(
                     'RESPONSE',
@@ -96,7 +96,7 @@ class ApiLogItemBody extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.w),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8.w),
-                    color: Colors.red.withOpacity(.3),
+                    color: Colors.red.withValues(alpha: .3),
                   ),
                   child: Text(
                     'ERROR',
