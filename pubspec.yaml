@@ -3,7 +3,7 @@ version: 1.0.6+6
 publish_to: none
 description: Airline Ticket Booking Application.
 environment:
-  sdk: ">=3.1.0 <=4.0.0"
+  sdk: ">=3.1.0 <5.0.0"
 
 dependencies:
   change_app_package_name: ^1.1.0
@@ -19,7 +19,6 @@ dependencies:
   firebase_storage: ^13.0.2
   flutter:
     sdk: flutter
-  flutter_jailbreak_detection: ^1.8.0
   flutter_launcher_icons: ^0.14.4
   flutter_localization: ^0.3.3
   flutter_screenutil: ^5.6.0
